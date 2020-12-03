@@ -1,0 +1,207 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+// === fonts ===
+@import "fonts";
+@import "iconfonts";
+
+// === Base ===
+@import "base/index";
+
+// === Components ===
+@import "components/index";
+
+// === Pages ===
+@import "pages/index";
+
+.header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	font-family: $fontSecondary;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #fff;
+		z-index: 2;
+	}
+
+	&__container {
+	}
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		height: $size-header-height;
+
+		@media screen and (max-width: 767px) {
+			height: $size-header-height-mobile;
+		}
+	}
+
+	&__left {
+		flex: 1 1 auto;
+		display: flex;
+		align-items: center;
+	}
+
+	&__logo {
+		position: relative;
+		z-index: 2;
+		margin-right: 52px;
+
+		i.icon-apple {
+			font-size: 44px;
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&__menu {
+		@media screen and (max-width: 920px) {
+			display: none;
+		}
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		position: relative;
+		z-index: 2;
+
+		@media screen and (max-width: 767px) {
+			display: block;
+		}
+	}
+
+	&__item {
+		margin-right: 2.3em;
+		font-weight: 500;
+		font-size: calc(12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		line-height: calc(18 / 14);
+
+		&.menu__item--has-children {
+			&:hover {
+				& > .menu__link {
+					img {
+						transform: rotate(-180deg);
+					}
+				}
+
+				.sub-menu {
+					opacity: 1;
+					visibility: visible;
+					pointer-events: all;
+				}
+			}
+
+			.sub-menu {
+				@media screen and (min-width: 768px) {
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					transform: translate(0, 100%);
+					display: block;
+					width: 100%;
+					min-width: 181px;
+					background-color: $White;
+					padding: 16px 19px;
+					overflow-y: auto;
+					box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.08);
+					transition: 0.3s ease all 0s;
+					opacity: 0;
+					visibility: hidden;
+					pointer-events: none;
+				}
+
+				&__list {
+				}
+
+				&__item {
+					margin-bottom: 8px;
+
+					a {
+						font-family: $fontMain;
+						font-size: calc(
+							12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile}))
+						);
+						color: $Black;
+					}
+				}
+			}
+		}
+
+		&--active {
+			.header__link {
+				color: $Gray2;
+			}
+		}
+	}
+
+	&__link {
+		color: $DGray;
+		transition: 0.3s ease all 0s;
+		padding: 10px;
+		display: flex;
+		align-items: center;
+
+		img {
+			margin-left: 4px;
+			transition: 0.3s ease all 0s;
+		}
+	}
+
+	&__right {
+		display: flex;
+		align-items: center;
+		position: relative;
+		z-index: 2;
+
+		.header__item {
+			margin-right: 1.4em;
+			font-weight: 400;
+			font-size: calc(11px + 1 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		}
+	}
+
+	&__phone {
+		display: inline-block;
+		font-weight: 700;
+		font-size: calc(10px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		line-height: calc(14 / 12);
+		color: $DGray;
+		margin-right: 2.6em;
+	}
+
+	&__cart {
+	}
+}
+
+.cart {
+	&__link {
+	}
+
+	i.icon-cart {
+		display: flex;
+		align-items: center;
+		font-size: 38px;
+		color: $DGray;
+	}
+}
+
+// !Header end

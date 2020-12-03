@@ -1,0 +1,122 @@
+.main {
+	min-height: 703px;
+	padding: 95px 0 58px;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	position: relative;
+
+	@media screen and (max-width: 991px) {
+		min-height: 500px;
+		padding: 50px 0 30px;
+	}
+	@media screen and (max-width: 575px) {
+		min-height: calc(100vh - #{$size-header-height-mobile});
+	}
+
+	&--white {
+		color: $White;
+
+		.main-menu__link {
+			color: $White;
+		}
+	}
+
+	&__container {
+		@media screen and (max-width: 575px) {
+			overflow-x: auto;
+		}
+	}
+
+	&__title {
+		font-weight: 300;
+		font-size: calc(24px + 24 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		line-height: calc(58 / 48);
+		margin-bottom: 0.8em;
+
+		span {
+			font-weight: 500;
+		}
+	}
+
+	&__text {
+		max-width: 366px;
+		margin: 0 auto;
+		font-weight: 300;
+
+		@media screen and (min-width: $layoutDesktop + "px") {
+			max-width: 36%;
+		}
+	}
+
+	&__image {
+		max-width: 612px;
+		margin: 0 auto;
+
+		@media screen and (min-width: $layoutDesktop + "px") {
+			max-width: 60%;
+		}
+	}
+
+
+	&--center {
+		.main {
+			&__row {
+				display: block;
+			}
+
+			&__content {
+				text-align: center;
+			}
+
+			&__text {
+				margin-bottom: 4.3em;
+			}
+		}
+	}
+}
+
+.main-menu {
+	padding-bottom: 20px;
+
+	@media screen and (max-width: 575px) {
+		overflow-x: auto;
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__item {
+		margin-right: 2.4em;
+		&:last-child {
+			margin-right: 0;
+		}
+
+		@media screen and (max-width: 991px) {
+			margin-right: 1.5em;
+		}
+		@media screen and (max-width: 767px) {
+			margin-right: 0.4em;
+		}
+		@media screen and (max-width: 575px) {
+			flex: 1 1 auto;
+		}
+	}
+
+	&__link {
+		padding: 8px 16px;
+		font-weight: 300;
+		font-size: calc(12px + 6 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		line-height: calc(25 / 18);
+		white-space: nowrap;
+	}
+
+	&__item--active {
+		background: rgba(0, 0, 0, 0.2);
+		box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.1);
+		border-radius: 3px;
+	}
+}

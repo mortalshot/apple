@@ -843,7 +843,6 @@ $(document).ready(function () {
     slidesToScroll: 1,
     arrows: false,
     fade: true,
-    // adaptiveHeight: true,
     asNavFor: '.gallery__thumbnails'
   });
   $('.gallery__thumbnails').slick({
@@ -853,7 +852,14 @@ $(document).ready(function () {
     arrows: false,
     focusOnSelect: true,
     vertical: true,
-    verticalSwiping: true
+    verticalSwiping: true,
+    responsive: [{
+      breakpoint: 991,
+      settings: {
+        vertical: false,
+        verticalSwiping: false
+      }
+    }]
   });
   $('#productGallery .tabs-triggers__item').click(function () {
     $('.gallery__main').slick('refresh');

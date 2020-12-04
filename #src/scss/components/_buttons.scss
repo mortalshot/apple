@@ -3,15 +3,17 @@
     padding: 3px 20px 3px 32px;
     border-radius: 3px;
     border: 1px solid $Gray;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     font-weight: 500;
     font-size: calc(12px + 4 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
-    line-height: 1;
+    line-height: calc(19 / 16);
     white-space: nowrap;
-
     i.icon-cart {
         font-size: 39px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
     }
 }

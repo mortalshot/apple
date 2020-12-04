@@ -214,6 +214,8 @@
 	&__tabs {
 		flex: 0 0 50%;
 		max-width: 50%;
+		display: flex;
+		flex-direction: column;
 	}
 
 	&__about {
@@ -224,14 +226,19 @@
 	.slick {
 	}
 	&__thumbnails {
-		max-width: 25%;
-		flex: 0 0 25%;
+		@media screen and (min-width: 992px) {
+			max-width: 25%;
+			flex: 0 0 25%;
+			border-right: 1px solid $LGray3;
+		}
 
 		.gallery__image {
-			border-right: 1px solid $LGray3;
-			border-bottom: 1px solid $LGray3;
 			position: relative;
-			padding-bottom: 118%;
+			padding-bottom: 118.8%;
+
+			@media screen and (max-width: 991px) {
+				padding-bottom: 13.5%;
+			}
 
 			img {
 				position: absolute;
@@ -252,9 +259,11 @@
 	}
 
 	&__main {
-		max-width: 75%;
-		flex: 0 0 75%;
-		border-right: 1px solid $LGray3;
+		@media screen and (min-width: 992px) {
+			max-width: 75%;
+			flex: 0 0 75%;
+			border-right: 1px solid $LGray3;
+		}
 
 		.slick-track {
 			display: flex;
@@ -266,7 +275,6 @@
 			margin: 0 auto;
 			position: relative;
 			padding-bottom: 29.4%;
-
 			img {
 				position: absolute;
 				top: 0;
@@ -275,17 +283,41 @@
 				height: 100%;
 				object-fit: contain;
 				padding: 60px 0;
+
+				@media screen and (max-width: 991px) {
+					padding: 30px;
+				}
+			}
+			@media screen and (max-width: 991px) {
+				display: flex;
+				justify-content: center;
+				padding-bottom: 19.6%;
 			}
 		}
 	}
 
 	.tabs-content {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+
 		&__item {
+			height: 100%;
+			flex-direction: column-reverse;
+
+			&--active {
+				@media screen and (min-width: 992px) {
+					display: flex;
+				}
+				@media screen and (max-width: 991px) {
+					display: flex;
+				}
+			}
 		}
 	}
 }
 .product-about {
-	padding: 55px 0;
+	padding: 55px 0 50px;
 
 	&__container {
 		padding: 0 67px 0 43px;
@@ -315,6 +347,9 @@
 			padding-left: 14px;
 			margin-bottom: 1.8em;
 			position: relative;
+			&:last-child {
+				margin-bottom: 0;
+			}
 
 			&::before {
 				content: "";
@@ -339,7 +374,6 @@
 
 	&__summary {
 		text-align: right;
-		max-width: 39.8%;
 
 		.options {
 			display: inline-flex;
@@ -407,10 +441,13 @@
 		.options {
 			&__item {
 				margin-bottom: 1em;
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 
 			&__input {
-				&:checked+.options__label {
+				&:checked + .options__label {
 					&::after {
 						transform: translate(0, -50%) scale(1);
 					}
@@ -452,4 +489,9 @@
 
 	&__btn {
 	}
+}
+
+.qweqwe {
+	min-height: 100px;
+	background-color: $Black;
 }

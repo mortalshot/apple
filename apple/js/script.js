@@ -31,7 +31,6 @@ $('.gallery__main').slick({
     slidesToScroll: 1,
     arrows: false,
     fade: true,
-    // adaptiveHeight: true,
     asNavFor: '.gallery__thumbnails',
 });
 $('.gallery__thumbnails').slick({
@@ -42,6 +41,16 @@ $('.gallery__thumbnails').slick({
     focusOnSelect: true,
     vertical: true,
     verticalSwiping: true,
+
+    responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            vertical: false,
+            verticalSwiping: false,
+          }
+        },
+      ]
 });
 
 $('#productGallery .tabs-triggers__item').click(function() {

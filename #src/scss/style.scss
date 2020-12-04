@@ -40,6 +40,7 @@
 		height: 100%;
 		background: #fff;
 		z-index: 2;
+		box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.08);
 	}
 
 	&__container {
@@ -206,8 +207,8 @@
 		color: $DGray;
 	}
 }
-
 // !Header end
+
 .product {
 	display: flex;
 
@@ -226,9 +227,6 @@
 	.slick {
 	}
 	&__thumbnails {
-		display: flex;
-		align-items: center;
-		
 		@media screen and (min-width: 992px) {
 			max-width: 25%;
 			flex: 0 0 25%;
@@ -275,9 +273,6 @@
 	}
 
 	&__main {
-		display: flex;
-		align-items: center;
-
 		@media screen and (min-width: 992px) {
 			max-width: 75%;
 			flex: 0 0 75%;
@@ -548,8 +543,4 @@
 	&__btn {
 	}
 }
-
-.qweqwe {
-	min-height: 100px;
-	background-color: $Black;
-}
+// !Product end

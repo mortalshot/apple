@@ -1,0 +1,65 @@
+.characteristics {
+    padding: 49px 0 78px;
+    background-color: $LGray2;
+
+    @media screen and (min-width: $layoutDesktop + "px") {
+        padding: 2.5em 0 3.9em;
+    }
+    @media screen and (max-width: 991px) {
+        padding: 30px 0 50px;
+    }
+    @media screen and (max-width: 767px) {
+        padding: 30px 0;
+    }
+
+    &__container {
+        max-width: 1268px;
+
+        @media screen and (min-width: $layoutDesktop + "px") {
+            max-width: 93%;
+        }
+    }
+
+    &__header {
+        margin-bottom: 2.1em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        font-weight: 300;
+        font-size: calc(18px + 8 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+        line-height: calc(36 / 26);
+        margin-right: 20px;
+    }
+
+    &__logo {
+        flex: 0 1 175px;
+    }
+
+    &__body {
+        margin-bottom: 2.2em;
+    }
+
+    &__item {
+        font-weight: 700;
+        font-size: calc(14px + 4 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+        line-height: calc(22 / 18);
+        margin-bottom: 0.7em;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__btn {
+        display: inline-block;
+        font-weight: 300;
+        font-size: calc(14px + 4 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+        line-height: calc(25 / 18);
+        color: $Black;
+        border-bottom: 1px dashed $DGray;
+    }
+}

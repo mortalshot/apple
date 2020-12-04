@@ -355,6 +355,95 @@ img {
   border-radius: 3px;
 }
 
+.features__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.features__card {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.333%;
+          flex: 0 0 33.333%;
+  position: relative;
+  min-height: 448px;
+  overflow: hidden;
+}
+
+.features__title {
+  font-weight: 300;
+  color: #1f1f1f;
+  max-width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.features__image {
+  position: absolute;
+  width: 100%;
+}
+
+.features .features__card--iphone12-1 .features__title {
+  max-width: 60%;
+  margin: 2.4em auto;
+}
+
+.features .features__card--iphone12-1 .features__image {
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  max-width: 64%;
+}
+
+.features .features__card--iphone12-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.features .features__card--iphone12-2 .features__title {
+  font-size: calc(18px + 8 * ((100vw - 320px) / (1366 - 320)));
+  line-height: calc(36 / 26);
+  max-width: 70%;
+  padding: 2.4em 0;
+}
+
+.features .features__card--iphone12-2 .features__image {
+  position: inherit;
+  left: auto;
+  bottom: auto;
+  margin: 0 auto 2.9em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.features .features__card--iphone12-3 .features__title {
+  font-size: calc(18px + 8 * ((100vw - 320px) / (1366 - 320)));
+  line-height: calc(36 / 26);
+  color: #b7b7b7;
+  max-width: 64%;
+  margin: 2.6em auto 0;
+}
+
+.features .features__card--iphone12-3 .features__image {
+  right: 0;
+  bottom: 0;
+  max-width: 85%;
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -568,6 +657,35 @@ img {
   .main__image {
     max-width: 60%;
   }
+
+  .features .features__card--iphone12-1 .features__image {
+    max-width: 300px;
+  }
+
+  .features .features__card--iphone12-3 .features__image {
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .features .features__card--iphone12-1 .features__title {
+    max-width: 70%;
+    margin: 2em auto;
+  }
+
+  .features .features__card--iphone12-2 .features__title {
+    max-width: 80%;
+    padding: 2em 0;
+  }
+
+  .features .features__card--iphone12-2 .features__image {
+    margin-bottom: 1.45em;
+  }
+
+  .features .features__card--iphone12-3 .features__title {
+    max-width: 75%;
+    margin: 2em auto;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -578,6 +696,10 @@ img {
 
   .main-menu__item {
     margin-right: 1.5em;
+  }
+
+  .features__card {
+    min-height: 330px;
   }
 }
 
@@ -594,6 +716,28 @@ img {
 
   .main-menu__item {
     margin-right: 0.4em;
+  }
+
+  .features__cards {
+    overflow-x: auto;
+  }
+
+  .features__card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 48%;
+            flex: 0 0 48%;
+  }
+
+  .features .features__card--iphone12-1 .features__title {
+    max-width: 80%;
+  }
+
+  .features .features__card--iphone12-2 .features__title {
+    max-width: 90%;
+  }
+
+  .features .features__card--iphone12-3 .features__title {
+    max-width: 585;
   }
 
   .header__body {
@@ -618,9 +762,36 @@ img {
     overflow-x: auto;
   }
 
+  .main-menu__list {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+
   .main-menu__item {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
+  }
+
+  .features__card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 80%;
+            flex: 0 0 80%;
+    min-height: 380px;
+  }
+
+  .features__title {
+    font-size: calc(18px + 8 * ((100vw - 320px) / (1366 - 320)));
+    line-height: calc(36 / 26);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .features__card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 95%;
+            flex: 0 0 95%;
+    min-height: 350px;
   }
 }

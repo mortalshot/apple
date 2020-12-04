@@ -1151,14 +1151,6 @@ textarea.form__input {
           flex-direction: column;
 }
 
-.gallery .tabs-content__item {
-  height: 100%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-}
-
 .product-about {
   padding: 55px 0 50px;
 }
@@ -1492,6 +1484,14 @@ textarea.form__input {
         -ms-flex-pack: center;
             justify-content: center;
     padding-bottom: 19.6%;
+  }
+
+  .gallery .tabs-content__item {
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
 
   .gallery .tabs-content__item--active {

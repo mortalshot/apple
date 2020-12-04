@@ -302,8 +302,10 @@
 		flex-direction: column;
 
 		&__item {
-			height: 100%;
-			flex-direction: column-reverse;
+			@media screen and (max-width: 991px) {
+				height: 100%;
+				flex-direction: column-reverse;
+			}
 
 			&--active {
 				@media screen and (min-width: 992px) {

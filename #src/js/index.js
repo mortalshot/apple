@@ -6,4 +6,5 @@
 @@include('components/menu.js')
 @@include('components/slider.js')
 @@include('components/tabs.js')
+@@include('components/product-info.js')
 

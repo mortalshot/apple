@@ -360,6 +360,10 @@ img {
   display: none;
 }
 
+p {
+  margin: 1.4em 0;
+}
+
 .icon-star {
   display: inline-block;
   vertical-align: middle;
@@ -1370,6 +1374,61 @@ textarea.form__input {
           flex: 1 1 auto;
 }
 
+.about-product {
+  padding: 4.7em 0 5.2em;
+}
+
+.about-product__container {
+  max-width: 1093px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.about-product__title {
+  margin-bottom: 1em;
+}
+
+.about-product__text {
+  font-weight: 300;
+}
+
+.product-features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -0.75em 1.5em;
+  padding-bottom: 1em;
+}
+
+.product-features__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+}
+
+.product-features__wrapper {
+  padding: 0 0.75em;
+}
+
+.product-features__icon {
+  margin-bottom: 10px;
+}
+
+.product-features__title {
+  font-weight: 600;
+  font-size: calc(14px + 4 * ((100vw - 320px) / (1366 - 320)));
+  line-height: 140%;
+}
+
+.product-features__text {
+  font-weight: 300;
+  color: #b3b3b3;
+  font-size: calc(12px + 4 * ((100vw - 320px) / (1366 - 320)));
+  line-height: 140%;
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -1971,6 +2030,10 @@ textarea.form__input {
     margin-top: 175px;
   }
 
+  .about-product__container {
+    max-width: 80%;
+  }
+
   .product-about__container {
     padding: 0 3.3em 0 2.1em;
   }
@@ -2178,6 +2241,14 @@ textarea.form__input {
     max-width: 85%;
   }
 
+  .about-product {
+    padding: 2em 0 3em;
+  }
+
+  .about-product__container {
+    padding: 0 15px;
+  }
+
   .gallery__thumbnails .gallery__image {
     padding-bottom: 13.5%;
   }
@@ -2339,6 +2410,20 @@ textarea.form__input {
     max-width: 100%;
   }
 
+  .product-features {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-bottom: 0;
+    padding-bottom: 0.5em;
+  }
+
+  .product-features__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 35%;
+            flex: 0 0 35%;
+  }
+
   .header__body {
     height: 54px;
   }
@@ -2455,6 +2540,12 @@ textarea.form__input {
   .accessories__image {
     margin-bottom: -30px;
   }
+
+  .product-features__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 55%;
+            flex: 0 0 55%;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -2496,5 +2587,11 @@ textarea.form__input {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 95%;
             flex: 0 0 95%;
+  }
+
+  .product-features__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 80%;
+            flex: 0 0 80%;
   }
 }

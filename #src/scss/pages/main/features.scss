@@ -36,12 +36,14 @@
 		font-weight: 300;
 		color: $Black;
 		max-width: 100%;
+		padding: 0 15px;
 		position: relative;
 		z-index: 1;
 
 		@media screen and (max-width: 575px) {
 			font-size: calc(18px + 8 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 			line-height: calc(36 / 26);
+			max-width: 100% !important;
 		}
 	}
 
@@ -95,6 +97,9 @@
 				}
 				@media screen and (max-width: 767px) {
 					max-width: 90%;
+				}
+				@media screen and (max-width: 575px) {
+					padding: 2em 15px;
 				}
 			}
 			&__image {
@@ -181,6 +186,9 @@
 				@media screen and (max-width: 767px) {
 					max-width: 85%;
 				}
+				@media screen and (max-width: 575px) {
+					padding: 2em 15px;
+				}
 			}
 			&__image {
 				position: inherit;
@@ -238,7 +246,7 @@
 				line-height: $lineHeight;
 				max-width: 45%;
 				margin: 4.1em 0;
-				padding: 0px 20px 0px 3em;
+				padding: 0px 15px 0px 3em;
 
 				@media screen and (max-width: 991px) {
 					padding-left: 1.5em;
@@ -248,7 +256,7 @@
 				}
 				@media screen and (max-width: 575px) {
 					max-width: 100%;
-					padding: 0 20px;
+					padding: 0 15px;
 				}
 			}
 			&__image {
@@ -286,7 +294,7 @@
 				font-size: calc(14px + 6 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 				line-height: $lineHeight;
 				max-width: 56%;
-				padding: 0px 20px 0px 3.5em;
+				padding: 0px 15px 0px 3.5em;
 				margin: 3.1em 0;
 				color: $DGray2;
 
@@ -298,7 +306,7 @@
 				}
 				@media screen and (max-width: 575px) {
 					max-width: 100%;
-					padding: 0 20px;
+					padding: 0 15px;
 				}
 			}
 			&__image {

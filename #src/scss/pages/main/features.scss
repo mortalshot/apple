@@ -13,11 +13,14 @@
 		min-height: 448px;
 		overflow: hidden;
 
+		@media screen and (min-width: 1921px) {
+			min-height: 558px;
+		}
 		@media screen and (max-width: 991px) {
 			min-height: 330px;
 		}
 		@media screen and (max-width: 767px) {
-			flex: 0 0 48%;
+			flex: 0 0 40%;
 		}
 		@media screen and (max-width: 575px) {
 			flex: 0 0 80%;
@@ -102,9 +105,6 @@
 				display: flex;
 				justify-content: center;
 
-				@media screen and (min-width: $layoutDesktop + "px") {
-					margin-top: 5em;
-				}
 				@media screen and (max-width: 1300px) {
 					margin-bottom: 1.45em;
 				}
@@ -175,7 +175,6 @@
 				max-width: 76%;
 				padding: 3.2em 0 3.1em;
 
-
 				@media screen and (max-width: 991px) {
 					padding: 2em 0;
 				}
@@ -217,6 +216,101 @@
 
 				@media screen and (min-width: $layoutDesktop + "px") {
 					max-width: 230px;
+				}
+			}
+		}
+	}
+
+	.features__card--iphone12-7 {
+		flex: 0 0 50%;
+
+		@media screen and (max-width: 575px) {
+			flex: 0 0 80%;
+		}
+		@media screen and (max-width: 400px) {
+			flex: 0 0 95%;
+		}
+
+		.features {
+			&__title {
+				font-weight: 400;
+				font-size: calc(14px + 6 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+				line-height: $lineHeight;
+				max-width: 45%;
+				margin: 4.1em 0;
+				padding: 0px 20px 0px 3em;
+
+				@media screen and (max-width: 991px) {
+					padding-left: 1.5em;
+				}
+				@media screen and (max-width: 767px) {
+					margin: 2em 0;
+				}
+				@media screen and (max-width: 575px) {
+					max-width: 100%;
+					padding: 0 20px;
+				}
+			}
+			&__image {
+				left: 50%;
+				bottom: 0;
+				transform: translate(-47%, 0);
+				max-width: 95%;
+
+				@media screen and (min-width: 1921px) {
+					max-width: 800px;
+				}
+				@media screen and (min-width: $layoutDesktop + "px") {
+					max-width: 650px;
+				}
+			}
+		}
+	}
+
+	.features__card--iphone12-8 {
+		flex: 0 0 50%;
+		display: flex;
+		align-items: flex-end;
+
+		@media screen and (max-width: 575px) {
+			align-items: flex-start;
+			flex: 0 0 80%;
+		}
+		@media screen and (max-width: 400px) {
+			flex: 0 0 95%;
+		}
+
+		.features {
+			&__title {
+				font-weight: 400;
+				font-size: calc(14px + 6 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+				line-height: $lineHeight;
+				max-width: 56%;
+				padding: 0px 20px 0px 3.5em;
+				margin: 3.1em 0;
+				color: $DGray2;
+
+				@media screen and (max-width: 991px) {
+					padding-left: 2em;
+				}
+				@media screen and (max-width: 767px) {
+					margin: 2em 0;
+				}
+				@media screen and (max-width: 575px) {
+					max-width: 100%;
+					padding: 0 20px;
+				}
+			}
+			&__image {
+				bottom: 0;
+				right: 0;
+				max-width: 39%;
+
+				@media screen and (min-width: 1921px) {
+					max-width: 326px;
+				}
+				@media screen and (min-width: $layoutDesktop + "px") {
+					max-width: 266px;
 				}
 			}
 		}

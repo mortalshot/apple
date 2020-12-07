@@ -4,11 +4,9 @@
 	padding: 3.6em 0 2.2em;
 
 	&__container {
-		max-width: 890px;
-		padding: 0 15px;
-		margin: 0 auto;
+		max-width: 940px;
 
-		@media screen and (min-width: $layoutDesktop + 'px') {
+		@media screen and (min-width: 1400px) {
 			max-width: 62.6%;
 		}
 		@media screen and (max-width: 767px) {

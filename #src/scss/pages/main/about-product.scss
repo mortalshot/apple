@@ -1,20 +1,15 @@
 .about-product {
-	padding: 4.7em 0 5.2em;
+	padding: 4.7em 0 3.8em;
 
 	@media screen and (max-width: 991px) {
 		padding: 2em 0 3em;
 	}
 
 	&__container {
-		max-width: 1093px;
-		padding: 0 30px;
-		margin: 0 auto;
+		max-width: 1143px;
 
-		@media screen and (min-width: $layoutDesktop + "px") {
+		@media screen and (min-width: 1400px) {
 			max-width: 80%;
-		}
-		@media screen and (max-width: 991px) {
-			padding: 0 15px;
 		}
 	}
 

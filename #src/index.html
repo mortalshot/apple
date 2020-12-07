@@ -29,30 +29,24 @@
 		</div>
 	</section>
 
-	<section class="features">
-		<div class="features__cards">
-			<div class="features__card features__card--iphone12-1" style="background-color: #c4c4c4;">
-				<h2 class="features__title">Новая широкоугольная камера Wide и Ultra Wide теперь имеет ночной режим</h2>
-				<div class="features__image">
-					<img src="img/iphone12/features/feature-1.png" alt="">
-				</div>
-			</div>
-			<div class="features__card features__card--iphone12-2" style="background-color: #e7e3f3;">
-				<h2 class="features__title">A14 Bionic, самый быстрый процессор iPhone</h2>
-				<div class="features__image">
-					<img src="img/iphone12/features/feature-2.png" alt="">
-				</div>
-			</div>
-			<div class="features__card features__card--iphone12-3" style="background-color: #0f0d10;">
-				<h2 class="features__title">Лучший дисплей iPhone Super Retina XDR</h2>
-				<div class="features__image">
-					<img src="img/iphone12/features/feature-3.png" alt="">
-				</div>
-			</div>
-		</div>
-	</section>
+	@@include('html-components/features.html', {
+	"card1Class": "features__card--iphone12-1",
+	"card1Color": "#c4c4c4",
+	"card1Text": "Новая широкоугольная камера Wide и Ultra Wide теперь имеет ночной режим",
+	"card1Img": "img/iphone12/features/feature-1.png",
 
-	<!-- <section id="productGallery" class="product tabs">
+	"card2Class": "features__card--iphone12-2",
+	"card2Color": "#e7e3f3",
+	"card2Text": "A14 Bionic, самый быстрый процессор iPhone",
+	"card2Img": "img/iphone12/features/feature-2.png",
+
+	"card3Class": "features__card--iphone12-3",
+	"card3Color": "#0f0d10",
+	"card3Text": "Лучший дисплей iPhone Super Retina XDR",
+	"card3Img": "img/iphone12/features/feature-3.png",
+	})
+
+	<section id="productGallery" class="product tabs">
 		<div class="product__tabs gallery">
 			<div class="tabs__content tabs-content">
 				<div id="productGallery-1" class="tabs-content__item">
@@ -207,7 +201,7 @@
 				</div>
 			</div>
 		</div>
-	</section> -->
+	</section>
 
 	<section class="iphone">
 		<div class="iphone__container">
@@ -356,7 +350,8 @@
 							<img src="img/icons/design_battery.svg" alt="">
 						</div>
 					</div>
-					<div class="design-note__text">Поддержка 5G. Передача данных по беспроводным сетям LTE со скоростью до 2 Гбит/с. До 17 часов воспроизведения видео</div>
+					<div class="design-note__text">Поддержка 5G. Передача данных по беспроводным сетям LTE со скоростью
+						до 2 Гбит/с. До 17 часов воспроизведения видео</div>
 				</div>
 			</div>
 		</div>
@@ -364,6 +359,23 @@
 			<img src="img/iphone12/design-img.png" alt="" width="469px" height="595px">
 		</div>
 	</section>
+
+	@@include('html-components/features.html', {
+	"card1Class": "features__card--iphone12-4",
+	"card1Color": "#AECBD9",
+	"card1Text": "Лучший дисплей iPhone с невероятной контрастностью и более высоким разрешением.",
+	"card1Img": "img/iphone12/features/feature-4.png",
+
+	"card2Class": "features__card--iphone12-5",
+	"card2Color": "#E7E3F3",
+	"card2Text": "Благодаря 16‑ядерной системе Neural Engine он легко выполняет триллионы операций в секунду. А высокая энергоэффективность обеспечивает долгую работу без подзарядки",
+	"card2Img": "img/iphone12/features/feature-5.png",
+
+	"card3Class": "features__card--iphone12-6",
+	"card3Color": "#E2F4DE",
+	"card3Text": "Лучший дисплей iPhone Super Retina XDR",
+	"card3Img": "img/iphone12/features/feature-6.png",
+	})
 
 
 	<br>

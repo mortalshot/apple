@@ -397,6 +397,18 @@ img {
           justify-content: center;
 }
 
+.title-h2 {
+  font-weight: 500;
+  font-size: calc(24px + 24 * ((100vw - 320px) / (1366 - 320)));
+  line-height: calc(58 / 48);
+}
+
+.title-h3 {
+  font-weight: 500;
+  font-size: calc(20px + 20 * ((100vw - 320px) / (1366 - 320)));
+  line-height: calc(48 / 40);
+}
+
 .form__body {
   position: relative;
 }
@@ -1018,6 +1030,91 @@ textarea.form__input {
   border-bottom: 1px dashed #333333;
 }
 
+.accessories__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.accessories__card {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.333%;
+          flex: 0 0 33.333%;
+  border-right: 1px solid #eaeaea;
+}
+
+.accessories__card:last-child {
+  border-right: 0;
+}
+
+.accessories__wrapper {
+  padding: 2.5em 2.5em 2em;
+}
+
+.accessories__heading {
+  text-align: right;
+  position: relative;
+  z-index: 1;
+}
+
+.accessories__title {
+  margin-bottom: 0.23em;
+}
+
+.accessories__body {
+  margin-bottom: 37px;
+}
+
+.accessories__image {
+  position: relative;
+  max-width: 48%;
+  margin: -38px 0 -100px 19px;
+  padding-bottom: 100%;
+}
+
+.accessories__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.accessories__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.accessories__price-wrapper {
+  white-space: nowrap;
+}
+
+.accessories__price {
+  margin-right: 20px;
+  font-size: calc(14px + 16 * ((100vw - 320px) / (1366 - 320)));
+  line-height: calc(36 / 30);
+}
+
+.accessories__old {
+  text-decoration: line-through;
+}
+
+.accessories__btn {
+  color: #333333;
+  padding: 0.3em 1.2em;
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -1479,6 +1576,17 @@ textarea.form__input {
   margin-bottom: 0.7em;
 }
 
+@media screen and (min-width: 576px) {
+  .accessories__price-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .header__item.menu__item--has-children .sub-menu {
     position: absolute;
@@ -1569,6 +1677,15 @@ textarea.form__input {
     max-width: 93%;
   }
 
+  .accessories__body {
+    margin-bottom: 1.85em;
+  }
+
+  .accessories__image {
+    padding-bottom: 17.8em;
+    margin: -1.9em 0 -5em 19px;
+  }
+
   .product-about__container {
     padding: 0 3.3em 0 2.1em;
   }
@@ -1607,6 +1724,10 @@ textarea.form__input {
 }
 
 @media screen and (min-width: 1600px) {
+  .accessories__image {
+    margin-bottom: -4em;
+  }
+
   .gallery__main .gallery__image {
     padding-bottom: 20%;
   }
@@ -1632,6 +1753,13 @@ textarea.form__input {
   }
 }
 
+@media screen and (min-width: 1920px) {
+  .accessories__image {
+    margin-bottom: -3em;
+    max-width: 38%;
+  }
+}
+
 @media screen and (max-width: 1300px) {
   .features .features__card--iphone12-1 .features__title {
     max-width: 70%;
@@ -1653,6 +1781,16 @@ textarea.form__input {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .accessories__wrapper {
+    padding: 1.75em 1.75em 1em;
+  }
+
+  .accessories__image {
+    margin: -15px 0 -85px 19px;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .main {
     min-height: 500px;
@@ -1669,6 +1807,14 @@ textarea.form__input {
 
   .characteristics {
     padding: 30px 0 50px;
+  }
+
+  .accessories__wrapper {
+    padding: 25px 20px;
+  }
+
+  .accessories__price {
+    margin-right: 10px;
   }
 
   .gallery__thumbnails .gallery__image {
@@ -1709,6 +1855,12 @@ textarea.form__input {
 @media screen and (max-width: 920px) {
   .header__menu {
     display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .accessories__btn {
+    padding: 0.15em 0.6em;
   }
 }
 
@@ -1759,6 +1911,25 @@ textarea.form__input {
 
   .characteristics {
     padding: 30px 0;
+  }
+
+  .accessories__cards {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .accessories__card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+            flex: 0 0 40%;
+  }
+
+  .accessories__wrapper {
+    padding: 20px;
+  }
+
+  .accessories__image {
+    margin: 0 0 -75px 19px;
   }
 
   .header__body {
@@ -1812,10 +1983,26 @@ textarea.form__input {
         -ms-flex: 0 0 43%;
             flex: 0 0 43%;
   }
+
+  .accessories__card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 43%;
+            flex: 0 0 43%;
+  }
+
+  .accessories__image {
+    margin-bottom: -30px;
+  }
 }
 
 @media screen and (max-width: 450px) {
   .iphone__card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 55%;
+            flex: 0 0 55%;
+  }
+
+  .accessories__card {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 55%;
             flex: 0 0 55%;

@@ -1,3 +1,13 @@
 .title {
-    
+    &-h2 {
+        font-weight: 500;
+        font-size: calc(24px + 24 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+        line-height: calc(58 / 48);
+    }
+
+    &-h3 {
+        font-weight: 500;
+        font-size: calc(20px + 20 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+        line-height: calc(48 / 40);
+    }
 }

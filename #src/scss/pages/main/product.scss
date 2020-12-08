@@ -84,10 +84,9 @@
 	}
 
 	&__main {
-		display: flex;
-		align-items: center;
-
 		@media screen and (min-width: 992px) {
+			display: flex;
+			align-items: center;
 			max-width: 75%;
 			flex: 0 0 75%;
 			border-right: 1px solid $LGray3;

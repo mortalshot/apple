@@ -33,9 +33,15 @@
 		font-size: calc(24px + 24 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 		line-height: calc(58 / 48);
 		margin-bottom: 0.8em;
+		transition: 0.3s ease all 0s;
 
 		span {
 			font-weight: 500;
+		}
+
+		&._active {
+			opacity: 1;
+			transform: translate(0, 0);
 		}
 	}
 
@@ -43,6 +49,7 @@
 		max-width: 366px;
 		margin: 0 auto;
 		font-weight: 300;
+		transition: 0.3s ease all 0.2s;
 
 		@media screen and (min-width: $layoutDesktop + "px") {
 			max-width: 36%;
@@ -52,12 +59,12 @@
 	&__image {
 		max-width: 612px;
 		margin: 0 auto;
+		transition: 0.3s ease all 0.3s;
 
 		@media screen and (min-width: $layoutDesktop + "px") {
 			max-width: 60%;
 		}
 	}
-
 
 	&--center {
 		.main {
@@ -95,6 +102,9 @@
 
 	&__item {
 		margin-right: 2.4em;
+		opacity: 0;
+		transform: translate(0, 50%);
+
 		&:last-child {
 			margin-right: 0;
 		}
@@ -108,6 +118,20 @@
 		@media screen and (max-width: 575px) {
 			flex: 1 1 auto;
 		}
+
+		&._active {
+			opacity: 1;
+			transform: translate(0, 0);
+		}
+	}
+
+	$j: 0.4;
+	@for $i from 1 to 10 {
+		.main-menu__item:nth-child(#{$i}) {
+			transition: 0.3s ease all #{$j}s;
+		}
+
+		$j: $j + 0.15;
 	}
 
 	&__link {

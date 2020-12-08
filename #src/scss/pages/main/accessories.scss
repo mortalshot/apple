@@ -2,6 +2,7 @@
 .accessories {
 	&__cards {
 		display: flex;
+		overflow-y: hidden;
 
 		@media screen and (max-width: 767px) {
 			overflow-x: auto;
@@ -25,6 +26,14 @@
 		@media screen and (max-width: 450px) {
 			flex: 0 0 55%;
 		}
+	}
+	$j: 0;
+	@for $i from 1 to 4 {
+		.accessories__card:nth-child(#{$i}) {
+			transition: 0.3s ease all #{$j}s;
+		}
+
+		$j: $j + 0.2;
 	}
 
 	&__wrapper {

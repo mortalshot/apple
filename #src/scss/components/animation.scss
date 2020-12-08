@@ -1,0 +1,36 @@
+._anim-bottom {
+    transform: translate(0, 40%);
+    opacity: 0;
+    transition: 0.3s ease all 0s;
+}
+._anim-bottom._active,
+._active ._anim-bottom {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+._anim-left {
+    @media screen and (min-width: 768px) {
+        transform: translate(-100%, 0);
+        opacity: 0;
+        transition: 0.3s ease all 0s;
+
+        &._active {
+            transform: translate(0, 0);
+            opacity: 1;
+        }
+    }
+}
+
+._anim-right {
+    @media screen and (min-width: 768px) {
+        transform: translate(100%, 0);
+        opacity: 0;
+        transition: 0.3s ease all 0s;
+
+        &._active {
+            transform: translate(0, 0);
+            opacity: 1;
+        }
+    }
+}

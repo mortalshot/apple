@@ -47,6 +47,7 @@
 	}
 
 	&__text {
+		transition: 0.3s ease all 0.3s;
 		@media screen and (min-width: 651px) {
 			max-width: 77%;
 		}
@@ -59,6 +60,7 @@
 	&__size {
 		flex: 0 0 50%;
 		padding-right: 15px;
+		transition: 0.3s ease all 0.4s;
 		&:last-child {
 			padding-right: 0;
 		}

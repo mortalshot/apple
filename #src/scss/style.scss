@@ -210,13 +210,18 @@
 // !Header end
 
 .product {
-	display: flex;
+	@media screen and (min-width: 576px) {
+		display: flex;
+	}
 
 	&__tabs {
 		flex: 0 0 50%;
-		max-width: 50%;
 		display: flex;
 		flex-direction: column;
+
+		@media screen and (min-width: 576px) {
+			max-width: 50%;
+		}
 	}
 
 	&__about {
@@ -224,7 +229,11 @@
 	}
 }
 .gallery {
-	.slick {
+	@media screen and (max-width: 575px) {
+		padding: 0 20px;
+	}
+	@media screen and (max-width: 450px) {
+		padding-top: 30px;
 	}
 	&__thumbnails {
 		@media screen and (min-width: 992px) {
@@ -252,6 +261,9 @@
 			@media screen and (max-width: 991px) {
 				padding-bottom: 13.5%;
 			}
+			@media screen and (max-width: 575px) {
+				padding-bottom: 4%;
+			}
 
 			img {
 				position: absolute;
@@ -262,6 +274,13 @@
 				object-fit: contain;
 				padding: 25px;
 				max-height: 200px;
+
+				@media screen and (max-width: 767px) {
+					padding: 20px;
+				}
+				@media screen and (max-width: 575px) {
+					padding: 0;
+				}
 			}
 		}
 	}
@@ -305,6 +324,12 @@
 			@media screen and (min-width: 1400px) {
 				padding-bottom: 27%;
 			}
+			@media screen and (max-width: 575px) {
+				padding-bottom: 15%;
+			}
+			@media screen and (max-width: 450px) {
+				padding-bottom: 12%;
+			}
 
 			img {
 				position: absolute;
@@ -318,6 +343,9 @@
 
 				@media screen and (max-width: 991px) {
 					padding: 30px;
+				}
+				@media screen and (max-width: 450px) {
+					padding: 10px;
 				}
 			}
 			@media screen and (max-width: 991px) {
@@ -362,6 +390,12 @@
 		@media screen and (max-width: 991px) {
 			padding: 0 35px 0 18px;
 		}
+		@media screen and (max-width: 767px) {
+			padding: 0 20px 0 0;
+		}
+		@media screen and (max-width: 575px) {
+			padding: 0 20px;
+		}
 	}
 
 	&__top {
@@ -372,6 +406,12 @@
 		@media screen and (min-width: $layoutDesktop + "px") {
 			margin-bottom: 95px;
 		}
+		@media screen and (max-width: 575px) {
+			margin-bottom: 1.8em;
+		}
+		@media screen and (max-width: 450px) {
+			margin-bottom: 15px;
+		}
 	}
 
 	&__row {
@@ -380,8 +420,11 @@
 	}
 
 	&__triggers {
-		flex-direction: column;
 		padding-top: 0.8em;
+		
+		@media screen and (min-width: 451px) {
+			flex-direction: column;
+		}
 
 		.tabs-triggers__item {
 			font-weight: 500;
@@ -399,6 +442,14 @@
 			@media screen and (min-width: $layoutDesktop + "px") {
 				margin-bottom: 28px;
 			}
+			@media screen and (max-width: 575px) {
+				font-size: 14px;
+				line-height: $lineHeight;
+			}
+			@media screen and (max-width: 450px) {
+				padding-left: 0;
+				margin: 0px 15px 0px 0px;
+			}
 
 			&::before {
 				content: "";
@@ -411,18 +462,35 @@
 				top: 50%;
 				transform: translate(0, -50%) scale(0);
 				transition: 0.3s ease all 0s;
+
+				@media screen and (max-width: 450px) {
+					top: auto;
+					bottom: -4px;
+					width: 100%;
+					height: 4px;
+					transform: translate(0, 100%) scale(0);
+				}
 			}
 
 			&--active {
 				&::before {
 					transform: translate(0, -50%) scale(1);
+
+					@media screen and (max-width: 450px) {
+						transform: translate(0, 100%) scale(1);
+					}
 				}
 			}
 		}
 	}
 
 	&__summary {
-		text-align: right;
+		@media screen and (min-width: 451px) {
+			text-align: right;
+		}
+		@media screen and (max-width: 450px) {
+			padding-bottom: 15px;
+		}
 
 		.options {
 			display: inline-flex;
@@ -431,23 +499,22 @@
 			background-color: $LGray;
 			border-radius: 3px;
 			padding: 4px;
-
 			&__item {
 				margin: 0px 4px 0px 0px;
 			}
-
+	
 			&__input {
 				&:checked + .options__label {
 					background-color: $White;
 				}
 			}
-
+	
 			&__label {
 				padding: 10px;
 				font-weight: 500;
 				font-size: calc(12px + 4 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 				line-height: calc(19 / 16);
-
+	
 				&::before,
 				&::after {
 					display: none;
@@ -466,28 +533,35 @@
 	&__attributes {
 		display: flex;
 		align-items: center;
-		justify-content: flex-end;
 		font-size: calc(14px + 14 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 		line-height: calc(34 / 28);
 		margin-bottom: 1.6em;
+		
+		@media screen and (min-width: 451px) {
+			justify-content: flex-end;
+		}
 	}
 
 	&__storage {
 		margin-right: 5px;
 	}
 
-	&__color {
-	}
-
-	&__options {
-	}
-
 	&__bottom {
 		.row {
 			align-items: center;
+
+			@media screen and (max-width: 450px) {
+				flex-direction: column;
+				align-items: flex-start;
+			}
 		}
 
 		.options {
+			@media screen and (max-width: 450px) {
+				display: flex;
+				padding-bottom: 25px;
+			}
+
 			&__item {
 				margin-bottom: 1em;
 				&:last-child {
@@ -497,12 +571,19 @@
 				@media screen and (min-width: $layoutDesktop + "px") {
 					margin-bottom: 20px;
 				}
+				@media screen and (max-width: 450px) {
+					margin: 0px 15px 0 0px;
+				}
 			}
 
 			&__input {
 				&:checked + .options__label {
 					&::after {
 						transform: translate(0, -50%) scale(1);
+
+						@media screen and (max-width: 450px) {
+							transform: translate(0, 100%) scale(1);
+						}
 					}
 				}
 			}
@@ -511,6 +592,14 @@
 				padding-left: 14px;
 				font-size: calc(12px + 4 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 				line-height: calc(19 / 16);
+
+				@media screen and (max-width: 575px) {
+					font-size: 14px;
+					line-height: $lineHeight;
+				}
+				@media screen and (max-width: 450px) {
+					padding: 0;
+				}
 
 				&::before {
 					display: none;
@@ -525,22 +614,45 @@
 					transform: translate(0, -50%) scale(0);
 					border-radius: 0;
 					transition: 0.3s ease all 0s;
+
+					@media screen and (max-width: 450px) {
+						width: 100%;
+						height: 4px;
+						top: auto;
+						bottom: -4px;
+						transform: translate(0, 100%) scale(0);
+					}
 				}
 			}
 		}
 	}
 
 	&__cart {
-		text-align: right;
+		@media screen and (min-width: 451px) {
+			text-align: right;
+		}
+		@media screen and (max-width: 450px) {
+			width: 100%;
+		}
 	}
 
 	&__price {
 		font-size: calc(20px + 20 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 		line-height: calc(48 / 40);
 		margin-bottom: 0.7em;
+
+		@media screen and (max-width: 575px) {
+			font-size: 32px;
+			line-height: $lineHeight;
+			margin-bottom: 24px;
+		}
 	}
 
 	&__btn {
+		@media screen and (max-width: 450px) {
+			width: 100%;
+		}
 	}
 }
+
 // !Product end

@@ -1,5 +1,7 @@
 // libs
 @@include('libs/slick.min.js')
+@@include('libs/dynamic-adapt.js')
+@@include('libs/fancybox.js')
 
 // components
 @@include('components/webp.js')

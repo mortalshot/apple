@@ -1,0 +1,332 @@
+.header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	font-family: $fontSecondary;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #fff;
+		z-index: 2;
+		box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.08);
+	}
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		height: $size-header-height;
+
+		@media screen and (max-width: 767px) {
+			height: $size-header-height-mobile;
+		}
+	}
+
+	&__left {
+		flex: 1 1 auto;
+		display: flex;
+		align-items: center;
+	}
+
+	&__logo {
+		position: relative;
+		z-index: 2;
+		margin-right: 2.6em;
+
+		@media screen and (max-width: 767px) {
+			margin-right: 1em;
+		}
+
+		i.icon-apple {
+			font-size: 44px;
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&__menu {
+		@media screen and (max-width: 550px) {
+			position: fixed;
+			top: -100%;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			background-color: $White;
+			padding: #{$size-header-height * 1.5	} 20px 25px;
+			z-index: 1;
+			display: flex;
+			flex-direction: column;
+			transition: 0.3s ease all 0s;
+
+			&.active {
+				top: 0;
+			}
+		}
+
+		&--right {
+			@media screen and (max-width: 550px) {
+				display: none;
+			}
+		}
+	}
+
+	&__list {
+		z-index: 2;
+		@media screen and (min-width: 551px) {
+			display: flex;
+			align-items: center;
+			position: relative;
+		}
+	}
+
+	&__item {
+		margin-right: 2.3em;
+		font-weight: 500;
+		font-size: calc(12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		line-height: calc(18 / 14);
+
+		@media screen and (max-width: 767px) {
+			margin-right: 1em;
+		}
+		@media screen and (max-width: 550px) {
+			font-size: 18px;
+			line-height: $lineHeight;
+			margin: 0px 0px 15px 0px;
+		}
+
+		&.menu__item--has-children {
+			@media screen and (min-width: 992px) {
+				&:hover {
+					& > .menu__link {
+						img {
+							transform: rotate(-180deg);
+						}
+					}
+
+					.sub-menu {
+						opacity: 1;
+						visibility: visible;
+						pointer-events: all;
+					}
+				}
+			}
+
+			.menu__link {
+				@media screen and (max-width: 550px) {
+					margin: 0px 0px 15px 0px;
+
+					img {
+						display: none;
+					}
+				}
+			}
+
+			.sub-menu {
+				@media screen and (min-width: 551px) {
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					transform: translate(0, 100%);
+					display: block;
+					width: 100%;
+					min-width: 181px;
+					background-color: $White;
+					padding: 16px 19px;
+					overflow-y: auto;
+					box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.08);
+					transition: 0.3s ease all 0s;
+					opacity: 0;
+					visibility: hidden;
+					pointer-events: none;
+				}
+
+				&__list {
+				}
+
+				&__item {
+					margin-bottom: 8px;
+
+					@media screen and (max-width: 550px) {
+						margin: 0px 0px 15px 0px;
+					}
+
+					a {
+						font-family: $fontMain;
+						font-size: calc(12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+						color: $Black;
+
+						@media screen and (max-width: 550px) {
+							font-size: 18px;
+							line-height: $lineHeight;
+						}
+					}
+				}
+			}
+		}
+
+		&--active {
+			.header__link {
+				color: $Gray2;
+			}
+		}
+	}
+
+	&__link {
+		color: $DGray;
+		transition: 0.3s ease all 0s;
+		padding: 10px;
+		display: flex;
+		align-items: center;
+
+		@media screen and (max-width: 550px) {
+			padding: 0;
+		}
+
+		img {
+			margin-left: 4px;
+			transition: 0.3s ease all 0s;
+		}
+	}
+
+	&__right {
+		display: flex;
+		align-items: center;
+		position: relative;
+		z-index: 2;
+
+		.header__item {
+			margin-right: 1.4em;
+			font-weight: 400;
+			font-size: calc(11px + 1 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		}
+	}
+
+	&__phone {
+		display: inline-block;
+		font-weight: 700;
+		font-size: calc(10px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		line-height: calc(14 / 12);
+		color: $DGray;
+		margin-right: 2.6em;
+		white-space: nowrap;
+
+		@media screen and (max-width: 680px) {
+			margin-right: 1em;
+		}
+		@media screen and (max-width: 650px) {
+			font-size: 0;
+			line-height: 1;
+			padding: 5px;
+
+			&::before {
+				content: "";
+				display: block;
+				width: 16.9px;
+				height: 18.2px;
+				background: url(../img/icons/phone.svg) no-repeat center/cover;
+			}
+		}
+		@media screen and (max-width: 550px) {
+			margin-right: 10px;
+		}
+	}
+
+	&__cart {
+		@media screen and (max-width: 550px) {
+			margin-right: 1em;
+		}
+	}
+
+	&__burger {
+		display: none;
+
+		@media screen and (max-width: 550px) {
+			display: block;
+			position: relative;
+			width: 15px;
+			height: 12px;
+			z-index: 3;
+			transition: 0.3s ease all 0s;
+			padding: 6px;
+			order: 0;
+
+			&::before,
+			&::after,
+			span {
+				content: "";
+				background-color: $Black;
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				left: 0;
+				transition: 0.3s ease all 0s;
+				border-radius: 20px;
+			}
+			&::before {
+				top: 0;
+			}
+			&::after {
+				bottom: 0;
+			}
+			span {
+				top: 5px;
+			}
+
+			&-wrapper {
+				width: 54px;
+				height: 46px;
+				background-color: $White;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 2;
+				border-radius: 30px;
+				transition: 0.3s ease all 0s;
+
+				&.active {
+					background-color: $LGray;
+				}
+			}
+
+			&.active {
+				&::before {
+					transform: rotate(45deg);
+					top: 5px;
+				}
+
+				&::after {
+					transform: rotate(-45deg);
+					bottom: 5px;
+				}
+
+				span {
+					transform: scale(0);
+				}
+			}
+
+			&--menu {
+				position: absolute;
+				right: 32px;
+				top: 30px;
+			}
+		}
+	}
+}
+
+.cart {
+	i.icon-cart {
+		display: flex;
+		align-items: center;
+		font-size: 38px;
+		color: $DGray;
+	}
+}

@@ -58,6 +58,7 @@
 			&__title {
 				max-width: 60%;
 				margin: 2.4em auto;
+				transition: 0.3s ease all 0s;
 
 				@media screen and (max-width: 1300px) {
 					max-width: 70%;
@@ -72,6 +73,7 @@
 				bottom: 0;
 				transform: translate(-50%, 0);
 				max-width: 64%;
+				transition: 0.3s ease all 0.1s;
 
 				@media screen and (min-width: $layoutDesktop + "px") {
 					max-width: 300px;
@@ -91,6 +93,8 @@
 				line-height: calc(36 / 26);
 				max-width: 70%;
 				padding: 2.4em 0;
+				transition: 0.3s ease all 0.2s;
+
 
 				@media screen and (max-width: 1300px) {
 					max-width: 80%;
@@ -110,6 +114,7 @@
 				margin: 0 auto 2.9em;
 				display: flex;
 				justify-content: center;
+				transition: 0.3s ease all 0.3s;
 
 				@media screen and (max-width: 1300px) {
 					margin-bottom: 1.45em;
@@ -126,6 +131,7 @@
 				color: $Gray4;
 				max-width: 64%;
 				margin: 2.6em auto 0;
+				transition: 0.3s ease all 0.4s;
 
 				@media screen and (max-width: 1300px) {
 					max-width: 75%;
@@ -136,6 +142,7 @@
 				right: 0;
 				bottom: 0;
 				max-width: 85%;
+				transition: 0.3s ease all 0.5s;
 
 				@media screen and (min-width: $layoutDesktop + "px") {
 					max-width: 400px;
@@ -162,6 +169,7 @@
 				bottom: 0;
 				transform: translate(-18%, 0);
 				max-width: 61%;
+				transition: 0.3s ease all 0.1s;
 
 				@media screen and (min-width: $layoutDesktop + "px") {
 					max-width: 280px;
@@ -180,6 +188,7 @@
 				font-weight: 400;
 				max-width: 76%;
 				padding: 3.2em 0 3.1em;
+				transition: 0.3s ease all 0.2s;
 
 				@media screen and (max-width: 991px) {
 					padding: 2em 0;
@@ -198,6 +207,7 @@
 				margin: 1em auto 0.2em;
 				display: flex;
 				justify-content: center;
+				transition: 0.3s ease all 0.3s;
 			}
 		}
 	}
@@ -210,6 +220,7 @@
 				line-height: $lineHeight;
 				margin: 2.2em auto 0;
 				max-width: 75%;
+				transition: 0.3s ease all 0.4s;
 
 				@media screen and (max-width: 991px) {
 					margin-top: 1.5em;
@@ -222,6 +233,7 @@
 				left: 13%;
 				bottom: 0;
 				max-width: 51%;
+				transition: 0.3s ease all 0.5s;
 
 				@media screen and (min-width: $layoutDesktop + "px") {
 					max-width: 230px;
@@ -265,6 +277,7 @@
 				bottom: 0;
 				transform: translate(-47%, 0);
 				max-width: 95%;
+				transition: 0.3s ease all 0.1s;
 
 				@media screen and (min-width: 1921px) {
 					max-width: 800px;
@@ -298,6 +311,7 @@
 				padding: 0px 15px 0px 3.5em;
 				margin: 3.1em 0;
 				color: $DGray2;
+				transition: 0.3s ease all 0.2s;
 
 				@media screen and (max-width: 991px) {
 					padding-left: 2em;
@@ -314,6 +328,7 @@
 				bottom: 0;
 				right: 0;
 				max-width: 39%;
+				transition: 0.3s ease all 0.3s;
 
 				@media screen and (min-width: 1921px) {
 					max-width: 326px;

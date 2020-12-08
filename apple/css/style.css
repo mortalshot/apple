@@ -2150,6 +2150,9 @@ textarea.form__input {
 .features .features__card--iphone12-1 .features__title {
   max-width: 60%;
   margin: 2.4em auto;
+  -webkit-transition: 0.3s ease all 0s;
+  -o-transition: 0.3s ease all 0s;
+  transition: 0.3s ease all 0s;
 }
 
 .features .features__card--iphone12-1 .features__image {
@@ -2159,6 +2162,9 @@ textarea.form__input {
       -ms-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   max-width: 64%;
+  -webkit-transition: 0.3s ease all 0.1s;
+  -o-transition: 0.3s ease all 0.1s;
+  transition: 0.3s ease all 0.1s;
 }
 
 .features .features__card--iphone12-2 {
@@ -2179,6 +2185,9 @@ textarea.form__input {
   line-height: calc(36 / 26);
   max-width: 70%;
   padding: 2.4em 0;
+  -webkit-transition: 0.3s ease all 0.2s;
+  -o-transition: 0.3s ease all 0.2s;
+  transition: 0.3s ease all 0.2s;
 }
 
 .features .features__card--iphone12-2 .features__image {
@@ -2192,6 +2201,9 @@ textarea.form__input {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: 0.3s ease all 0.3s;
+  -o-transition: 0.3s ease all 0.3s;
+  transition: 0.3s ease all 0.3s;
 }
 
 .features .features__card--iphone12-3 .features__title {
@@ -2200,12 +2212,18 @@ textarea.form__input {
   color: #b7b7b7;
   max-width: 64%;
   margin: 2.6em auto 0;
+  -webkit-transition: 0.3s ease all 0.4s;
+  -o-transition: 0.3s ease all 0.4s;
+  transition: 0.3s ease all 0.4s;
 }
 
 .features .features__card--iphone12-3 .features__image {
   right: 0;
   bottom: 0;
   max-width: 85%;
+  -webkit-transition: 0.3s ease all 0.5s;
+  -o-transition: 0.3s ease all 0.5s;
+  transition: 0.3s ease all 0.5s;
 }
 
 .features .features__card--iphone12-4 .features__title {
@@ -2223,6 +2241,9 @@ textarea.form__input {
       -ms-transform: translate(-18%, 0);
           transform: translate(-18%, 0);
   max-width: 61%;
+  -webkit-transition: 0.3s ease all 0.1s;
+  -o-transition: 0.3s ease all 0.1s;
+  transition: 0.3s ease all 0.1s;
 }
 
 .features .features__card--iphone12-5 {
@@ -2242,6 +2263,9 @@ textarea.form__input {
   font-weight: 400;
   max-width: 76%;
   padding: 3.2em 0 3.1em;
+  -webkit-transition: 0.3s ease all 0.2s;
+  -o-transition: 0.3s ease all 0.2s;
+  transition: 0.3s ease all 0.2s;
 }
 
 .features .features__card--iphone12-5 .features__image {
@@ -2255,6 +2279,9 @@ textarea.form__input {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: 0.3s ease all 0.3s;
+  -o-transition: 0.3s ease all 0.3s;
+  transition: 0.3s ease all 0.3s;
 }
 
 .features .features__card--iphone12-6 .features__title {
@@ -2263,12 +2290,18 @@ textarea.form__input {
   line-height: 140%;
   margin: 2.2em auto 0;
   max-width: 75%;
+  -webkit-transition: 0.3s ease all 0.4s;
+  -o-transition: 0.3s ease all 0.4s;
+  transition: 0.3s ease all 0.4s;
 }
 
 .features .features__card--iphone12-6 .features__image {
   left: 13%;
   bottom: 0;
   max-width: 51%;
+  -webkit-transition: 0.3s ease all 0.5s;
+  -o-transition: 0.3s ease all 0.5s;
+  transition: 0.3s ease all 0.5s;
 }
 
 .features .features__card--iphone12-7 {
@@ -2293,6 +2326,9 @@ textarea.form__input {
       -ms-transform: translate(-47%, 0);
           transform: translate(-47%, 0);
   max-width: 95%;
+  -webkit-transition: 0.3s ease all 0.1s;
+  -o-transition: 0.3s ease all 0.1s;
+  transition: 0.3s ease all 0.1s;
 }
 
 .features .features__card--iphone12-8 {
@@ -2315,12 +2351,18 @@ textarea.form__input {
   padding: 0px 15px 0px 3.5em;
   margin: 3.1em 0;
   color: #767676;
+  -webkit-transition: 0.3s ease all 0.2s;
+  -o-transition: 0.3s ease all 0.2s;
+  transition: 0.3s ease all 0.2s;
 }
 
 .features .features__card--iphone12-8 .features__image {
   bottom: 0;
   right: 0;
   max-width: 39%;
+  -webkit-transition: 0.3s ease all 0.3s;
+  -o-transition: 0.3s ease all 0.3s;
+  transition: 0.3s ease all 0.3s;
 }
 
 .product__tabs {
@@ -4096,7 +4138,7 @@ textarea.form__input {
     -webkit-transition: 0.3s ease all 0s;
     -o-transition: 0.3s ease all 0s;
     transition: 0.3s ease all 0s;
-    padding: 6px;
+    padding: 6px 9px;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;

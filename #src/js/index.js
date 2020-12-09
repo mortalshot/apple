@@ -10,4 +10,6 @@
 @@include('components/tabs.js')
 @@include('components/product-info.js')
 @@include('components/animation.js')
+@@include('components/form.js')
+@@include('components/select.js')
 

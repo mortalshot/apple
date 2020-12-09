@@ -1,0 +1,204 @@
+.checkout {
+	display: flex;
+	background-color: $LGray2;
+
+	@media screen and (max-width: 600px) {
+		display: block;
+	}
+
+	&__form {
+		padding: 2.75em 0;
+		flex: 0 0 53.3%;
+
+		.select {
+			&__title {
+				border-radius: 0;
+				border: 0;
+				border-bottom: 1px solid $Gray3;
+			}
+
+			&__value {
+				height: 36px;
+				padding: 0px 5px;
+				font-size: 12px;
+
+				@media screen and (min-width: $layoutDesktop + "px") {
+					font-size: calc(12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+				}
+			}
+
+			&__option {
+				font-size: 14px;
+				padding: 5px;
+
+				@media screen and (min-width: $layoutDesktop + "px") {
+					font-size: calc(12px + 3 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+				}
+			}
+		}
+
+		.options {
+			display: flex;
+			align-items: center;
+
+			&__item {
+				margin: 0px 2em 0 0px;
+
+				&:last-child {
+					margin: 0;
+				}
+			}
+		}
+
+		.form__input {
+			background-color: $LGray2;
+		}
+
+		.quantity__input input {
+			background-color: $LGray2;
+		}
+	}
+
+	&__container {
+		padding: 0 3em;
+
+		@media screen and (max-width: 1200px) {
+			padding: 0 2em;
+		}
+		@media screen and (max-width: 991px) {
+			padding: 0 20px;
+		}
+	}
+
+	&__back {
+		display: flex;
+		align-items: center;
+		margin-bottom: 2.3em;
+
+		@media screen and (max-width: 991px) {
+			margin-bottom: 1em;
+		}
+	}
+
+	&__back-link {
+		margin-right: 1.4em;
+		font-size: calc(20px + 6 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		color: $DGray;
+
+		@media screen and (max-width: 767px) {
+			margin-right: 0.5em;
+		}
+	}
+
+	&__title {
+		font-weight: 300;
+	}
+
+	&__offer {
+		background-color: $White;
+
+		.accessories {
+			&__cards {
+				flex-wrap: wrap;
+
+				@media screen and (max-width: 600px) {
+					flex-wrap: nowrap;
+					overflow-x: auto;
+				}
+			}
+
+			&__card {
+				flex: 0 0 50%;
+				border-bottom: 1px solid $LGray3;
+				overflow: hidden;
+
+				@media screen and (max-width: 767px) {
+					flex: 0 0 100%;
+				}
+				@media screen and (max-width: 600px) {
+					flex: 0 0 50%;
+				}
+
+				&--full {
+					@media screen and (min-width: 601px) {
+						flex: 0 0 100%;
+
+						.accessories__image {
+							padding-bottom: 14.8em;
+							margin: -2.6em 0 -6.5em 0;
+						}
+
+						.accessories__btn {
+							padding: 0.1em 1.25em;
+						}
+					}
+				}
+			}
+
+			&__wrapper {
+				padding: 1.75em;
+
+				@media screen and (max-width: 1100px) {
+					padding: 20px 15px;
+				}
+			}
+
+			&__title {
+				font-size: calc(14px + 14 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+				line-height: calc(34 / 28);
+				margin-bottom: 6px;
+			}
+
+			&__subtitle {
+				font-size: calc(12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+				line-height: $lineHeight;
+			}
+
+			&__image {
+				max-width: 43%;
+				padding-bottom: 6.8em;
+				margin: -0.1em 0 -1.6em 19px;
+
+				@media screen and (max-width: 600px) {
+					padding-bottom: 100%;
+					margin: 0 0 -30px 19px;
+					max-width: 48%;
+				}
+			}
+
+			&__footer {
+				align-items: flex-end;
+			}
+
+			&__price-wrapper {
+				@media screen and (max-width: 991px) {
+					display: block;
+				}
+			}
+
+			&__price {
+				font-size: calc(14px + 6 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+				line-height: calc(24 / 20);
+
+				@media screen and (max-width: 991px) {
+					margin-right: 10px;
+				}
+			}
+
+			&__old {
+				font-size: calc(12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+				line-height: calc(17 / 14);
+			}
+
+			&__btn {
+				padding: 0.1em 0.45em;
+
+				span {
+					@media screen and (max-width: 600px) {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

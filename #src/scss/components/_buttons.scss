@@ -21,4 +21,12 @@
         font-size: 16px;
         line-height: $lineHeight;
     }
+
+    &-bg {
+        background-color: $Blue;
+        color: $White;
+        border-radius: 12px;
+        padding: 18px 32px;
+        font-weight: 600;
+    }
 }

@@ -1,238 +1,312 @@
 .form {
-    // .form__body
-    &__body {
-        position: relative;
+	&__body {
+		position: relative;
 
-        &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(51, 51, 51, 0.9) url("../img/loading.gif") center / 50px no-repeat;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.5s ease 0s;
-        }
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(51, 51, 51, 0.9) url("../img/loading.gif") center / 50px no-repeat;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.5s ease 0s;
+		}
 
-        &._sending {
-            &::after {
-                opacity: 1;
-                visibility: visible;
-            }
-        }
-    }
+		&._sending {
+			&::after {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
 
-    // .form__title
-    &__title {
-    }
+	&__row {
+		display: flex;
+		margin: 0 -22.5px;
 
-    // .form__item
-    &__item {
-        margin: 0px 0px 20px 0px;
-    }
+		@media screen and (max-width: 991px) {
+			margin: 0 -10px;
+		}
+		@media screen and (max-width: 767px) {
+			flex-direction: column;
+		}
+	}
 
-    // .form__label
-    &__label {
-        display: block;
-        margin: 0px 0px 10px 0px;
-    }
+	&__item {
+		margin: 0 0 2.3em 0;
+		position: relative;
+		padding: 0 22.5px;
+		flex: 1 1 auto;
 
-    // .form__input
-    &__input {
-        height: 50px;
-        padding: 0px 20px;
-        border-radius: 5px;
-        width: 100%;
-        font-size: 18px;
-        transition: all 0.5s ease 0s;
+		@media screen and (max-width: 991px) {
+			padding: 0 10px;
+			margin-bottom: 1.5em;
+		}
+		@media screen and (max-width: 767px) {
+			margin-bottom: 2em;
+		}
 
-        &:focus {
-            box-shadow: 0 0 15px #7a956b;
-        }
+		&.row {
+			@media screen and (max-width: 991px) {
+				flex-direction: column;
+			}
+		}
+	}
 
-        &._error {
-            box-shadow: 0 0 15px red;
-        }
-    }
+	&__label {
+		display: block;
+		line-height: 1;
+		position: absolute;
+		top: 6px;
+		left: 27.5px;
+		margin-bottom: -6px;
+		transition: 0.3s ease all 0s;
+		font-size: 12px;
 
-    // .form__button
-    &__button {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 60px;
-        background-color: #7a956b;
-        color: #fff;
-        font-size: 18px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-weight: 700;
-        cursor: pointer;
-        border-radius: 20px;
-        box-shadow: 0 5px 0 #161b13;
-        transition: background-color 0.5s ease 0s;
-        position: relative;
-        top: 0;
+		@media screen and (min-width: $layoutDesktop + "px") {
+			font-size: calc(12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		}
+		@media screen and (max-width: 991px) {
+			left: 15px;
+		}
 
-        &:hover {
-            background-color: #4f6146;
-        }
-        &:active {
-            top: 3px;
-            box-shadow: 0 2px 0 #161b13;
-        }
-    }
+		&--select {
+			top: -13px;
+		}
+	}
+
+	&__input {
+		height: 36px;
+		padding: 0px 5px;
+		border-radius: 5px;
+		width: 100%;
+		font-size: calc(12px + 4 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		line-height: 1;
+		transition: all 0.5s ease 0s;
+		border-bottom: 1px solid $Gray3;
+		border-radius: 0;
+
+		@media screen and (min-width: $layoutDesktop + "px") {
+			font-size: calc(14px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		}
+	}
+
+	&__item--md-6 {
+		flex: 0 0 50%;
+	}
+
+	&__item--md-10 {
+		flex: 0 0 75%;
+	}
+
+	&__item--md-2 {
+		flex: 0 0 25%;
+	}
+
+	&__item--mb-1 {
+		margin-bottom: 1em;
+	}
+
+	&__delivery {
+		display: flex;
+		align-items: center;
+		font-size: 12px;
+		line-height: $lineHeight;
+		margin-right: 20px;
+		flex: 1 1 auto;
+
+		@media screen and (min-width: $layoutDesktop + "px") {
+			font-size: calc(12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		}
+		@media screen and (max-width: 991px) {
+			margin-bottom: 15px;
+		}
+
+		img {
+			margin-right: 15px;
+		}
+	}
+
+	&__privacy {
+		font-size: calc(10px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		line-height: $lineHeight;
+		color: $Gray3;
+
+		a {
+			color: $Gray;
+			text-decoration: underline;
+		}
+	}
 }
 
 .options {
-    padding: 10px 0px 0px 0px;
+	padding: 10px 0px 0px 0px;
 
-    // .options__item
-    &__item {
-        margin: 0px 0px 10px 0px;
-    }
+	&__item {
+		margin: 0px 0px 10px 0px;
+		flex: 1 1 auto;
+	}
 
-    // .options__input
-    &__input {
-        display: none;
+	&__input {
+		display: none;
 
-        &:checked + .options__label::after {
-            transform: scale(1);
-        }
-    }
+		&:checked + .options__label::after {
+			transform: scale(1) translate(0, -50%);
+		}
+		&:checked + .options__label::before {
+			background-color: $Gray3;
+		}
+	}
 
-    // .options__label
-    &__label {
-        display: inline-flex;
-        align-items: center;
-        position: relative;
-        cursor: pointer;
+	&__label {
+		display: inline-flex;
+		align-items: center;
+		position: relative;
+		cursor: pointer;
+		width: 100%;
+		font-size: calc(12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 
-        &::before {
-            content: "";
-            align-self: flex-start;
-            flex: 0 0 24px;
-            height: 24px;
-            background-color: #fff;
-            border-radius: 50%;
-            margin: 0px 10px 0px 0px;
-        }
+		&::before {
+			content: "";
+			align-self: center;
+			flex: 0 0 18px;
+			height: 18px;
+			background-color: $LGray2;
+			border-radius: 50%;
+			margin: 0px 14px 0px 0px;
+			border: 1px solid $Gray3;
+			transition: 0.3s ease all 0s;
+		}
 
-        &::after {
-            content: "";
-            position: absolute;
-            top: 4px;
-            left: 4px;
-            width: 16px;
-            height: 16px;
-            background-color: #7a956b;
-            border-radius: 50%;
-            transform: scale(0);
-            transition: transform 0.5s ease 0s;
-        }
-    }
-}
-
-.file {
-    // .file__item
-    &__item {
-        position: relative;
-    }
-
-    // .file__input
-    &__input {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        font-size: 0;
-        cursor: pointer;
-    }
-
-    // .file__button
-    &__button {
-        display: inline-flex;
-        min-height: 40px;
-        border-radius: 30px;
-        justify-content: center;
-        align-items: center;
-        background-color: #77608d;
-        padding: 0px 20px;
-    }
-
-    // .file__preview
-    &__preview {
-        display: inline-block;
-        max-width: 100px;
-        padding: 10px 0px 0px 0px;
-
-        img {
-            max-width: 100%;
-        }
-    }
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 6px;
+			width: 6px;
+			height: 6px;
+			background-color: $White;
+			border-radius: 50%;
+			transform: scale(0) translate(0, -50%);
+			transition: 0.3s ease all 0s;
+		}
+	}
 }
 
 .checkbox {
-    &._error {
-        .checkbox__label::before {
-            box-shadow: 0 0 15px red;
-        }
-    }
+	&._error {
+		.checkbox__label::before {
+			box-shadow: 0 0 15px red;
+		}
+	}
 
-    // .checkbox__input
-    &__input {
-        display: none;
-    }
+	&__input {
+		display: none;
+	}
 
-    // .checkbox__label
-    &__label {
-        font-size: 16px;
-        line-height: 140%;
-        display: inline-flex;
-        align-items: center;
-        position: relative;
-        cursor: pointer;
+	&__label {
+		font-size: 16px;
+		line-height: 140%;
+		display: inline-flex;
+		align-items: center;
+		position: relative;
+		cursor: pointer;
 
-        &::before {
-            content: "";
-            align-self: flex-start;
-            flex: 0 0 24px;
-            height: 24px;
-            background-color: #fff;
-            border-radius: 4px;
-            margin: 0px 10px 0px 0px;
-        }
+		&::before {
+			content: "";
+			align-self: flex-start;
+			flex: 0 0 24px;
+			height: 24px;
+			background-color: #fff;
+			border-radius: 4px;
+			margin: 0px 10px 0px 0px;
+		}
 
-        &::after {
-            content: "";
-            width: 16px;
-            height: 16px;
-            position: absolute;
-            top: 4px;
-            left: 4px;
-            background-color: #7a956b;
-            border-radius: 4px;
-            transform: scale(0);
-            transition: transform 0.5s ease 0s;
-        }
+		&::after {
+			content: "";
+			width: 16px;
+			height: 16px;
+			position: absolute;
+			top: 4px;
+			left: 4px;
+			background-color: #7a956b;
+			border-radius: 4px;
+			transform: scale(0);
+			transition: transform 0.5s ease 0s;
+		}
 
-        a {
-            color: #7a956b;
-        }
-    }
+		a {
+			color: #7a956b;
+		}
+	}
 
-    &__input:checked + .checkbox__label::after {
-        transform: scale(1);
-    }
+	&__input:checked + .checkbox__label::after {
+		transform: scale(1);
+	}
 }
 
 textarea.form__input {
 	min-height: 120px;
 	resize: vertical;
 	padding: 20px;
+}
+
+.quantity {
+	width: 48px;
+	height: 17px;
+	display: flex;
+	align-items: center;
+
+	&__button {
+		flex: 0 0 9px;
+		padding: 10px 8px;
+		position: relative;
+		cursor: pointer;
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transition: all 0.3s ease 0s;
+			margin: 0px 0px 0px -3px;
+			background-color: $Black;
+			width: 7px;
+			height: 1px;
+		}
+
+		@media screen and (min-width: 992px) {
+			&:hover {
+				&::before,
+				&::after {
+					background-color: rgba($Black, 0.5);
+				}
+			}
+		}
+
+		&--plus {
+			&::before {
+				transform: rotate(-90deg);
+			}
+		}
+	}
+	&__input {
+		flex: 1 1 auto;
+
+		input {
+			height: 100%;
+			color: $Black;
+			font-size: 14px;
+			width: 100%;
+			text-align: center;
+
+			@media screen and (min-width: $layoutDesktop + "px") {
+				font-size: calc(14px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+			}
+		}
+	}
 }

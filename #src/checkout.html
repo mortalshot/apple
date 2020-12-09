@@ -1,0 +1,267 @@
+@@include('html-components/_header.html', {
+"title": "Page name"
+})
+
+<main class="site__main">
+	<section class="checkout">
+		<div class="checkout__form">
+			<div class="checkout__container container">
+				<div class="checkout__back">
+					<a href="" class="checkout__back-link"><i class="icon-backspace"></i></a>
+					<h1 class="checkout__title title-h2">Оформление заказа</h1>
+				</div>
+				<div class="checkout__cart checkout-cart">
+					<div class="checkout-cart__item">
+						<div class="checkout-cart__wrapper">
+							<div class="checkout-cart__image">
+								<a href=""><img src="img/checkout/checkout-1.png" alt=""></a>
+							</div>
+							<div class="checkout-cart__content">
+								<a href="" class="checkout-cart__remove">
+									<svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M1.60021 0.821173L0.186 2.23539L4.42864 6.47803L0.186 10.7207L1.60021 12.1349L5.84285 7.89224L10.0855 12.1349L11.4997 10.7207L7.25707 6.47803L11.4997 2.23539L10.0855 0.821173L5.84285 5.06381L1.60021 0.821173Z"
+											fill="#B3B3B3" />
+									</svg>
+								</a>
+								<div class="checkout-cart__top">
+									<a href="" class="checkout-cart__name">iPhone 11</a>
+									<div class="checkout-cart__attributes">
+										<div class="checkout-cart__attribute">128 GB</div>
+									</div>
+								</div>
+								<div class="checkout-cart__footer">
+									<div class="checkout-cart__price">66 500 ₽</div>
+									<div class="checkout-cart__quantity quantity">
+										<div class="quantity__button quantity__button--minus"></div>
+										<div class="quantity__input">
+											<input autocomplete="off" type="text" value="1">
+										</div>
+										<div class="quantity__button quantity__button--plus"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="checkout-cart__item">
+						<div class="checkout-cart__wrapper">
+							<div class="checkout-cart__image">
+								<a href=""><img src="img/checkout/checkout-2.png" alt=""></a>
+							</div>
+							<div class="checkout-cart__content">
+								<a href="" class="checkout-cart__remove">
+									<svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M1.60021 0.821173L0.186 2.23539L4.42864 6.47803L0.186 10.7207L1.60021 12.1349L5.84285 7.89224L10.0855 12.1349L11.4997 10.7207L7.25707 6.47803L11.4997 2.23539L10.0855 0.821173L5.84285 5.06381L1.60021 0.821173Z"
+											fill="#B3B3B3" />
+									</svg>
+								</a>
+								<div class="checkout-cart__top">
+									<a href="" class="checkout-cart__name">iPad Pro</a>
+									<div class="checkout-cart__attributes">
+										<div class="checkout-cart__attribute">256 GB</div>
+									</div>
+								</div>
+								<div class="checkout-cart__footer">
+									<div class="checkout-cart__price">50 490 ₽</div>
+									<div class="checkout-cart__quantity quantity">
+										<div class="quantity__button quantity__button--minus"></div>
+										<div class="quantity__input">
+											<input autocomplete="off" type="text" value="1">
+										</div>
+										<div class="quantity__button quantity__button--plus"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form">
+					<form action="#" id="checkout" class="form__body">
+						<div class="form__row">
+							<div class="form__item">
+								<label for="checkoutName" class="form__label">ФИО*:</label>
+								<input id="checkoutName" type="text" name="name" class="form__input" required>
+							</div>
+						</div>
+						<div class="form__row">
+							<div class="form__item form__item--md-6">
+								<label for="checkoutPhone" class="form__label">Телефон*:</label>
+								<input id="checkoutPhone" type="text" name="phone" class="form__input" required>
+							</div>
+							<div class="form__item form__item--md-6">
+								<label for="checkoutEmail" class="form__label">Email*:</label>
+								<input id="checkoutEmail" type="email" name="email" class="form__input" required>
+							</div>
+						</div>
+						<div class="form__row">
+							<div class="form__item form__item--md-6">
+								<div class="form__label form__label--select">Город:</div>
+								<select name="age" class="form__select">
+									<option value="Москва">Москва</option>
+									<option value="Тверь">Тверь</option>
+									<option value="Московская область">Московская область</option>
+								</select>
+							</div>
+							<div class="form__item form__item--md-6">
+								<label for="checkoutIndex" class="form__label">Индекс*:</label>
+								<input id="checkoutIndex" type="text" name="index" class="form__input" required>
+							</div>
+						</div>
+						<div class="form__row">
+							<div class="form__item form__item--md-10 form__item--mb-1">
+								<label for="checkoutStreet" class="form__label">Улица*:</label>
+								<input id="checkoutStreet" type="text" name="street" class="form__input" required>
+							</div>
+							<div class="form__item form__item--md-2 form__item--mb-1">
+								<label for="checkoutHouse" class="form__label">Дом*:</label>
+								<input id="checkoutHouse" type="text" name="house" class="form__input" required>
+							</div>
+						</div>
+						<div class="form__row">
+							<div class="form__item form__item--mb-1">
+								<div class="options">
+									<div class="options__item">
+										<input id="checkoutCashPayment" checked type="radio" value="cash" name="payment"
+											class="options__input">
+										<label for="checkoutCashPayment" class="options__label"><span>Оплата
+												наличными</span></label>
+									</div>
+									<div class="options__item">
+										<input id="checkoutCreditPayment" type="radio" value="credit" name="payment"
+											class="options__input">
+										<label for="checkoutCreditPayment" class="options__label"><span>Оплата
+												картой</span></label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form__row">
+							<div class="form__item row">
+								<div class="form__delivery">
+									<img src="img/icons/delivery.svg" alt="">
+									<span>Бесплатная доставка по Москве</span>
+								</div>
+								<button type="submit" class="form__button btn btn-bg">Оформить заказ на &nbsp; <span>116
+										990</span>&nbsp; ₽</button>
+							</div>
+						</div>
+						<div class="form__privacy">Нажимая кнопку, вы соглашаетесь с <a href="">политикой
+								конфиденциальности</a></div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="checkout__offer">
+			<div class="accessories__cards">
+				<div class="accessories__card">
+					<div class="accessories__wrapper">
+						<div class="accessories__heading">
+							<h2 class="accessories__title title-h3">Airpods</h2>
+							<h3 class="accessories__subtitle">Гарнитура</h3>
+						</div>
+						<div class="accessories__body">
+							<div class="accessories__image">
+								<img src="img/iphone12/accessories/accessories-1.png" alt="">
+							</div>
+						</div>
+						<div class="accessories__footer">
+							<div class="accessories__price-wrapper">
+								<div class="accessories__price">5 150 ₽</div>
+								<div class="accessories__old">11 150 ₽</div>
+							</div>
+							<a href="" class="accessories__btn btn"><i class="icon-cart"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="accessories__card">
+					<div class="accessories__wrapper">
+						<div class="accessories__heading">
+							<h2 class="accessories__title title-h3">Airpods</h2>
+							<h3 class="accessories__subtitle">Гарнитура</h3>
+						</div>
+						<div class="accessories__body">
+							<div class="accessories__image">
+								<img src="img/iphone12/accessories/accessories-3.png" alt="">
+							</div>
+						</div>
+						<div class="accessories__footer">
+							<div class="accessories__price-wrapper">
+								<div class="accessories__price">5 150 ₽</div>
+								<div class="accessories__old">11 150 ₽</div>
+							</div>
+							<a href="" class="accessories__btn btn"><i class="icon-cart"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="accessories__card accessories__card--full">
+					<div class="accessories__wrapper">
+						<div class="accessories__heading">
+							<h2 class="accessories__title title-h3">MagSafe</h2>
+							<h3 class="accessories__subtitle">Зарядное устройство</h3>
+						</div>
+						<div class="accessories__body">
+							<div class="accessories__image">
+								<img src="img/iphone12/accessories/accessories-2.png" alt="">
+							</div>
+						</div>
+						<div class="accessories__footer">
+							<div class="accessories__price-wrapper">
+								<div class="accessories__price">5 150 ₽</div>
+								<div class="accessories__old">11 150 ₽</div>
+							</div>
+							<a href="" class="accessories__btn btn">
+								<span>В корзину</span>
+								<i class="icon-cart"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="accessories__card">
+					<div class="accessories__wrapper">
+						<div class="accessories__heading">
+							<h2 class="accessories__title title-h3">MagSafe</h2>
+							<h3 class="accessories__subtitle">Зарядное устройство</h3>
+						</div>
+						<div class="accessories__body">
+							<div class="accessories__image">
+								<img src="img/iphone12/accessories/accessories-1.png" alt="">
+							</div>
+						</div>
+						<div class="accessories__footer">
+							<div class="accessories__price-wrapper">
+								<div class="accessories__price">5 150 ₽</div>
+								<div class="accessories__old">11 150 ₽</div>
+							</div>
+							<a href="" class="accessories__btn btn"><i class="icon-cart"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="accessories__card">
+					<div class="accessories__wrapper">
+						<div class="accessories__heading">
+							<h2 class="accessories__title title-h3">Airpods</h2>
+							<h3 class="accessories__subtitle">Гарнитура</h3>
+						</div>
+						<div class="accessories__body">
+							<div class="accessories__image">
+								<img src="img/iphone12/accessories/accessories-3.png" alt="">
+							</div>
+						</div>
+						<div class="accessories__footer">
+							<div class="accessories__price-wrapper">
+								<div class="accessories__price">5 150 ₽</div>
+								<div class="accessories__old">11 150 ₽</div>
+							</div>
+							<a href="" class="accessories__btn btn"><i class="icon-cart"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+@@include('html-components/_footer.html')

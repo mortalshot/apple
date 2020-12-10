@@ -89,7 +89,7 @@
 	}
 
 	&__item {
-		margin-right: 2.3em;
+		margin: 0px 2.3em 0px 0px;
 		font-weight: 500;
 		font-size: calc(12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 		line-height: calc(18 / 14);
@@ -104,6 +104,8 @@
 		}
 
 		&.menu__item--has-children {
+			display: block;
+			
 			@media screen and (min-width: 992px) {
 				&:hover {
 					& > .menu__link {
@@ -155,6 +157,10 @@
 				&__item {
 					margin-bottom: 8px;
 
+					&::before {
+						display: none;
+					}
+
 					@media screen and (max-width: 550px) {
 						margin: 0px 0px 15px 0px;
 					}
@@ -177,6 +183,10 @@
 			.header__link {
 				color: $Gray2;
 			}
+		}
+
+		&::before {
+			display: none;
 		}
 	}
 

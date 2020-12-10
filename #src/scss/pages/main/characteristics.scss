@@ -47,6 +47,10 @@
         font-size: calc(14px + 4 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
         line-height: calc(22 / 18);
         margin-bottom: 0.7em;
+
+        &::before {
+            display: none;
+        }
     }
 
     &__footer {

@@ -11,3 +11,25 @@
         line-height: calc(48 / 40);
     }
 }
+
+h1 {
+    font-weight: 500;
+    font-size: calc(18px + 22 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+    line-height: $lineHeight;
+    margin: 1.2em 0;
+
+    @media screen and (max-width: 991px) {
+        margin-bottom: 0.6em;
+    }
+}
+
+h3 {
+    font-weight: 700;
+    font-size: calc(14px + 6 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+    line-height: $lineHeight;
+    margin: 2.4em 0;
+
+    @media screen and (max-width: 991px) {
+        margin: 1em 0;
+    }
+}

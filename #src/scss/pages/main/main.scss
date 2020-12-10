@@ -101,12 +101,15 @@
 	}
 
 	&__item {
-		margin-right: 2.4em;
+		margin: 0px 2.4em 0px 0px;
 		opacity: 0;
 		transform: translate(0, 50%);
 
 		&:last-child {
 			margin-right: 0;
+		}
+		&::before {
+			display: none;
 		}
 
 		@media screen and (max-width: 991px) {

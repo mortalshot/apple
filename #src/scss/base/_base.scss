@@ -75,7 +75,7 @@ ul {
         }
 
         &::before {
-            content: '';
+            content: "";
             display: block;
             width: 20px;
             flex: 0 0 20px;
@@ -87,6 +87,81 @@ ul {
                 width: 15px;
                 flex: 0 0 15px;
             }
+        }
+    }
+}
+
+.thesis {
+    @include adaptiv-value("padding-top", 60, 20, 0);
+    @include adaptiv-value("padding-right", 85, 20, 0);
+    @include adaptiv-value("padding-bottom", 60, 20, 0);
+    @include adaptiv-value("padding-left", 85, 20, 0);
+    @include adaptiv-value("margin-top", 64, 20, 0);
+    @include adaptiv-value("margin-right", -85, -20, 0);
+    @include adaptiv-value("margin-bottom", 56, 20, 0);
+    @include adaptiv-value("margin-left", -85, -20, 0);
+    background-color: $LGray5;
+    
+    &__content {
+    }
+}
+
+
+.block-table {
+    overflow-x: auto;
+    scrollbar-width: thin;
+    &::-webkit-scrollbar {
+        height: 8px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: #F6F6F6;
+        border-radius: 3px;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 3px;
+        background-color: #CCC3C3;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        font-weight: 600;
+        font-size: calc(12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+
+        thead {
+        }
+
+        tr {
+        }
+
+        th {
+            color: $Gray3;
+            @include adaptiv-value("padding-top", 24, 10, 0);
+            @include adaptiv-value("padding-right", 26, 5, 0);
+            @include adaptiv-value("padding-bottom", 24, 10, 0);
+            @include adaptiv-value("padding-left", 26, 5, 0);
+            text-align: left;
+            border-bottom: 1px solid $LGray3;
+            min-width: 200px;
+        }
+
+        tbody {
+            tr {
+                &:last-child {
+                    td {
+                        border-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        td {
+            @include adaptiv-value("padding-top", 16, 8, 0);
+            @include adaptiv-value("padding-right", 26, 5, 0);
+            @include adaptiv-value("padding-bottom", 16, 8, 0);
+            @include adaptiv-value("padding-left", 26, 5, 0);
+            border-bottom: 1px solid $LGray3;
+            min-width: 200px;
         }
     }
 }

@@ -32,12 +32,25 @@ body {
 }
 
 .container {
-    max-width: 100%;
+    max-width: #{$size-container + px};
     margin: 0 auto;
     padding: 0 20px;
 
     @media screen and (min-width: 992px) {
         padding: 0 30px;
+    }
+    @media screen and (min-width: $layoutDesktop + 'px') {
+        max-width: #{$size-container + px};
+    }
+
+    &-fluid {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+    
+        @media screen and (min-width: 992px) {
+            padding: 0 30px;
+        }
     }
 }
 

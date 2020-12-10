@@ -1,0 +1,147 @@
+.contacts {
+	@include adaptiv-value("padding-top", 80, 30, 0);
+	@include adaptiv-value("padding-bottom", 75, 30, 0);
+
+	@media screen and (max-width: 575px) {
+		padding-top: 0;
+	}
+
+	&__row {
+		align-items: center;
+
+		@media screen and (max-width: 575px) {
+			flex-direction: column-reverse;
+			align-items: flex-start;
+			margin: 0 -20px;
+		}
+	}
+
+	&__content {
+		flex: 0 0 58%;
+	}
+
+	&__wrapper {
+		max-width: 454px;
+		padding-right: 20px;
+
+		@media screen and (min-width: $layoutDesktop + "px") {
+			max-width: 78%;
+		}
+		@media screen and (max-width: 575px) {
+			padding: 0 20px;
+		}
+	}
+
+	&__title {
+		margin-top: 0;
+		@include adaptiv-value("margin-bottom", 50, 10, 0);
+	}
+
+	&__links {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	&__phone {
+		font-weight: 600;
+		font-size: calc(14px + 6 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		line-height: calc(24 / 20);
+		color: $Black;
+		display: inline-flex;
+		@include adaptiv-value("padding-top", 12, 8, 0);
+		@include adaptiv-value("padding-bottom", 12, 8, 0);
+		@include adaptiv-value("margin-right", 40, 5, 0);
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__phone-whatsapp {
+		display: inline-flex;
+		align-items: center;
+
+		&::before {
+			content: "";
+			display: block;
+			width: 20px;
+			height: 20px;
+			margin-right: 8px;
+			background: url(../img/icons/whatsapp.svg) no-repeat center/cover;
+		}
+	}
+
+	&__mail {
+		font-weight: 400;
+		font-size: calc(14px + 6 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		line-height: calc(24 / 20);
+		color: $Black;
+		display: inline-flex;
+		@include adaptiv-value("padding-top", 12, 8, 0);
+		@include adaptiv-value("padding-bottom", 12, 8, 0);
+	}
+
+	&__telegram {
+		align-items: center;
+		@include adaptiv-value("margin-right", 37, 5, 0);
+
+		&::before {
+			content: "";
+			display: block;
+			width: 20px;
+			height: 20px;
+			margin-right: 8px;
+			background: url(../img/icons/telegram.svg) no-repeat center/cover;
+		}
+	}
+
+	&__social {
+		display: flex;
+		align-items: center;
+		@include adaptiv-value("margin-top", 15, 0, 0);
+		@include adaptiv-value("margin-bottom", 37, 15, 0);
+	}
+
+	&__social-label {
+		font-size: calc(12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		line-height: calc(17 / 14);
+		@include adaptiv-value("margin-right", 20, 10, 0);
+	}
+
+	&__social-link {
+		@include adaptiv-value("margin-right", 20, 10, 0);
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__address {
+		font-weight: 300;
+	}
+
+	&__map {
+		flex: 1 1 auto;
+		position: relative;
+		padding-bottom: 42%;
+
+		@media screen and (max-width: 575px) {
+			width: 100%;
+			padding-bottom: 50%;
+			margin-bottom: 20px;
+		}
+		@media screen and (max-width: 450px) {
+			padding-bottom: 100%;
+		}
+
+		& > ymaps {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100% !important;
+			height: 100% !important;
+			object-fit: cover;
+		}
+	}
+}

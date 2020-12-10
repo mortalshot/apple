@@ -1,0 +1,83 @@
+
+.mailing {
+	@include adaptiv-value("margin-bottom", 75, 30, 0);
+
+	&__wrapper {
+		background-color: $LGray5;
+		display: flex;
+		justify-content: center;
+		@include adaptiv-value("padding-top", 81, 20, 0);
+		@include adaptiv-value("padding-bottom", 81, 20, 0);
+	}
+
+	&__content {
+		width: 100%;
+		max-width: 644px;
+		text-align: center;
+		margin: 0 auto;
+		padding: 0 20px;
+	}
+
+	&__title {
+		font-size: calc(18px + 18 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		line-height: calc(43 / 36);
+		@include adaptiv-value("margin-bottom", 24, 15, 0);
+	}
+
+	&__text {
+		@include adaptiv-value("margin-bottom", 40, 20, 0);
+
+		@media screen and (max-width: 450px) {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__form {
+		.form__row {
+			align-items: flex-end;
+			margin: 0;
+			@include adaptiv-value("margin-bottom", 35, 20, 0);
+
+			@media screen and (max-width: 767px) {
+				flex-direction: row;
+			}
+			@media screen and (max-width: 450px) {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+		}
+
+		.form__item {
+			margin: 0 0 10px 0;
+			padding: 0;
+			@include adaptiv-value("margin-right", 32, 15, 0);
+
+			@media screen and (max-width: 450px) {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+		}
+
+		.form__label {
+			left: 5px;
+		}
+
+		.form__input {
+			background-color: transparent;
+		}
+
+		.form__privacy {
+			font-weight: 300;
+
+			a {
+				color: $Blue;
+			}
+		}
+	}
+
+	&__button {
+		@media screen and (max-width: 450px) {
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,58 @@
+@@include('html-components/_header.html', {
+"title": "О компании"
+})
+
+<main class="site__main">
+    <section class="contacts">
+        <div class="contacts__container container">
+            <div class="contacts__row row">
+                <div class="contacts__content">
+                    <div class="contacts__wrapper">
+                        <h1 class="contacts__title title-h3">Контакты</h1>
+                        <div class="contacts__links">
+                            <a href="tel:88004200910" class="contacts__phone">8 (800) 420 09 10</a>
+                            <a href="" class="contacts__phone contacts__phone-whatsapp">+7 (495) 420 09 10</a>
+                            <a href="" class="contacts__mail contacts__telegram">@applestore</a>
+                            <a href="mailto:info@applestore.ru" class="contacts__mail">info@applestore.ru</a>
+                        </div>
+                        <div class="contacts__social">
+                            <div class="contacts__social-label">Мы в социальных сетях</div>
+                            <a href="" class="contacts__social-link"><img src="img/icons/instagram-color.svg" alt=""></a>
+                            <a href="" class="contacts__social-link"><img src="img/icons/vk-color.svg" alt=""></a>
+                        </div>
+                        <div class="contacts__address">347916 г. Москва, ул. Название улицы. 30/2 корпус 3, строение 1</div>
+                    </div>
+                </div>
+                <div class="contacts__map">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad0335fc20f3a9c689126c84dae553b37571b593c8cb9e95cc6efda7549f292a6&amp;width=448&amp;height=448&amp;lang=ru_RU&amp;scroll=false"></script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mailing">
+        <div class="mailing__container container">
+            <div class="mailing__wrapper">
+                <div class="mailing__content">
+                    <h2 class="mailing__title">Подпишитесь прямо сейчас!</h2>
+                    <div class="mailing__text">Чтобы не пропустить интересные новинки и акции</div>
+                    <div class="mailing__form form">
+                        <form action="#" id="mailing" class="form__body">
+                            <div class="form__row">
+                                <!-- form__item--md-6 -->
+                                <div class="form__item"> 
+                                    <label for="mailingEmail" class="form__label">Email*:</label>
+                                    <input id="mailingEmail" type="email" name="email" class="form__input" required>
+                                </div>
+                                <button type="submit" class="mailing__button btn btn-bg">Подписаться</button>
+                            </div>
+                            <div class="form__privacy">Нажимая кнопку, вы дёте согласие на обработку <a href="">персональных данных</a></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+@@include('html-components/_footer.html')

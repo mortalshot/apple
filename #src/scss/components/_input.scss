@@ -65,6 +65,7 @@
 		margin-bottom: -6px;
 		transition: 0.3s ease all 0s;
 		font-size: 12px;
+		color: $Gray2;
 
 		@media screen and (min-width: $layoutDesktop + "px") {
 			font-size: calc(12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
@@ -86,7 +87,7 @@
 		font-size: calc(12px + 4 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 		line-height: 1;
 		transition: all 0.5s ease 0s;
-		border-bottom: 1px solid $Gray3;
+		border-bottom: 1px solid $Gray;
 		border-radius: 0;
 
 		@media screen and (min-width: $layoutDesktop + "px") {
@@ -128,6 +129,10 @@
 		img {
 			margin-right: 15px;
 		}
+	}
+
+	&__button {
+		border-radius: 30px;
 	}
 
 	&__privacy {

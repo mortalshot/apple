@@ -22,3 +22,25 @@
 
 // === Pages ===
 @import "pages/index";
+
+.btn-to-product {
+	position: fixed;
+	bottom: 100px;
+	right: 90px;
+	border-radius: 30px;
+	transition: 0.3s ease all 0s;
+	opacity: 0;
+	pointer-events: none;
+	visibility: hidden;
+
+	@media screen and (max-width: 767px) {
+		bottom: 50px;
+		right: 20px;
+	}
+
+	&._active {
+		opacity: 1;
+		pointer-events: auto;
+		visibility: visible;
+	}
+}

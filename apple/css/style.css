@@ -1667,6 +1667,7 @@ h3 {
   -o-transition: 0.3s ease all 0s;
   transition: 0.3s ease all 0s;
   font-size: 12px;
+  color: #b2b2b2;
 }
 
 .form__label--select {
@@ -1683,7 +1684,7 @@ h3 {
   -webkit-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
-  border-bottom: 1px solid #767676;
+  border-bottom: 1px solid #b3b3b3;
   border-radius: 0;
 }
 
@@ -1726,6 +1727,10 @@ h3 {
 
 .form__delivery img {
   margin-right: 15px;
+}
+
+.form__button {
+  border-radius: 30px;
 }
 
 .form__privacy {
@@ -3027,8 +3032,13 @@ textarea.form__input {
   max-width: 1278px;
 }
 
+.characteristics__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .characteristics__header {
-  margin-bottom: 2.1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3038,6 +3048,7 @@ textarea.form__input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: calc(20px + 27 * ((100vw - 320px) / (1046)));
 }
 
 .characteristics__title {
@@ -3053,30 +3064,6 @@ textarea.form__input {
           flex: 0 1 175px;
 }
 
-.characteristics__body {
-  margin-bottom: 2.2em;
-}
-
-.characteristics__item {
-  font-weight: 700;
-  font-size: calc(14px + 4 * ((100vw - 320px) / (1366 - 320)));
-  line-height: calc(22 / 18);
-  margin-bottom: 0.7em;
-}
-
-.characteristics__item::before {
-  display: none;
-}
-
-.characteristics__footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
 .characteristics__btn {
   display: inline-block;
   font-weight: 300;
@@ -3084,6 +3071,59 @@ textarea.form__input {
   line-height: calc(25 / 18);
   color: #1f1f1f;
   border-bottom: 1px dashed #333333;
+}
+
+.characteristic-table__item {
+  display: none;
+  margin-bottom: 56px;
+}
+
+.characteristic-table__item .characteristic-table__row:first-child {
+  border-top: 1px solid rgba(179, 179, 179, 0.3);
+}
+
+.characteristic-table__item .characteristic-table__row:last-child {
+  border-bottom: 0;
+}
+
+.characteristic-table__item--main {
+  display: block !important;
+}
+
+.characteristic-table__title {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 31.6%;
+          flex: 0 0 31.6%;
+  font-weight: 700;
+  font-size: calc(12px + 4 * ((100vw - 320px) / (1366 - 320)));
+  line-height: 120%;
+}
+
+.characteristic-table__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.characteristic-table__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid rgba(179, 179, 179, 0.3);
+}
+
+.characteristic-table__atr {
+  font-size: calc(12px + 2 * ((100vw - 320px) / (1366 - 320)));
+  line-height: 120%;
+  color: #333333;
+  padding: 17px 21px;
+  padding-top: 17px;
+  padding-right: 21px;
+  padding-bottom: 17px;
+  padding-left: 21px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 47%;
+          flex: 0 0 47%;
 }
 
 .accessories__cards {
@@ -3422,19 +3462,18 @@ textarea.form__input {
 }
 
 .product-features__icon {
-  margin-bottom: 10px;
+  margin-bottom: calc(10px + 6 * ((100vw - 320px) / (1046)));
 }
 
 .product-features__title {
   font-weight: 600;
-  font-size: calc(14px + 4 * ((100vw - 320px) / (1366 - 320)));
+  font-size: calc(14px + 2 * ((100vw - 320px) / (1366 - 320)));
   line-height: 140%;
+  margin-bottom: calc(10px + 6 * ((100vw - 320px) / (1046)));
 }
 
 .product-features__text {
-  font-weight: 300;
-  color: #b3b3b3;
-  font-size: calc(12px + 4 * ((100vw - 320px) / (1366 - 320)));
+  font-size: calc(12px + 2 * ((100vw - 320px) / (1366 - 320)));
   line-height: 140%;
 }
 
@@ -4116,6 +4155,25 @@ textarea.form__input {
           flex: 0 0 50%;
 }
 
+.btn-to-product {
+  position: fixed;
+  bottom: 100px;
+  right: 90px;
+  border-radius: 30px;
+  -webkit-transition: 0.3s ease all 0s;
+  -o-transition: 0.3s ease all 0s;
+  transition: 0.3s ease all 0s;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.btn-to-product._active {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
 @media screen and (min-width: 451px) {
   .product-about__triggers {
     -webkit-box-orient: vertical;
@@ -4347,6 +4405,14 @@ textarea.form__input {
     border-right: 1px solid #eaeaea;
   }
 
+  .characteristic-table {
+    max-width: 76%;
+  }
+
+  .product-features__wrapper {
+    max-width: 80%;
+  }
+
   .error__container {
     padding-left: calc(20px + 180 * ((100vw - 320px) / (1046)));
   }
@@ -4433,6 +4499,10 @@ textarea.form__input {
     padding: 2.5em 0 3.9em;
   }
 
+  .characteristics__container {
+    max-width: 93%;
+  }
+
   .accessories__body {
     margin-bottom: 1.85em;
   }
@@ -4482,10 +4552,6 @@ textarea.form__input {
 
   .iphone__container {
     max-width: 62.6%;
-  }
-
-  .characteristics__container {
-    max-width: 93%;
   }
 
   .singularity__size-title {
@@ -4649,6 +4715,26 @@ textarea.form__input {
 }
 
 @media (max-width: 1131px) {
+  .characteristic-table__item {
+    margin-bottom: calc(30px + 26 * ((100vw - 320px) / (1046)));
+  }
+
+  .characteristic-table__atr {
+    padding-top: calc(5px + 12 * ((100vw - 320px) / (1046)));
+  }
+
+  .characteristic-table__atr {
+    padding-right: calc(10px + 11 * ((100vw - 320px) / (1046)));
+  }
+
+  .characteristic-table__atr {
+    padding-bottom: calc(5px + 12 * ((100vw - 320px) / (1046)));
+  }
+
+  .characteristic-table__atr {
+    padding-left: calc(10px + 11 * ((100vw - 320px) / (1046)));
+  }
+
   .mailing__wrapper {
     padding-top: calc(20px + 61 * ((100vw - 320px) / (1046)));
   }
@@ -5084,6 +5170,11 @@ textarea.form__input {
 
   .home-card__button {
     font-size: 14px;
+  }
+
+  .btn-to-product {
+    bottom: 50px;
+    right: 20px;
   }
 }
 
@@ -5695,6 +5786,29 @@ textarea.form__input {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 55%;
             flex: 0 0 55%;
+  }
+
+  .characteristic-table {
+    overflow-x: auto;
+    padding-bottom: 20px;
+  }
+
+  .characteristic-table__title {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+            flex: 0 0 40%;
+  }
+
+  .characteristic-table__content {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 80%;
+            flex: 0 0 80%;
+  }
+
+  .characteristic-table__atr {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
   }
 
   .accessories__card {

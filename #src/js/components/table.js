@@ -26,3 +26,11 @@ if (slider) {
     slider.scrollLeft = scrollLeft - walk;
   });
 }
+
+let table = $(".characteristic-table");
+let button = $('.characteristics__btn');
+
+button.click(function (e) {
+  e.preventDefault();
+  $('.characteristic-table__item:not(.characteristic-table__item--main)').slideToggle(300);
+});

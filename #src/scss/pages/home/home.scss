@@ -1,0 +1,14 @@
+.home {
+	&__main {
+		background-color: $Black3;
+		min-height: calc(100vh - #{$size-header-height});
+		display: flex;
+		align-items: center;
+		text-align: center;
+	}
+
+	&__cards {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}

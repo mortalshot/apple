@@ -12,4 +12,5 @@
 @@include('components/animation.js')
 @@include('components/form.js')
 @@include('components/select.js')
+@@include('components/table.js')
 

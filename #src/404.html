@@ -1,0 +1,20 @@
+@@include('html-components/_header.html', {
+"title": "Главная страница"
+})
+
+<main class="site__main">
+	<section class="error">
+        <div class="error__content">
+            <div class="error__container container">
+                <h1 class="error__title">404</h1>
+                <div class="error__text">Упс! Этой страницы не существует</div>
+                <a href="/" class="error__button btn btn-bg">На главную</a>
+            </div>
+        </div>
+        <div class="error__image">
+            <img src="img/404.png" alt="">
+        </div>
+    </section>
+</main>
+
+@@include('html-components/_footer.html')

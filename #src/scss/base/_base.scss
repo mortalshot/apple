@@ -123,6 +123,7 @@ ul {
 .block-table {
     overflow-x: auto;
     scrollbar-width: thin;
+    cursor: grab;
     &::-webkit-scrollbar {
         height: 8px;
     }
@@ -133,6 +134,10 @@ ul {
     &::-webkit-scrollbar-thumb {
         border-radius: 3px;
         background-color: #CCC3C3;
+    }
+
+    &.active {
+        cursor: grabbing;
     }
 
     table {

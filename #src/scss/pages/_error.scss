@@ -1,0 +1,72 @@
+.error {
+	@media screen and (min-width: 576px) {
+		display: flex;
+	}
+
+	&__content {
+		@include adaptiv-value("padding-top", 150, 20, 1);
+		@include adaptiv-value("padding-bottom", 150, 20, 1);
+		flex: 0 0 50%;
+
+		@media screen and (max-width: 575px) {
+			text-align: center;
+		}
+	}
+
+	&__container {
+		@include adaptiv-value("padding-left", 200, 20, 1);
+
+		@media screen and (min-width: 992px) {
+			@include adaptiv-value("padding-left", 200, 20, 0);
+		}
+	}
+
+	&__title {
+		font-weight: 400;
+		font-size: 184px;
+		line-height: 114%;
+		margin: 0;
+
+		@media screen and (max-width: $layoutDesktop + "px") {
+			font-size: calc(60px + 124 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		}
+	}
+
+	&__text {
+		line-height: $lineHeight;
+		font-size: 18px;
+		@include adaptiv-value("margin-bottom", 40, 10, 1);
+
+		@media screen and (max-width: $layoutDesktop + "px") {
+			font-size: calc(14px + 4 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		}
+	}
+
+	&__button {
+		padding: 10px 22px;
+		border-radius: 40px;
+		font-size: calc(12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+
+		@media screen and (max-width: 767px) {
+			font-size: 14px;
+		}
+	}
+
+	&__image {
+		flex: 1 1 auto;
+		position: relative;
+
+		@media screen and (max-width: 575px) {
+			padding-bottom: 60%;
+		}
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}

@@ -6,8 +6,8 @@
 		background-color: $LGray5;
 		display: flex;
 		justify-content: center;
-		@include adaptiv-value("padding-top", 81, 20, 0);
-		@include adaptiv-value("padding-bottom", 81, 20, 0);
+		@include adaptiv-value("padding-top", 81, 20, 1);
+		@include adaptiv-value("padding-bottom", 81, 20, 1);
 	}
 
 	&__content {

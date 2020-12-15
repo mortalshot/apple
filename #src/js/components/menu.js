@@ -11,13 +11,15 @@ btnToProduct.on("click", function (e) {
     $('body,html').animate({ scrollTop: top }, 1000);
 });
 
-const productOffset = $('#productGallery').offset().top;
-$(window).scroll(function () {
-    let scrolled = $(this).scrollTop();
+if ($('#productGallery')) {
+    const productOffset = $('#productGallery').offset().top;
+    $(window).scroll(function () {
+        let scrolled = $(this).scrollTop();
 
-    if (scrolled > productOffset - $('.site__header').innerHeight()) {
-        btnToProduct.addClass('_active');
-    } else {
-        btnToProduct.removeClass('_active');
-    }
-})
+        if (scrolled > productOffset - $('.site__header').innerHeight()) {
+            btnToProduct.addClass('_active');
+        } else {
+            btnToProduct.removeClass('_active');
+        }
+    })
+}

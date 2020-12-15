@@ -2738,18 +2738,20 @@ $(document).ready(function () {
       scrollTop: top
     }, 1000);
   });
-  var productOffset = $('#productGallery').offset().top;
-  $(window).scroll(function () {
-    var scrolled = $(this).scrollTop();
-    console.log(scrolled);
-    console.log(productOffset);
 
-    if (scrolled > productOffset - $('.site__header').innerHeight()) {
-      btnToProduct.addClass('_active');
-    } else {
-      btnToProduct.removeClass('_active');
-    }
-  });
+  if ($('#productGallery')) {
+    var productOffset = $('#productGallery').offset().top;
+    $(window).scroll(function () {
+      var scrolled = $(this).scrollTop();
+
+      if (scrolled > productOffset - $('.site__header').innerHeight()) {
+        btnToProduct.addClass('_active');
+      } else {
+        btnToProduct.removeClass('_active');
+      }
+    });
+  }
+
   $('.gallery__main').slick({
     slidesToShow: 1,
     slidesToScroll: 1,

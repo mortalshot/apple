@@ -218,18 +218,18 @@ btnToProduct.on("click", function (e) {
     $('body,html').animate({ scrollTop: top }, 1000);
 });
 
-const productOffset = $('#productGallery').offset().top;
-$(window).scroll(function () {
-    let scrolled = $(this).scrollTop();
-    console.log(scrolled);
-    console.log(productOffset);
+if ($('#productGallery')) {
+    const productOffset = $('#productGallery').offset().top;
+    $(window).scroll(function () {
+        let scrolled = $(this).scrollTop();
 
-    if (scrolled > productOffset - $('.site__header').innerHeight()) {
-        btnToProduct.addClass('_active');
-    } else {
-        btnToProduct.removeClass('_active');
-    }
-})
+        if (scrolled > productOffset - $('.site__header').innerHeight()) {
+            btnToProduct.addClass('_active');
+        } else {
+            btnToProduct.removeClass('_active');
+        }
+    })
+}
 $('.gallery__main').slick({
     slidesToShow: 1,
     slidesToScroll: 1,

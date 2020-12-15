@@ -2739,7 +2739,7 @@ $(document).ready(function () {
     }, 1000);
   });
 
-  if ($('#productGallery')) {
+  if ($('#productGallery').length > 0) {
     var productOffset = $('#productGallery').offset().top;
     $(window).scroll(function () {
       var scrolled = $(this).scrollTop();

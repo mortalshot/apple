@@ -10,8 +10,7 @@ btnToProduct.on("click", function (e) {
     var top = $(id).offset().top - $('.site__header').innerHeight();
     $('body,html').animate({ scrollTop: top }, 1000);
 });
-
-if ($('#productGallery')) {
+if ($('#productGallery').length > 0) {
     const productOffset = $('#productGallery').offset().top;
     $(window).scroll(function () {
         let scrolled = $(this).scrollTop();

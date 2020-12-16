@@ -1,0 +1,101 @@
+.request {
+	@include adaptiv-value("margin-top", 40, 30, 0);
+
+	&__container {
+		max-width: 1267px;
+
+		@media screen and (min-width: $layoutDesktop + "px") {
+			max-width: 93%;
+		}
+	}
+
+	&__wrapper {
+		@include adaptiv-value("padding-top", 113, 20, 1);
+		@include adaptiv-value("padding-right", 77, 20, 1);
+		@include adaptiv-value("padding-bottom", 113, 30, 1);
+		@include adaptiv-value("padding-left", 77, 20, 1);
+		background-color: $LGray5;
+
+		@media screen and (max-width: 767px) {
+			margin: 0 -20px;
+		}
+	}
+
+	&__row {
+		align-items: center;
+
+		@media screen and (max-width: 575px) {
+			display: block;
+		}
+	}
+
+	&__content {
+		flex: 0 0 57%;
+		@include adaptiv-value("padding-right", 150, 20, 0);
+
+		@media screen and (max-width: 991px) {
+			padding-right: 20px;
+		}
+		@media screen and (max-width: 575px) {
+			padding: 0px 0px 30px 0px;
+		}
+	}
+
+	&__title {
+		@include adaptiv-value("margin-bottom", 24, 15, 0);
+	}
+
+	&__text {
+		font-weight: 300;
+	}
+
+	&__form {
+		.form {
+			&__item {
+				padding: 0;
+
+				&:last-child {
+					@include adaptiv-value("margin-bottom", 32, 20, 1);
+				}
+			}
+
+			&__label {
+				left: 5px;
+			}
+
+			&__input {
+				background-color: transparent;
+			}
+		}
+	}
+
+	&__form-footer {
+		display: flex;
+		align-items: center;
+
+		@media screen and (max-width: 767px) {
+			display: block;
+		}
+
+		.form__button {
+			@media screen and (max-width: 767px) {
+				width: 100%;
+			}
+		}
+
+		.form__privacy {
+			@include adaptiv-value("padding-left", 40, 20, 0);
+
+			@media screen and (max-width: 991px) {
+				padding-left: 20px;
+			}
+			@media screen and (max-width: 767px) {
+				padding: 0;
+				margin-top: 20px;
+			}
+			@media screen and (max-width: 575px) {
+				text-align: center;
+			}
+		}
+	}
+}

@@ -1,6 +1,7 @@
 .singularity {
 	display: flex;
 	align-items: flex-end;
+	overflow: hidden;
 
 	@media screen and (max-width: 650px) {
 		flex-direction: column;

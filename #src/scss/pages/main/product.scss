@@ -405,6 +405,13 @@
 				padding-left: 14px;
 				font-size: calc(12px + 4 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 				line-height: calc(19 / 16);
+				transition: 0.3s ease all 0s;
+
+				@media screen and (min-width: 992px) {
+					&:hover {
+						color: rgba($color: $Black, $alpha: 0.75);
+					}
+				}
 
 				@media screen and (max-width: 575px) {
 					font-size: 14px;
@@ -463,7 +470,7 @@
 
 	&__btn {
 		color: $Black;
-		
+
 		@media screen and (max-width: 450px) {
 			width: 100%;
 		}

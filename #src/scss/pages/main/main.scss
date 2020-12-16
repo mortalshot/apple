@@ -104,6 +104,7 @@
 		margin: 0px 2.4em 0px 0px;
 		opacity: 0;
 		transform: translate(0, 50%);
+		border-radius: 3px;
 
 		&:last-child {
 			margin-right: 0;
@@ -143,11 +144,18 @@
 		font-size: calc(12px + 6 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 		line-height: calc(25 / 18);
 		white-space: nowrap;
+		border-radius: 3px;
+		transition: 0.3s ease all 0s;
+
+		@media screen and (min-width: 992px) {
+			&:hover {
+				background: rgba(0, 0, 0, 0.2);
+			}
+		}
 	}
 
 	&__item--active {
 		background: rgba(0, 0, 0, 0.2);
 		box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.1);
-		border-radius: 3px;
 	}
 }

@@ -48,7 +48,18 @@
 		i.icon-apple {
 			font-size: 44px;
 			display: flex;
-			align-items: center;
+
+			&::before {
+				transition: 0.3s ease all 0s;
+			}
+
+			@media screen and (min-width: 992px) {
+				&:hover {
+					&::before {
+						color: rgba($color: #a5a5a6, $alpha: 0.75);
+					}
+				}
+			}
 		}
 	}
 
@@ -239,7 +250,13 @@
 		color: $DGray;
 		margin-right: 2.6em;
 		white-space: nowrap;
+		transition: 0.3s ease all 0s;
 
+		@media screen and (min-width: 992px) {
+			&:hover {
+				color: rgba($color: $Gray3, $alpha: 0.75);
+			}
+		}
 		@media screen and (max-width: 680px) {
 			margin-right: 1em;
 		}
@@ -349,5 +366,12 @@
 		align-items: center;
 		font-size: 38px;
 		color: $DGray;
+		transition: 0.3s ease all 0s;
+
+		@media screen and (min-width: 992px) {
+			&:hover {
+				color: rgba($color: $DGray, $alpha: 0.75);
+			}
+		}
 	}
 }

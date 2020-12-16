@@ -41,7 +41,13 @@
 		color: $Gray3;
 		display: inline-flex;
 		white-space: nowrap;
+		transition: 0.3s ease all 0s;
 
+		@media screen and (min-width: 992px) {
+			&:hover {
+				color: rgba($color: $Gray3, $alpha: 0.75);
+			}
+		}
 		@media screen and (max-width: 575px) {
 			font-size: 14px;
 			margin: 0px 0px 11px 0px;
@@ -54,7 +60,13 @@
 		color: $Gray;
 		display: inline-flex;
 		white-space: nowrap;
+		transition: 0.3s ease all 0s;
 
+		@media screen and (min-width: 992px) {
+			&:hover {
+				color: rgba($color: $Gray, $alpha: 0.75);
+			}
+		}
 		@media screen and (max-width: 575px) {
 			font-size: 12px;
 		}
@@ -79,11 +91,11 @@
 			}
 
 			i {
-                font-size: calc(20px + 5 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+				font-size: calc(20px + 5 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 
-                @media screen and (max-width: 575px) {
-                    font-size: 25px;
-                }
+				@media screen and (max-width: 575px) {
+					font-size: 25px;
+				}
 			}
 		}
 	}
@@ -129,6 +141,12 @@
 					font-weight: 700;
 					line-height: 120%;
 					color: $DGray;
+
+					@media screen and (min-width: 992px) {
+						&:hover {
+							color: rgba($color: $DGray, $alpha: 0.75);
+						}
+					}
 				}
 			}
 		}
@@ -151,7 +169,13 @@
 		font-size: calc(12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 		line-height: $lineHeight;
 		color: $Black;
+		transition: 0.3s ease all 0s;
 
+		@media screen and (min-width: 992px) {
+			&:hover {
+				color: rgba($color: $Black, $alpha: 0.75);
+			}
+		}
 		@media screen and (max-width: 575px) {
 			font-size: 14px;
 		}
@@ -186,5 +210,17 @@
 	&__link {
 		color: $Gray3;
 		text-decoration: underline;
+	}
+}
+
+.social {
+	&__link {
+		transition: 0.3s ease all 0s;
+
+		@media screen and (min-width: 992px) {
+			&:hover {
+				transform: translate(0, 5px);
+			}
+		}
 	}
 }

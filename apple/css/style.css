@@ -1435,9 +1435,12 @@ ul li::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+.header__logo i.icon-apple::before {
+  -webkit-transition: 0.3s ease all 0s;
+  -o-transition: 0.3s ease all 0s;
+  transition: 0.3s ease all 0s;
 }
 
 .header__list {
@@ -1527,6 +1530,9 @@ ul li::before {
   color: #333333;
   margin-right: 2.6em;
   white-space: nowrap;
+  -webkit-transition: 0.3s ease all 0s;
+  -o-transition: 0.3s ease all 0s;
+  transition: 0.3s ease all 0s;
 }
 
 .header__burger {
@@ -1542,6 +1548,9 @@ ul li::before {
           align-items: center;
   font-size: 38px;
   color: #333333;
+  -webkit-transition: 0.3s ease all 0s;
+  -o-transition: 0.3s ease all 0s;
+  transition: 0.3s ease all 0s;
 }
 
 .icon-star {
@@ -2361,6 +2370,9 @@ textarea.form__input {
   display: -ms-inline-flexbox;
   display: inline-flex;
   white-space: nowrap;
+  -webkit-transition: 0.3s ease all 0s;
+  -o-transition: 0.3s ease all 0s;
+  transition: 0.3s ease all 0s;
 }
 
 .footer__mail {
@@ -2371,6 +2383,9 @@ textarea.form__input {
   display: -ms-inline-flexbox;
   display: inline-flex;
   white-space: nowrap;
+  -webkit-transition: 0.3s ease all 0s;
+  -o-transition: 0.3s ease all 0s;
+  transition: 0.3s ease all 0s;
 }
 
 .footer__right {
@@ -2433,6 +2448,9 @@ textarea.form__input {
   font-size: calc(12px + 2 * ((100vw - 320px) / (1366 - 320)));
   line-height: 140%;
   color: #1f1f1f;
+  -webkit-transition: 0.3s ease all 0s;
+  -o-transition: 0.3s ease all 0s;
+  transition: 0.3s ease all 0s;
 }
 
 .footer__bottom {
@@ -2461,6 +2479,12 @@ textarea.form__input {
 .privacy__link {
   color: #767676;
   text-decoration: underline;
+}
+
+.social__link {
+  -webkit-transition: 0.3s ease all 0s;
+  -o-transition: 0.3s ease all 0s;
+  transition: 0.3s ease all 0s;
 }
 
 .main {
@@ -4399,6 +4423,72 @@ textarea.form__input {
           flex: 0 0 50%;
 }
 
+.request {
+  margin-top: calc(30px + 10 * ((100vw - 320px) / (1046)));
+}
+
+.request__container {
+  max-width: 1267px;
+}
+
+.request__wrapper {
+  padding-top: 113px;
+  padding-right: 77px;
+  padding-bottom: 113px;
+  padding-left: 77px;
+  background-color: #f5f5f7;
+}
+
+.request__row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.request__content {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 57%;
+          flex: 0 0 57%;
+  padding-right: calc(20px + 130 * ((100vw - 320px) / (1046)));
+}
+
+.request__title {
+  margin-bottom: calc(15px + 9 * ((100vw - 320px) / (1046)));
+}
+
+.request__text {
+  font-weight: 300;
+}
+
+.request__form .form__item {
+  padding: 0;
+}
+
+.request__form .form__item:last-child {
+  margin-bottom: 32px;
+}
+
+.request__form .form__label {
+  left: 5px;
+}
+
+.request__form .form__input {
+  background-color: transparent;
+}
+
+.request__form-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.request__form-footer .form__privacy {
+  padding-left: calc(20px + 20 * ((100vw - 320px) / (1046)));
+}
+
 @media screen and (min-width: 450px) {
   .to-cart .popup__close {
     display: none;
@@ -4515,6 +4605,12 @@ textarea.form__input {
   }
 }
 
+@media screen and (min-width: 576px) and (min-width: 992px) {
+  .footer__item:first-child .footer__link:hover {
+    color: rgba(51, 51, 51, 0.75);
+  }
+}
+
 @media screen and (min-width: 601px) {
   .checkout__offer .accessories__card--full {
     -webkit-box-flex: 0;
@@ -4587,6 +4683,10 @@ textarea.form__input {
     padding: 0 30px;
   }
 
+  .header__logo i.icon-apple:hover::before {
+    color: rgba(165, 165, 166, 0.75);
+  }
+
   .header__item.menu__item--has-children:hover > .menu__link img {
     -webkit-transform: rotate(-180deg);
         -ms-transform: rotate(-180deg);
@@ -4604,6 +4704,14 @@ textarea.form__input {
   }
 
   .header__link:hover {
+    color: rgba(51, 51, 51, 0.75);
+  }
+
+  .header__phone:hover {
+    color: rgba(118, 118, 118, 0.75);
+  }
+
+  .cart i.icon-cart:hover {
     color: rgba(51, 51, 51, 0.75);
   }
 
@@ -4636,6 +4744,24 @@ textarea.form__input {
 
   .footer__container {
     padding: 0 40px;
+  }
+
+  .footer__phone:hover {
+    color: rgba(118, 118, 118, 0.75);
+  }
+
+  .footer__mail:hover {
+    color: rgba(179, 179, 179, 0.75);
+  }
+
+  .footer__link:hover {
+    color: rgba(31, 31, 31, 0.75);
+  }
+
+  .social__link:hover {
+    -webkit-transform: translate(0, 5px);
+        -ms-transform: translate(0, 5px);
+            transform: translate(0, 5px);
   }
 
   .gallery__thumbnails {
@@ -4821,6 +4947,10 @@ textarea.form__input {
 
   .contacts__wrapper {
     max-width: 78%;
+  }
+
+  .request__container {
+    max-width: 93%;
   }
 }
 
@@ -5065,6 +5195,26 @@ textarea.form__input {
   .home-card__item {
     padding-bottom: calc(20px + 60 * ((100vw - 320px) / (1046)));
   }
+
+  .request__wrapper {
+    padding-top: calc(20px + 93 * ((100vw - 320px) / (1046)));
+  }
+
+  .request__wrapper {
+    padding-right: calc(20px + 57 * ((100vw - 320px) / (1046)));
+  }
+
+  .request__wrapper {
+    padding-bottom: calc(30px + 83 * ((100vw - 320px) / (1046)));
+  }
+
+  .request__wrapper {
+    padding-left: calc(20px + 57 * ((100vw - 320px) / (1046)));
+  }
+
+  .request__form .form__item:last-child {
+    margin-bottom: calc(20px + 12 * ((100vw - 320px) / (1046)));
+  }
 }
 
 @media screen and (max-width: 1100px) {
@@ -5247,6 +5397,14 @@ textarea.form__input {
 
   .about__main {
     margin-bottom: 2em;
+  }
+
+  .request__content {
+    padding-right: 20px;
+  }
+
+  .request__form-footer .form__privacy {
+    padding-left: 20px;
   }
 }
 
@@ -5467,6 +5625,23 @@ textarea.form__input {
 
   .home-card__button {
     font-size: 14px;
+  }
+
+  .request__wrapper {
+    margin: 0 -20px;
+  }
+
+  .request__form-footer {
+    display: block;
+  }
+
+  .request__form-footer .form__button {
+    width: 100%;
+  }
+
+  .request__form-footer .form__privacy {
+    padding: 0;
+    margin-top: 20px;
   }
 }
 
@@ -5821,6 +5996,18 @@ textarea.form__input {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
+  }
+
+  .request__row {
+    display: block;
+  }
+
+  .request__content {
+    padding: 0px 0px 30px 0px;
+  }
+
+  .request__form-footer .form__privacy {
+    text-align: center;
   }
 }
 

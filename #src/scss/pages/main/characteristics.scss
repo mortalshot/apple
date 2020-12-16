@@ -53,8 +53,16 @@
 		font-weight: 300;
 		font-size: calc(14px + 4 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 		line-height: calc(25 / 18);
-		color: $Black;
-		border-bottom: 1px dashed $DGray;
+		color: $Blue;
+		border-bottom: 1px dashed $Blue;
+		transition: 0.3s ease all 0s;
+
+		@media screen and (min-width: 992px) {
+			&:hover {
+				color: rgba($color: $Blue, $alpha: 0.75);
+				border-color: rgba($color: $Blue, $alpha: 0.75);
+			}
+		}
 	}
 }
 
@@ -82,7 +90,6 @@
 	&__item--main {
 		display: block !important;
 	}
-	
 
 	&__title {
 		flex: 0 0 31.6%;

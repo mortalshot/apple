@@ -9,3 +9,8 @@ $('.product-about__summary .product-about__options input').change(function() {
 $('.product-about__bottom .product-about__options input').change(function() {
     $('.product-about__storage span').text($(this).val());
 });
+
+$('.to-cart__promo').click(function(e) {
+    e.preventDefault();
+    $('.to-cart__promo-input').slideToggle(300);
+});

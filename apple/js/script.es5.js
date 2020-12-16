@@ -2806,6 +2806,10 @@ $(document).ready(function () {
   $('.product-about__bottom .product-about__options input').change(function () {
     $('.product-about__storage span').text($(this).val());
   });
+  $('.to-cart__promo').click(function (e) {
+    e.preventDefault();
+    $('.to-cart__promo-input').slideToggle(300);
+  });
   var animItems = document.querySelectorAll('._anim-items');
 
   if (animItems.length > 0) {
@@ -3174,4 +3178,139 @@ $(document).ready(function () {
     e.preventDefault();
     $('.characteristic-table__item:not(.characteristic-table__item--main)').slideToggle(300);
   });
+  var popupLinks = document.querySelectorAll('.popup-link');
+  var body = document.querySelector('body');
+  var lockPadding = document.querySelectorAll(".lock-padding");
+  var unlock = true;
+  var timeout = 800;
+
+  if (popupLinks.length > 0) {
+    var _loop3 = function _loop3(_index10) {
+      var popupLink = popupLinks[_index10];
+      popupLink.addEventListener("click", function (e) {
+        var popupName = popupLink.getAttribute('href').replace('#', '');
+        var currentPopup = document.getElementById(popupName);
+        popupOpen(currentPopup);
+        e.preventDefault();
+      });
+    };
+
+    for (var _index10 = 0; _index10 < popupLinks.length; _index10++) {
+      _loop3(_index10);
+    }
+  }
+
+  var popupCloseIcon = document.querySelectorAll('.close-popup');
+
+  if (popupCloseIcon.length > 0) {
+    var _loop4 = function _loop4(_index11) {
+      var el = popupCloseIcon[_index11];
+      el.addEventListener('click', function (e) {
+        popupClose(el.closest('.popup'));
+        e.preventDefault();
+      });
+    };
+
+    for (var _index11 = 0; _index11 < popupCloseIcon.length; _index11++) {
+      _loop4(_index11);
+    }
+  }
+
+  function popupOpen(currentPopup) {
+    if (currentPopup && unlock) {
+      var popupActive = document.querySelector('.popup.open');
+
+      if (popupActive) {
+        popupClose(popupActive, false);
+      } else {
+        bodyLock();
+      }
+
+      currentPopup.classList.add('open');
+      currentPopup.addEventListener('click', function (e) {
+        if (!e.target.closest('.popup__content')) {
+          popupClose(e.target.closest('.popup'));
+        }
+      });
+    }
+  }
+
+  function popupClose(popupActive) {
+    var doUnlock = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+
+    if (unlock) {
+      popupActive.classList.remove('open');
+
+      if (doUnlock) {
+        bodyUnLock();
+      }
+    }
+  }
+
+  function bodyLock() {
+    var lockPaddingValue = window.innerWidth - document.querySelector('.site__main').offsetWidth + 'px'; //!обратить внимание на контейнер
+
+    if (lockPadding.length > 0) {
+      for (var _index12 = 0; _index12 < lockPadding.length; _index12++) {
+        var el = lockPadding[_index12];
+        el.style.paddingRight = lockPaddingValue;
+      }
+    }
+
+    body.style.paddingRight = lockPaddingValue;
+    body.classList.add('lock');
+    unlock = false;
+    setTimeout(function () {
+      unlock = true;
+    }, timeout);
+  }
+
+  function bodyUnLock() {
+    setTimeout(function () {
+      if (lockPadding.length > 0) {
+        for (var _index13 = 0; _index13 < lockPadding.length; _index13++) {
+          var el = lockPadding[_index13];
+          el.style.paddingRight = '0px';
+        }
+      }
+
+      body.style.paddingRight = '0px';
+      body.classList.remove('lock');
+    }, timeout);
+    unlock = false;
+    setTimeout(function () {
+      unlock = true;
+    }, timeout);
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.which === 27) {
+      var popupActive = document.querySelector('.popup.open');
+      popupClose(popupActive);
+    }
+  });
+
+  (function () {
+    // проверяем поддержку
+    if (!Element.prototype.closest) {
+      // реализуем
+      Element.prototype.closest = function (css) {
+        var node = this;
+
+        while (node) {
+          if (node.matches(css)) return node;else node = node.parentElement;
+        }
+
+        return null;
+      };
+    }
+  })();
+
+  (function () {
+    // проверяем поддержку
+    if (!Element.prototype.matches) {
+      // определяем свойство
+      Element.prototype.matches = Element.prototype.matchesSelector || Element.prototype.webkitMatchesSelector || Element.prototype.mozMatchesSelector || Element.prototype.msMatchesSelector;
+    }
+  })();
 });

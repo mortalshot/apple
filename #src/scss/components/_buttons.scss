@@ -10,16 +10,23 @@
     font-size: calc(12px + 4 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
     line-height: calc(19 / 16);
     white-space: nowrap;
+    transition: 0.3s ease all 0s;
+
+    @media screen and (min-width: 992px) {
+        &:hover {
+            background-color: $LGray5;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        font-size: 16px;
+        line-height: $lineHeight;
+    }
+
     i.icon-cart {
         font-size: 39px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-    }
-
-    @media screen and (max-width: 767px) {
-        font-size: 16px;
-        line-height: $lineHeight;
     }
 
     &-bg {
@@ -29,5 +36,34 @@
         padding: 18px 32px;
         font-weight: 600;
         border-color: $Blue;
+
+        @media screen and (min-width: 992px) {
+            &:hover {
+                background-color: rgba($color: $Blue, $alpha: 0.75);
+                border-color: rgba($color: $Blue, $alpha: 0.75);
+            }
+        }
     }
+}
+
+.btn-to-product {
+	position: fixed;
+	bottom: 100px;
+	right: 90px;
+	border-radius: 30px;
+	transition: 0.3s ease all 0s;
+	opacity: 0;
+	pointer-events: none;
+	visibility: hidden;
+
+	@media screen and (max-width: 767px) {
+		bottom: 50px;
+		right: 20px;
+	}
+
+	&._active {
+		opacity: 1;
+		pointer-events: auto;
+		visibility: visible;
+	}
 }

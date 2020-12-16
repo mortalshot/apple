@@ -89,9 +89,18 @@
 		transition: all 0.5s ease 0s;
 		border-bottom: 1px solid $Gray;
 		border-radius: 0;
+		transition: 0.3s ease all 0s;
 
 		@media screen and (min-width: $layoutDesktop + "px") {
 			font-size: calc(14px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		}
+		@media screen and (min-width: 992px) {
+			&:hover {
+				border-color: rgba($color:$Blue, $alpha: 0.5);
+			}
+			&:focus {
+				border-color: $Blue;
+			}
 		}
 	}
 

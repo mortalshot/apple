@@ -4,7 +4,7 @@
 		overflow-x: hidden;
 
 		@media screen and (max-width: 767px) {
-			overflow-x: auto;
+			flex-wrap: wrap;
 		}
 	}
 
@@ -21,14 +21,12 @@
 			min-height: 330px;
 		}
 		@media screen and (max-width: 767px) {
-			flex: 0 0 40%;
+			flex: 0 0 100%;
 		}
 		@media screen and (max-width: 575px) {
-			flex: 0 0 80%;
 			min-height: 380px;
 		}
 		@media screen and (max-width: 400px) {
-			flex: 0 0 95%;
 			min-height: 350px;
 		}
 	}
@@ -77,6 +75,15 @@
 				@media screen and (min-width: $layoutDesktop + "px") {
 					max-width: 300px;
 				}
+				@media screen and (max-width: 767px) {
+					max-width: 38%;
+				}
+				@media screen and (max-width: 575px) {
+					max-width: 50%;
+				}
+				@media screen and (max-width: 450px) {
+					max-width: 64%;
+				}
 			}
 		}
 	}
@@ -93,7 +100,6 @@
 				max-width: 70%;
 				padding: 2.4em 0;
 				transition: 0.3s ease all 0.2s;
-
 
 				@media screen and (max-width: 1300px) {
 					max-width: 80%;
@@ -146,6 +152,12 @@
 				@media screen and (min-width: $layoutDesktop + "px") {
 					max-width: 400px;
 				}
+				@media screen and (max-width: 767px) {
+					max-width: 66%;
+				}
+				@media screen and (max-width: 575px) {
+					max-width: 100%;
+				}
 			}
 		}
 	}
@@ -172,6 +184,15 @@
 
 				@media screen and (min-width: $layoutDesktop + "px") {
 					max-width: 280px;
+				}
+				@media screen and (max-width: 767px) {
+					max-width: 31%;
+				}
+				@media screen and (max-width: 575px) {
+					max-width: 50%;
+				}
+				@media screen and (max-width: 450px) {
+					max-width: 61%;
 				}
 			}
 		}
@@ -237,6 +258,15 @@
 				@media screen and (min-width: $layoutDesktop + "px") {
 					max-width: 230px;
 				}
+				@media screen and (max-width: 767px) {
+					max-width: 26%;
+				}
+				@media screen and (max-width: 575px) {
+					max-width: 40%;
+				}
+				@media screen and (max-width: 450px) {
+					max-width: 51%;
+				}
 			}
 		}
 	}
@@ -245,10 +275,7 @@
 		flex: 0 0 50%;
 
 		@media screen and (max-width: 575px) {
-			flex: 0 0 80%;
-		}
-		@media screen and (max-width: 400px) {
-			flex: 0 0 95%;
+			flex: 0 0 100%;
 		}
 
 		.features {
@@ -295,10 +322,7 @@
 
 		@media screen and (max-width: 575px) {
 			align-items: flex-start;
-			flex: 0 0 80%;
-		}
-		@media screen and (max-width: 400px) {
-			flex: 0 0 95%;
+			flex: 0 0 100%;
 		}
 
 		.features {
@@ -334,6 +358,12 @@
 				}
 				@media screen and (min-width: $layoutDesktop + "px") {
 					max-width: 266px;
+				}
+				@media screen and (max-width: 575px) {
+					max-width: 34%;
+				}
+				@media screen and (max-width: 450px) {
+					max-width: 39%;
 				}
 			}
 		}

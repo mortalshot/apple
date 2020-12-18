@@ -5496,6 +5496,9 @@ textarea.form__input {
 
   .request__content {
     padding-right: 20px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
   }
 
   .request__form-footer .form__privacy {
@@ -5573,7 +5576,7 @@ textarea.form__input {
         -ms-transform: scale(0.8);
             transform: scale(0.8);
     bottom: 30px;
-    right: -20px;
+    left: 20px;
   }
 
   .form__row {
@@ -5601,25 +5604,38 @@ textarea.form__input {
   }
 
   .features__cards {
-    overflow-x: auto;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 
   .features__card {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 40%;
-            flex: 0 0 40%;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
   }
 
   .features .features__card--iphone12-1 .features__title {
     max-width: 80%;
   }
 
+  .features .features__card--iphone12-1 .features__image {
+    max-width: 38%;
+  }
+
   .features .features__card--iphone12-2 .features__title {
     max-width: 90%;
   }
 
+  .features .features__card--iphone12-3 .features__image {
+    max-width: 66%;
+  }
+
   .features .features__card--iphone12-4 .features__title {
     max-width: 85%;
+  }
+
+  .features .features__card--iphone12-4 .features__image {
+    max-width: 31%;
   }
 
   .features .features__card--iphone12-5 .features__title {
@@ -5628,6 +5644,10 @@ textarea.form__input {
 
   .features .features__card--iphone12-6 .features__title {
     max-width: 85%;
+  }
+
+  .features .features__card--iphone12-6 .features__image {
+    max-width: 26%;
   }
 
   .features .features__card--iphone12-7 .features__title {
@@ -5725,6 +5745,10 @@ textarea.form__input {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 35%;
             flex: 0 0 35%;
+  }
+
+  .request {
+    margin-top: 0;
   }
 
   .request__wrapper {
@@ -5944,6 +5968,22 @@ textarea.form__input {
 
   .main-menu {
     overflow-x: auto;
+    scrollbar-width: thin;
+    padding-bottom: 20px;
+  }
+
+  .main-menu::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .main-menu::-webkit-scrollbar-track {
+    background-color: #283c5e;
+    border-radius: 3px;
+  }
+
+  .main-menu::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: #5f6f97;
   }
 
   .main-menu__list {
@@ -5959,9 +5999,6 @@ textarea.form__input {
   }
 
   .features__card {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 80%;
-            flex: 0 0 80%;
     min-height: 380px;
   }
 
@@ -5971,18 +6008,34 @@ textarea.form__input {
     max-width: 100% !important;
   }
 
+  .features .features__card--iphone12-1 .features__image {
+    max-width: 50%;
+  }
+
   .features .features__card--iphone12-2 .features__title {
     padding: 2em 15px;
+  }
+
+  .features .features__card--iphone12-3 .features__image {
+    max-width: 100%;
+  }
+
+  .features .features__card--iphone12-4 .features__image {
+    max-width: 50%;
   }
 
   .features .features__card--iphone12-5 .features__title {
     padding: 2em 15px;
   }
 
+  .features .features__card--iphone12-6 .features__image {
+    max-width: 40%;
+  }
+
   .features .features__card--iphone12-7 {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 80%;
-            flex: 0 0 80%;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
   }
 
   .features .features__card--iphone12-7 .features__title {
@@ -5995,13 +6048,17 @@ textarea.form__input {
         -ms-flex-align: start;
             align-items: flex-start;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 80%;
-            flex: 0 0 80%;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
   }
 
   .features .features__card--iphone12-8 .features__title {
     max-width: 100%;
     padding: 0 15px;
+  }
+
+  .features .features__card--iphone12-8 .features__image {
+    max-width: 34%;
   }
 
   .gallery {
@@ -6046,14 +6103,18 @@ textarea.form__input {
 
   .iphone__card {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 43%;
-            flex: 0 0 43%;
+        -ms-flex: 0 0 40%;
+            flex: 0 0 40%;
+  }
+
+  .iphone__image {
+    padding-bottom: 110%;
   }
 
   .accessories__card {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 43%;
-            flex: 0 0 43%;
+        -ms-flex: 0 0 47%;
+            flex: 0 0 47%;
   }
 
   .accessories__wrapper {
@@ -6306,6 +6367,20 @@ textarea.form__input {
 }
 
 @media screen and (max-width: 450px) {
+  .btn-to-product {
+    right: 15px;
+    bottom: 15px;
+    padding: 10px 15px;
+  }
+
+  .up-btn {
+    left: 15px;
+    bottom: 8px;
+    -webkit-transform: scale(0.75);
+        -ms-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+
   .popup__body {
     padding: 30px 0;
   }
@@ -6314,12 +6389,29 @@ textarea.form__input {
     padding: 40px 15px 20px;
   }
 
+  .features .features__card--iphone12-1 .features__image {
+    max-width: 64%;
+  }
+
+  .features .features__card--iphone12-4 .features__image {
+    max-width: 61%;
+  }
+
+  .features .features__card--iphone12-6 .features__image {
+    max-width: 51%;
+  }
+
+  .features .features__card--iphone12-8 .features__image {
+    max-width: 39%;
+  }
+
   .gallery {
     padding-top: 30px;
   }
 
   .gallery__main .gallery__image {
     padding-bottom: 24%;
+    margin: 10px auto 20px;
   }
 
   .gallery__main .gallery__image img {
@@ -6404,10 +6496,8 @@ textarea.form__input {
     width: 100%;
   }
 
-  .iphone__card {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 55%;
-            flex: 0 0 55%;
+  .iphone__image {
+    padding-bottom: 140%;
   }
 
   .characteristic-table {
@@ -6435,8 +6525,8 @@ textarea.form__input {
 
   .accessories__card {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 55%;
-            flex: 0 0 55%;
+        -ms-flex: 0 0 70%;
+            flex: 0 0 70%;
   }
 
   .design-note__img {
@@ -6480,22 +6570,13 @@ textarea.form__input {
 
 @media screen and (max-width: 400px) {
   .features__card {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 95%;
-            flex: 0 0 95%;
     min-height: 350px;
   }
 
-  .features .features__card--iphone12-7 {
+  .accessories__card {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 95%;
-            flex: 0 0 95%;
-  }
-
-  .features .features__card--iphone12-8 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 95%;
-            flex: 0 0 95%;
+        -ms-flex: 0 0 80%;
+            flex: 0 0 80%;
   }
 
   .product-features__item {

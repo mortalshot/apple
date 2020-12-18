@@ -31,10 +31,7 @@
 			flex: 0 0 40%;
 		}
 		@media screen and (max-width: 575px) {
-			flex: 0 0 43%;
-		}
-		@media screen and (max-width: 450px) {
-			flex: 0 0 55%;
+			flex: 0 0 40%;
 		}
 	}
 
@@ -51,6 +48,14 @@
 		margin-bottom: 1em;
 		position: relative;
 		padding-bottom: 98%;
+
+		@media screen and (max-width: 575px) {
+			padding-bottom: 110%;
+		}
+		@media screen and (max-width: 450px) {
+			padding-bottom: 140%;
+		}
+
 		img {
 			position: absolute;
 			top: 0;

@@ -57,7 +57,7 @@
 	&__mail {
 		font-size: calc(10px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 		line-height: $lineHeight;
-		color: $Gray;
+		color: $Gray3;
 		display: inline-flex;
 		white-space: nowrap;
 		transition: 0.3s ease all 0s;
@@ -165,7 +165,6 @@
 
 	&__link {
 		display: inline-block;
-		font-weight: 300;
 		font-size: calc(12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 		line-height: $lineHeight;
 		color: $Black;

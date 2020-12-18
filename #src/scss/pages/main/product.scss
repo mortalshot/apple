@@ -74,6 +74,22 @@
 					padding: 0;
 				}
 			}
+
+			&.slick-current {
+				&::before {
+					content: "";
+					display: block;
+					width: 100%;
+					height: 100%;
+					background-color: rgba($color: $White, $alpha: 0.3);
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					z-index: 1;
+				}
+			}
 		}
 	}
 

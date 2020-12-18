@@ -29,7 +29,6 @@
 	}
 
 	&__title {
-		font-weight: 300;
 		font-size: calc(24px + 24 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 		line-height: calc(58 / 48);
 		margin-bottom: 0.8em;
@@ -48,7 +47,6 @@
 	&__text {
 		max-width: 366px;
 		margin: 0 auto;
-		font-weight: 300;
 		transition: 0.3s ease all 0.2s;
 
 		@media screen and (min-width: $layoutDesktop + "px") {
@@ -140,7 +138,6 @@
 
 	&__link {
 		padding: 8px 16px;
-		font-weight: 300;
 		font-size: calc(12px + 6 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 		line-height: calc(25 / 18);
 		white-space: nowrap;

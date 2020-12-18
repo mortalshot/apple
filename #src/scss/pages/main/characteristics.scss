@@ -32,7 +32,6 @@
 	}
 
 	&__title {
-		font-weight: 300;
 		font-size: calc(18px + 8 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 		line-height: calc(36 / 26);
 		margin-right: 20px;
@@ -50,7 +49,6 @@
 
 	&__btn {
 		display: inline-block;
-		font-weight: 300;
 		font-size: calc(14px + 4 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 		line-height: calc(25 / 18);
 		color: $Blue;

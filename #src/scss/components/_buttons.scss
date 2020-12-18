@@ -48,8 +48,8 @@
 
 .btn-to-product {
 	position: fixed;
-	bottom: 100px;
-	right: 90px;
+	bottom: 65px;
+	right: 50px;
 	border-radius: 30px;
 	transition: 0.3s ease all 0s;
 	opacity: 0;
@@ -57,13 +57,40 @@
 	visibility: hidden;
 
 	@media screen and (max-width: 767px) {
-		bottom: 50px;
+		bottom: 30px;
 		right: 20px;
 	}
 
 	&._active {
 		opacity: 1;
 		pointer-events: auto;
+		visibility: visible;
+	}
+}
+
+.up-btn {
+	position: fixed;
+	bottom: 65px;
+	left: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 59px;
+	height: 59px;
+	border-radius: 50%;
+	background: rgba($color: $Black, $alpha: 0.8);
+	transition: 0.3s ease all 0s;
+	opacity: 0;
+    visibility: hidden;
+
+    @media screen and (max-width: 767px) {
+        transform: scale(0.8);
+        bottom: 30px;
+		right: -20px;
+    }
+
+	&.show {
+		opacity: 1;
 		visibility: visible;
 	}
 }

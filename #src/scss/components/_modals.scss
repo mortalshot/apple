@@ -146,10 +146,14 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		position: sticky;
+		bottom: 0;
+		padding: 20px 0;
+		background-color: $White;
 
 		.form {
 			&__delivery {
-				@include adaptiv-value("margin-bottom", 33, 15, 0);
+				@include adaptiv-value("margin-bottom", 15, 10, 0);
 			}
 		}
 	}

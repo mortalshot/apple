@@ -1044,14 +1044,6 @@ body.compensate-for-scrollbar {
 @font-face {
   font-family: "SF Pro Display";
   font-display: swap;
-  src: url("../fonts/SFProDisplay-Thin.woff") format("woff"), url("../fonts/SFProDisplay-Thin.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "SF Pro Display";
-  font-display: swap;
   src: url("../fonts/SFProDisplay-Regular.woff") format("woff"), url("../fonts/SFProDisplay-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -1608,8 +1600,8 @@ ul li::before {
 
 .btn-to-product {
   position: fixed;
-  bottom: 100px;
-  right: 90px;
+  bottom: 65px;
+  right: 50px;
   border-radius: 30px;
   -webkit-transition: 0.3s ease all 0s;
   -o-transition: 0.3s ease all 0s;
@@ -1622,6 +1614,35 @@ ul li::before {
 .btn-to-product._active {
   opacity: 1;
   pointer-events: auto;
+  visibility: visible;
+}
+
+.up-btn {
+  position: fixed;
+  bottom: 65px;
+  left: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 59px;
+  height: 59px;
+  border-radius: 50%;
+  background: rgba(31, 31, 31, 0.8);
+  -webkit-transition: 0.3s ease all 0s;
+  -o-transition: 0.3s ease all 0s;
+  transition: 0.3s ease all 0s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.up-btn.show {
+  opacity: 1;
   visibility: visible;
 }
 
@@ -2289,10 +2310,15 @@ textarea.form__input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  padding: 20px 0;
+  background-color: #ffffff;
 }
 
 .to-cart__footer .form__delivery {
-  margin-bottom: calc(15px + 18 * ((100vw - 320px) / (1046)));
+  margin-bottom: calc(10px + 5 * ((100vw - 320px) / (1046)));
 }
 
 .to-cart .popup__close {
@@ -2378,7 +2404,7 @@ textarea.form__input {
 .footer__mail {
   font-size: calc(10px + 2 * ((100vw - 320px) / (1366 - 320)));
   line-height: 140%;
-  color: #b3b3b3;
+  color: #767676;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -2444,7 +2470,6 @@ textarea.form__input {
 
 .footer__link {
   display: inline-block;
-  font-weight: 300;
   font-size: calc(12px + 2 * ((100vw - 320px) / (1366 - 320)));
   line-height: 140%;
   color: #1f1f1f;
@@ -2509,7 +2534,6 @@ textarea.form__input {
 }
 
 .main__title {
-  font-weight: 300;
   font-size: calc(24px + 24 * ((100vw - 320px) / (1366 - 320)));
   line-height: calc(58 / 48);
   margin-bottom: 0.8em;
@@ -2532,7 +2556,6 @@ textarea.form__input {
 .main__text {
   max-width: 366px;
   margin: 0 auto;
-  font-weight: 300;
   -webkit-transition: 0.3s ease all 0.2s;
   -o-transition: 0.3s ease all 0.2s;
   transition: 0.3s ease all 0.2s;
@@ -2654,7 +2677,6 @@ textarea.form__input {
 
 .main-menu__link {
   padding: 8px 16px;
-  font-weight: 300;
   font-size: calc(12px + 6 * ((100vw - 320px) / (1366 - 320)));
   line-height: calc(25 / 18);
   white-space: nowrap;
@@ -2687,7 +2709,6 @@ textarea.form__input {
 }
 
 .features__title {
-  font-weight: 300;
   color: #1f1f1f;
   max-width: 100%;
   padding: 0 15px;
@@ -2953,6 +2974,20 @@ textarea.form__input {
      object-fit: contain;
   padding: 25px;
   max-height: 200px;
+}
+
+.gallery__thumbnails .gallery__image.slick-current::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .gallery__item {
@@ -3262,7 +3297,7 @@ textarea.form__input {
 .iphone__image {
   margin-bottom: 1em;
   position: relative;
-  padding-bottom: 118%;
+  padding-bottom: 98%;
 }
 
 .iphone__image img {
@@ -3331,7 +3366,6 @@ textarea.form__input {
 }
 
 .characteristics__title {
-  font-weight: 300;
   font-size: calc(18px + 8 * ((100vw - 320px) / (1366 - 320)));
   line-height: calc(36 / 26);
   margin-right: 20px;
@@ -3345,7 +3379,6 @@ textarea.form__input {
 
 .characteristics__btn {
   display: inline-block;
-  font-weight: 300;
   font-size: calc(14px + 4 * ((100vw - 320px) / (1366 - 320)));
   line-height: calc(25 / 18);
   color: #0071e3;
@@ -3556,7 +3589,6 @@ textarea.form__input {
 }
 
 .design__text {
-  font-weight: 300;
   -webkit-transition: 0.3s ease all 0.3s;
   -o-transition: 0.3s ease all 0.3s;
   transition: 0.3s ease all 0.3s;
@@ -3699,10 +3731,6 @@ textarea.form__input {
   margin-bottom: 1em;
 }
 
-.about-product__text {
-  font-weight: 300;
-}
-
 .product-features {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3794,10 +3822,6 @@ textarea.form__input {
 
 .request__title {
   margin-bottom: calc(15px + 9 * ((100vw - 320px) / (1046)));
-}
-
-.request__text {
-  font-weight: 300;
 }
 
 .request__form .form__item {
@@ -3906,7 +3930,6 @@ textarea.form__input {
 }
 
 .checkout__title {
-  font-weight: 300;
   margin: 0;
 }
 
@@ -4229,10 +4252,6 @@ textarea.form__input {
   margin-right: 0;
 }
 
-.contacts__address {
-  font-weight: 300;
-}
-
 .contacts__map {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -4305,10 +4324,6 @@ textarea.form__input {
 
 .mailing__form .form__input {
   background-color: transparent;
-}
-
-.mailing__form .form__privacy {
-  font-weight: 300;
 }
 
 .mailing__form .form__privacy a {
@@ -5549,8 +5564,16 @@ textarea.form__input {
   }
 
   .btn-to-product {
-    bottom: 50px;
+    bottom: 30px;
     right: 20px;
+  }
+
+  .up-btn {
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
+    bottom: 30px;
+    right: -20px;
   }
 
   .form__row {

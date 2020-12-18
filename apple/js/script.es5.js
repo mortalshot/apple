@@ -2750,8 +2750,25 @@ $(document).ready(function () {
         btnToProduct.removeClass('_active');
       }
     });
-  }
+  } // up btn show/hide
 
+
+  var btnUp = $('.up-btn');
+  $(window).scroll(function () {
+    var winScrollTop = $(this).scrollTop();
+
+    if (winScrollTop > 600) {
+      btnUp.addClass('show');
+    } else {
+      btnUp.removeClass('show');
+    }
+  });
+  btnUp.on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: 0
+    }, '1000');
+  });
   $('.gallery__main').slick({
     slidesToShow: 1,
     slidesToScroll: 1,

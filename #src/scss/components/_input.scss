@@ -310,6 +310,7 @@ textarea.form__input {
 	}
 	&__input {
 		flex: 1 1 auto;
+		display: flex;
 
 		input {
 			height: 100%;

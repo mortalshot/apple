@@ -209,6 +209,14 @@
 	&__link {
 		color: $Gray3;
 		text-decoration: underline;
+		transition: 0.3s ease all 0s;
+		
+		@media screen and (min-width: 992px) {
+			&:hover {
+				color: rgba($color: $Gray3, $alpha: 0.75);
+				text-decoration: underline;
+			}
+		}
 	}
 }
 

@@ -6,6 +6,18 @@
 		@media screen and (max-width: 767px) {
 			overflow-x: auto;
 			overflow-y: hidden;
+			scrollbar-width: thin;
+			&::-webkit-scrollbar {
+				height: 8px;
+			}
+			&::-webkit-scrollbar-track {
+				background-color: #f6f6f6;
+				border-radius: 3px;
+			}
+			&::-webkit-scrollbar-thumb {
+				border-radius: 3px;
+				background-color: #ccc3c3;
+			}
 		}
 	}
 

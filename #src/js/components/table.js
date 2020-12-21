@@ -33,4 +33,8 @@ let button = $('.characteristics__btn');
 button.click(function (e) {
   e.preventDefault();
   $('.characteristic-table__item:not(.characteristic-table__item--main)').slideToggle(300);
+
+  $(this).text(function (i, text) {
+    return text === "Детальные характеристики" ? "Скрыть характеристики" : "Детальные характеристики";
+  })
 });

@@ -25,3 +25,6 @@ $(".form__input").focusout(function () {
         $(this).closest('.form__item').children('.form__label').css({ 'top': '6px'});
     }
 });
+
+$(".form__input--phone").mask("+7 (999) 999-99-99");
+$(".form__input--index").mask("999999");

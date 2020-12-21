@@ -32,7 +32,7 @@
     &-bg {
         background-color: $Blue;
         color: $White;
-        border-radius: 12px;
+        border-radius: 40px;
         padding: 18px 32px;
         font-weight: 600;
         border-color: $Blue;
@@ -47,60 +47,112 @@
 }
 
 .btn-to-product {
-	position: fixed;
-	bottom: 65px;
-	right: 50px;
-	border-radius: 30px;
-	transition: 0.3s ease all 0s;
-	opacity: 0;
-	pointer-events: none;
-	visibility: hidden;
+    position: fixed;
+    bottom: 65px;
+    right: 50px;
+    border-radius: 30px;
+    pointer-events: none;
+    visibility: hidden;
 
-	@media screen and (max-width: 767px) {
-		bottom: 30px;
-		right: 20px;
+    @media screen and (max-width: 767px) {
+        bottom: 30px;
+        right: 20px;
+    }
+    @media screen and (max-width: 575px) {
+        font-size: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 66px;
+        height: 66px;
+        padding: 0;
+        background-color: $Blue;
+        border: 0;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 24px;
+            height: 22px;
+            background: url(../img/icons/cart-white.svg) no-repeat center/cover;
+        }
     }
     @media screen and (max-width: 450px) {
         right: 15px;
         bottom: 15px;
-        padding: 10px 15px;
+        width: 50px;
+        height: 50px;
     }
 
-	&._active {
-		opacity: 1;
-		pointer-events: auto;
-		visibility: visible;
-	}
+    .btn {
+        transition: 0.3s ease all 0s;
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+    }
+
+    &._active {
+        pointer-events: auto;
+        visibility: visible;
+
+        .btn {
+            opacity: 1;
+            pointer-events: auto;
+            visibility: visible;
+        }
+    }
 }
 
 .up-btn {
-	position: fixed;
-	bottom: 65px;
-	left: 50px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 59px;
-	height: 59px;
-	border-radius: 50%;
-	background: rgba($color: $Black, $alpha: 0.8);
-	transition: 0.3s ease all 0s;
-	opacity: 0;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: rgba($color: $Black, $alpha: 0.75);
+    position: fixed;
+    bottom: 65px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease all 0s;
+    opacity: 0;
     visibility: hidden;
+    z-index: 1;
 
+    @media screen and (min-width: $layoutDesktop + "px") {
+        font-size: calc(5px + 5 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+        line-height: calc(12 / 10);
+    }
     @media screen and (max-width: 767px) {
-        transform: scale(0.8);
         bottom: 30px;
-		left: 20px;
+        left: 20px;
     }
     @media screen and (max-width: 450px) {
         left: 15px;
         bottom: 8px;
-        transform: scale(0.75);
     }
 
-	&.show {
-		opacity: 1;
-		visibility: visible;
-	}
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    svg {
+        margin-bottom: 3px;
+
+        path {
+            transition: 0.3s ease all 0s;
+        }
+
+        @media screen and (min-width: 992px) {
+            &:hover {
+                path {
+                    &:first-child {
+                        fill: rgba($color: $Blue, $alpha: 0.75);
+                    }
+                }
+            }
+        }
+    }
 }

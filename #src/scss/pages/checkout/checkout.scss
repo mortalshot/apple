@@ -104,6 +104,18 @@
 				@media screen and (max-width: 600px) {
 					flex-wrap: nowrap;
 					overflow-x: auto;
+					scrollbar-width: thin;
+					&::-webkit-scrollbar {
+						height: 8px;
+					}
+					&::-webkit-scrollbar-track {
+						background-color: #F6F6F6;
+						border-radius: 3px;
+					}
+					&::-webkit-scrollbar-thumb {
+						border-radius: 3px;
+						background-color: #CCC3C3;
+					}
 				}
 			}
 
@@ -116,7 +128,13 @@
 					flex: 0 0 100%;
 				}
 				@media screen and (max-width: 600px) {
-					flex: 0 0 50%;
+					flex: 0 0 47%;
+				}
+				@media screen and (max-width: 450px) {
+					flex: 0 0 70%;
+				}
+				@media screen and (max-width: 400px) {
+					flex: 0 0 80%;
 				}
 
 				&--full {

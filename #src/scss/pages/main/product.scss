@@ -125,23 +125,25 @@
 			position: relative;
 			padding-bottom: 29.4%;
 
-			@media screen and (min-width: 1800px) {
-				padding-bottom: 15%;
-			}
-			@media screen and (min-width: 1700px) {
-				padding-bottom: 18%;
-			}
-			@media screen and (min-width: 1600px) {
-				padding-bottom: 20%;
-			}
 			@media screen and (min-width: 1500px) {
-				padding-bottom: 22%;
+				padding-bottom: 25%;
 			}
 			@media screen and (min-width: 1400px) {
 				padding-bottom: 27%;
 			}
+			@media screen and (min-width: 992px) {
+				padding-bottom: 32%;
+			}
+			@media screen and (max-width: 991px) {
+				display: flex;
+				justify-content: center;
+				padding-bottom: 22%;
+			}
+			@media screen and (max-width: 767px) {
+				padding-bottom: 24%;
+			}
 			@media screen and (max-width: 575px) {
-				padding-bottom: 15%;
+				padding-bottom: 22%;
 			}
 			@media screen and (max-width: 450px) {
 				padding-bottom: 24%;
@@ -156,7 +158,6 @@
 				height: 100%;
 				object-fit: contain;
 				padding: 60px 0;
-				max-height: 600px;
 
 				@media screen and (max-width: 991px) {
 					padding: 30px;
@@ -165,11 +166,7 @@
 					padding: 10px;
 				}
 			}
-			@media screen and (max-width: 991px) {
-				display: flex;
-				justify-content: center;
-				padding-bottom: 19.6%;
-			}
+
 		}
 	}
 
@@ -322,8 +319,15 @@
 			background-color: $LGray;
 			border-radius: 3px;
 			padding: 4px;
+
+			@media screen and (max-width: 450px) {
+				width: 100%;
+			}
+
 			&__item {
 				margin: 0px 4px 0px 0px;
+
+
 			}
 
 			&__input {
@@ -344,6 +348,11 @@
 						background-color: rgba($color: $White, $alpha: 0.5);
 					}
 				}
+				@media screen and (max-width: 450px) {
+					display: flex;
+					justify-content: center;
+					font-size: 14px;
+				}
 
 				&::before,
 				&::after {
@@ -358,6 +367,12 @@
 		font-size: calc(24px + 24 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 		line-height: calc(58 / 48);
 		margin-bottom: 0.4em;
+
+		@media screen and (max-width: 575px) {
+			br {
+				display: none;
+			}
+		}
 	}
 
 	&__attributes {
@@ -367,6 +382,9 @@
 		line-height: calc(34 / 28);
 		margin-bottom: 1.6em;
 
+		@media screen and (max-width: 575px) {
+			margin-bottom: 24px;
+		}
 		@media screen and (min-width: 451px) {
 			justify-content: flex-end;
 		}

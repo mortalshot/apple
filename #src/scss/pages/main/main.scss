@@ -60,12 +60,15 @@
 
 	&__image {
 		max-width: 612px;
-		@include adaptiv-value("max-height", 643, 290, 1);
+		@include adaptiv-value("max-height", 643, 270, 1);
 		margin: 0 auto;
 		transition: 0.3s ease all 0.3s;
 
 		@media screen and (min-width: $layoutDesktop + "px") {
 			max-width: 60%;
+		}
+		@media screen and (max-width: 575px) {
+			margin-bottom: 20px;
 		}
 	}
 
@@ -215,6 +218,7 @@
 		white-space: nowrap;
 		border-radius: 3px;
 		transition: 0.3s ease all 0s;
+		color: $Black;
 
 		@media screen and (min-width: 992px) {
 			&:hover {

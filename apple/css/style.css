@@ -2733,6 +2733,7 @@ textarea.form__input {
   -webkit-transition: 0.3s ease all 0s;
   -o-transition: 0.3s ease all 0s;
   transition: 0.3s ease all 0s;
+  color: #1f1f1f;
 }
 
 .main-menu__item--active {
@@ -3931,6 +3932,73 @@ textarea.form__input {
   color: #ffffff;
 }
 
+.uniq3 {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.uniq3__top {
+  padding-bottom: 100px;
+}
+
+.uniq3__top .uniq3__content {
+  padding-right: 40px;
+}
+
+.uniq3__top .uniq3__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 59%;
+          flex: 0 0 59%;
+}
+
+.uniq3__row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.uniq3__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.uniq3__title {
+  margin-bottom: 40px;
+}
+
+.uniq3__text {
+  font-size: calc(12px + 4 * ((100vw - 320px) / (1366 - 320)));
+  line-height: calc(22 / 16);
+}
+
+.uniq3__details {
+  margin-top: 40px;
+}
+
+.uniq3__subtitle {
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.uniq3__list-item {
+  padding: 0;
+  list-style-type: none;
+  font-size: calc(12px + 4 * ((100vw - 320px) / (1366 - 320)));
+  line-height: calc(22 / 16);
+  margin-bottom: 8px;
+}
+
+.uniq3__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+.uniq3__wrapper {
+  max-width: 343px;
+}
+
 .checkout {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4775,6 +4843,21 @@ textarea.form__input {
             align-items: center;
   }
 
+  .uniq3__top .uniq3__image {
+    position: relative;
+    padding-bottom: 50%;
+  }
+
+  .uniq3__top .uniq3__image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+
   .error {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5218,6 +5301,10 @@ textarea.form__input {
     max-width: 42%;
   }
 
+  .uniq3__wrapper {
+    max-width: 64%;
+  }
+
   .checkout__form .select__value {
     font-size: calc(12px + 2 * ((100vw - 320px) / (1366 - 320)));
   }
@@ -5402,7 +5489,7 @@ textarea.form__input {
 
 @media (max-width: 1131px) {
   .main__image {
-    max-height: calc(290px + 353 * ((100vw - 320px) / (1046)));
+    max-height: calc(270px + 373 * ((100vw - 320px) / (1046)));
   }
 
   .main--row {
@@ -5463,6 +5550,38 @@ textarea.form__input {
 
   .xxl-center__text {
     margin-bottom: calc(20px + 73 * ((100vw - 320px) / (1046)));
+  }
+
+  .uniq3 {
+    padding-top: calc(30px + 60 * ((100vw - 320px) / (1046)));
+  }
+
+  .uniq3 {
+    padding-bottom: calc(30px + 60 * ((100vw - 320px) / (1046)));
+  }
+
+  .uniq3__top {
+    padding-bottom: calc(25px + 75 * ((100vw - 320px) / (1046)));
+  }
+
+  .uniq3__top .uniq3__content {
+    padding-right: calc(15px + 25 * ((100vw - 320px) / (1046)));
+  }
+
+  .uniq3__title {
+    margin-bottom: calc(20px + 20 * ((100vw - 320px) / (1046)));
+  }
+
+  .uniq3__details {
+    margin-top: calc(20px + 20 * ((100vw - 320px) / (1046)));
+  }
+
+  .uniq3__subtitle {
+    margin-bottom: calc(10px + 6 * ((100vw - 320px) / (1046)));
+  }
+
+  .uniq3__list-item {
+    margin-bottom: calc(5px + 3 * ((100vw - 320px) / (1046)));
   }
 
   .mailing__wrapper {
@@ -5672,6 +5791,10 @@ textarea.form__input {
   }
 
   .request__form-footer .form__privacy {
+    padding-left: 20px;
+  }
+
+  .uniq3__bottom .uniq3__content {
     padding-left: 20px;
   }
 
@@ -5958,6 +6081,12 @@ textarea.form__input {
     margin-top: 20px;
   }
 
+  .uniq3__top .uniq3__image {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+            flex: 0 0 40%;
+  }
+
   .checkout__back-link {
     margin-right: 0.5em;
   }
@@ -6198,6 +6327,10 @@ textarea.form__input {
     overflow-x: auto;
   }
 
+  .main__image {
+    margin-bottom: 20px;
+  }
+
   .main--row .main__row {
     display: block;
   }
@@ -6380,6 +6513,29 @@ textarea.form__input {
 
   .request__form-footer .form__privacy {
     text-align: center;
+  }
+
+  .uniq3__top .uniq3__content {
+    padding: 0;
+  }
+
+  .uniq3__top .uniq3__image {
+    max-width: 70%;
+    margin: 0 auto 20px;
+  }
+
+  .uniq3__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+
+  .uniq3__bottom .uniq3__content {
+    padding: 0 0 20px;
   }
 
   .about__main {
@@ -6852,6 +7008,10 @@ textarea.form__input {
 
   .accessories__image {
     padding-bottom: 50%;
+  }
+
+  .uniq3__top .uniq3__image {
+    max-width: 100%;
   }
 
   .checkout__offer .accessories__card {

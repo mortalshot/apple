@@ -1,0 +1,107 @@
+.uniq3 {
+	@include adaptiv-value("padding-top", 90, 30, 1);
+	@include adaptiv-value("padding-bottom", 90, 30, 1);
+
+	&__top {
+		@include adaptiv-value("padding-bottom", 100, 25, 1);
+
+		.uniq3__content {
+			@include adaptiv-value("padding-right", 40, 15, 1);
+
+			@media screen and (max-width: 575px) {
+				padding: 0;
+			}
+		}
+		.uniq3__image {
+			flex: 0 0 59%;
+			
+			@media screen and (min-width: 576px) {
+				position: relative;
+				padding-bottom: 50%;
+			}
+			@media screen and (max-width: 767px) {
+				flex: 0 0 40%;
+			}
+			@media screen and (max-width: 575px) {
+				max-width: 70%;
+				margin: 0 auto 20px;
+			}
+			@media screen and (max-width: 400px) {
+				max-width: 100%;
+			}
+
+			img {
+				@media screen and (min-width: 576px) {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+				}
+			}
+		}	
+	}
+
+	&__row {
+		align-items: center;
+
+		@media screen and (max-width: 575px) {
+			flex-direction: column-reverse;
+			align-items: baseline;
+		}
+	}
+
+	&__content {
+		flex: 1 1 auto;
+	}
+
+	&__title {
+		@include adaptiv-value("margin-bottom", 40, 20, 1);
+	}
+
+	&__text {
+		font-size: calc(12px + 4 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		line-height: calc(22 / 16);
+	}
+
+	&__details {
+		@include adaptiv-value("margin-top", 40, 20, 1);
+	}
+
+	&__subtitle {
+		font-weight: 600;
+		@include adaptiv-value("margin-bottom", 16, 10, 1);
+	}
+
+	&__list-item {
+		padding: 0;
+		list-style-type: none;
+		font-size: calc(12px + 4 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		line-height: calc(22 / 16);
+		@include adaptiv-value("margin-bottom", 8, 5, 1);
+	}
+
+	&__image {
+		flex: 0 0 50%;
+	}
+
+	&__bottom {
+		.uniq3__content {
+			@media screen and (max-width: 991px) {
+				padding-left: 20px;
+			}
+			@media screen and (max-width: 575px) {
+				padding: 0 0 20px;
+			}
+		}
+	}
+
+	&__wrapper {
+		max-width: 343px;
+		
+		@media screen and (min-width: $layoutDesktop + 'px') {
+			max-width: 64%;
+		}
+	}
+}

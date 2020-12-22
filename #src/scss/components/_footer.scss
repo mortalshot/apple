@@ -1,6 +1,11 @@
 .footer {
 	background-color: $LGray2;
 	padding: 1.5em 0;
+	
+	@media screen and (max-width: 767px) {
+		position: relative;
+		z-index: 1;
+	}
 
 	&__container {
 		@media screen and (min-width: 992px) {

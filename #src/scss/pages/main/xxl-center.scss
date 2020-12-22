@@ -1,0 +1,27 @@
+.xxl-center {
+	text-align: center;
+
+	&__title {
+		@include adaptiv-value("padding-top", 90, 30, 1);
+		@include adaptiv-value("margin-bottom", 50, 20, 1);
+	}
+
+	&__text {
+		margin: 0 auto;
+		@include adaptiv-value("margin-bottom", 93, 20, 1);
+		max-width: 447px;
+
+		@media screen and (min-width: $layoutDesktop + 'px') {
+			max-width: 42%;
+		}
+	}
+
+	&__image {
+		display: flex;
+		justify-content: center;
+	}
+
+	&--white {
+		color: $White;
+	}
+}

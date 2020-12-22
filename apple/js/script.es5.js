@@ -3067,14 +3067,14 @@ $(document).ready(function () {
   $('.to-cart__promo').click(function (e) {
     e.preventDefault();
     $('.to-cart__promo-input').slideToggle(300);
-  });
-  $(".to-cart__promo-input input").focus(function () {
-    $(document).on('keypress', function (e) {
-      if (e.which === 13) {
-        alert('You pressed enter!');
-      }
-    });
-  });
+  }); // $(".to-cart__promo-input input").focus(function () {
+  //     $(document).on('keypress', function (e) {
+  //         if (e.which === 13) {
+  //             alert('You pressed enter!');
+  //         }
+  //     });
+  // });
+
   var animItems = document.querySelectorAll('._anim-items');
 
   if (animItems.length > 0) {

@@ -3903,6 +3903,34 @@ textarea.form__input {
   padding-left: calc(20px + 20 * ((100vw - 320px) / (1046)));
 }
 
+.xxl-center {
+  text-align: center;
+}
+
+.xxl-center__title {
+  padding-top: 90px;
+  margin-bottom: 50px;
+}
+
+.xxl-center__text {
+  margin: 0 auto;
+  margin-bottom: 93px;
+  max-width: 447px;
+}
+
+.xxl-center__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.xxl-center--white {
+  color: #ffffff;
+}
+
 .checkout {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5149,6 +5177,10 @@ textarea.form__input {
     margin-bottom: 20px;
   }
 
+  .iphone__image {
+    padding-bottom: 100%;
+  }
+
   .characteristics {
     padding: 2.5em 0 3.9em;
   }
@@ -5180,6 +5212,10 @@ textarea.form__input {
 
   .request__container {
     max-width: 93%;
+  }
+
+  .xxl-center__text {
+    max-width: 42%;
   }
 
   .checkout__form .select__value {
@@ -5236,6 +5272,10 @@ textarea.form__input {
 }
 
 @media screen and (min-width: 1600px) {
+  .iphone__image {
+    padding-bottom: 120%;
+  }
+
   .accessories__image {
     margin-bottom: -4em;
   }
@@ -5411,6 +5451,18 @@ textarea.form__input {
 
   .request__form .form__item:last-child {
     margin-bottom: calc(20px + 12 * ((100vw - 320px) / (1046)));
+  }
+
+  .xxl-center__title {
+    padding-top: calc(30px + 60 * ((100vw - 320px) / (1046)));
+  }
+
+  .xxl-center__title {
+    margin-bottom: calc(20px + 30 * ((100vw - 320px) / (1046)));
+  }
+
+  .xxl-center__text {
+    margin-bottom: calc(20px + 73 * ((100vw - 320px) / (1046)));
   }
 
   .mailing__wrapper {
@@ -5712,6 +5764,11 @@ textarea.form__input {
   .popup__close {
     top: 15px;
     right: 7px;
+  }
+
+  .footer {
+    position: relative;
+    z-index: 1;
   }
 
   .main-menu__item {

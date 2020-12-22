@@ -14,7 +14,7 @@
 			&__title {
 				border-radius: 0;
 				border: 0;
-				border-bottom: 1px solid $Gray3;
+				border-bottom: 1px solid $Gray;
 			}
 
 			&__value {
@@ -25,6 +25,10 @@
 				@media screen and (min-width: $layoutDesktop + "px") {
 					font-size: calc(12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 				}
+			}
+
+			&__options {
+				border-color: $Gray;
 			}
 
 			&__option {

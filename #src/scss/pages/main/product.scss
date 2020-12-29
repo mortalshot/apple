@@ -24,6 +24,7 @@
 	@media screen and (max-width: 450px) {
 		padding-top: 30px;
 	}
+
 	&__thumbnails {
 		@media screen and (min-width: 992px) {
 			display: flex;
@@ -51,7 +52,7 @@
 				padding-bottom: 100%;
 			}
 			@media screen and (max-width: 991px) {
-				padding-bottom: 13.5%;
+				padding-bottom: 9%;
 			}
 			@media screen and (max-width: 575px) {
 				padding-bottom: 4%;
@@ -137,7 +138,7 @@
 			@media screen and (max-width: 991px) {
 				display: flex;
 				justify-content: center;
-				padding-bottom: 22%;
+				padding-bottom: 25%;
 			}
 			@media screen and (max-width: 767px) {
 				padding-bottom: 24%;

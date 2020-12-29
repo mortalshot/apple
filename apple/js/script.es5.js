@@ -3037,6 +3037,23 @@ $(document).ready(function () {
     $('.gallery__main').slick('refresh');
     $('.gallery__thumbnails').slick('refresh');
   });
+  $('.accessories__cards').slick({
+    mobileFirst: true,
+    arrows: false,
+    dots: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: [{
+      breakpoint: 768,
+      settings: "unslick"
+    }, {
+      breakpoint: 450,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    }]
+  });
   $('.tabs-triggers__item').click(function (e) {
     e.preventDefault();
     var tabsid = $(this).closest('.tabs').attr("id");

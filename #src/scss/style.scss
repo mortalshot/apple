@@ -22,3 +22,157 @@
 
 // === Pages ===
 @import "pages/index";
+
+.features__card--top-center {
+	.features__title {
+		order: 2;
+		margin: 0 auto;
+		flex: initial;
+		@include adaptiv-value("padding-bottom", 82, 20, 1);
+	}
+	.features__image {
+		order: 1;
+		flex: 1 1 auto;
+
+		img {
+			margin: 0 auto;
+		}
+	}
+}
+
+.features__card--center {
+	.features__title {
+		margin: 0 auto;
+	}
+	.features__image {
+		img {
+			margin: 0 auto;
+		}
+	}
+}
+
+.features__card--right {
+	.features__image {
+		padding-top: 20px;
+		img {
+			margin-left: auto;
+		}
+	}
+}
+
+.features__card--full {
+	position: relative;
+
+	.features__title {
+	}
+
+	.features__image {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+.features__card--text-end {
+	.features__title {
+		display: flex;
+		align-items: flex-end;
+		@include adaptiv-value("padding-bottom", 80, 20, 1);
+	}
+}
+
+.features__card--row {
+	@media screen and (min-width: 992px) {
+		flex-direction: row;
+		align-items: flex-end;
+
+		.features__title {
+			@include adaptiv-value("padding-bottom", 82, 20, 1);
+		}
+	}
+
+	@media screen and (min-width: 500px) and (max-width: 767px) {
+		flex-direction: row;
+		align-items: flex-end;
+
+		.features__title {
+			@include adaptiv-value("padding-bottom", 82, 20, 1);
+		}
+	}
+}
+
+.features__card--gray {
+	.features__title {
+		color: $Gray4;
+	}
+}
+
+.features__card--lgray {
+	.features__title {
+		color: $LGray;
+	}
+}
+
+.features__card--white {
+	.features__title {
+		color: $White;
+	}
+}
+
+.features__card--chip {
+	justify-content: center;
+
+	.features__title {
+		order: 2;
+		padding: 0;
+		@include adaptiv-value("padding-left", 80, 15, 1);
+		@include adaptiv-value("padding-right", 80, 15, 1);
+		margin: 0 auto;
+		flex: initial;
+	}
+
+	.features__image {
+		order: 1;
+		@include adaptiv-value("margin-bottom", 67, 20, 1);
+
+		img {
+			margin: 0 auto;
+		}
+	}
+}
+
+.features__card--trans1 {
+	.features__title {
+		transition: 0.3s ease opacity, transform 0s;
+	}
+	.features__image {
+		transition: 0.3s ease opacity, transform 0.1s;
+	}
+}
+
+.features__card--trans2 {
+	.features__title {
+		transition: 0.3s ease opacity, transform 0.2s;
+	}
+	.features__image {
+		transition: 0.3s ease opacity, transform 0.3s;
+	}
+}
+
+.features__card--trans3 {
+	.features__title {
+		transition: 0.3s ease opacity, transform 0.4s;
+	}
+	.features__image {
+		transition: 0.3s ease opacity, transform 0.5s;
+	}
+}

@@ -4,28 +4,36 @@
 
 <main class="site__main">
 	@@include('html-components/main.html', {
-	"class": "main--row main--white",
+	"class": "main--row main--white main--bottom",
 	"background": "#131313",
 	"title": "Купите <span>iPhone SE</span>",
-	"text": "Небольшой слоган или уникальное тороговое предложение",
+	"text": "Небольшой слоган или уникальное <br> тороговое предложение",
 	"imgurl": "iphoneSE/main-bg.png",
+	"imgw": "408",
+	"imgh": "643",
 	})
 
 	@@include('html-components/features.html', {
-	"card1Class": "features__card--iphone12-1",
-	"card1Color": "#c4c4c4",
-	"card1Text": "Новая широкоугольная камера Wide и Ultra Wide теперь имеет ночной режим",
-	"card1Img": "img/iphone12/features/feature-1.png",
+	"card1Class": "features__card--lgray features__card--top-center features__card--trans1",
+	"card1Color": "#000000",
+	"card1Text": "Скорость и безопасность <br> вместе с Touch ID",
+	"card1Img": "img/iphoneSE/features/features-1.png",
+	"imgw1": "360",
+	"imgh1": "231",
 
-	"card2Class": "features__card--iphone12-2",
-	"card2Color": "#e7e3f3",
-	"card2Text": "A14 Bionic, самый быстрый процессор iPhone",
-	"card2Img": "img/iphone12/features/feature-2.png",
+	"card2Class": "features__card--right features__card--trans2",
+	"card2Color": "#fff",
+	"card2Text": "Тонкий корпус из <br> переработанного алюминия",
+	"card2Img": "img/iphoneSE/features/features-2.png",
+	"imgw2": "255",
+	"imgh2": "184",
 
-	"card3Class": "features__card--iphone12-3",
-	"card3Color": "#0f0d10",
-	"card3Text": "Лучший дисплей iPhone Super Retina XDR",
-	"card3Img": "img/iphone12/features/feature-3.png",
+	"card3Class": "features__card--lgray features__card--right features__card--trans3",
+	"card3Color": "#000",
+	"card3Text": "Защита от воды при погружении на глубину до 1 метра на 30 минут",
+	"card3Img": "img/iphoneSE/features/features-3.png",
+	"imgw3": "407",
+	"imgh3": "275",
 	})
 
 	<section id="productGallery" class="product tabs">
@@ -408,7 +416,8 @@
 							<img src="img/icons/design_battery.svg" alt="">
 						</div>
 					</div>
-					<div class="design-note__text _anim-bottom">Поддержка 5G. Передача данных по беспроводным сетям LTE со скоростью
+					<div class="design-note__text _anim-bottom">Поддержка 5G. Передача данных по беспроводным сетям LTE
+						со скоростью
 						до 2 Гбит/с. До 17 часов воспроизведения видео</div>
 				</div>
 			</div>
@@ -419,64 +428,25 @@
 	</section>
 
 	@@include('html-components/features.html', {
-		"card1Class": "features__card--iphone12-4",
-		"card1Color": "#AECBD9",
-		"card1Text": "Лучший дисплей iPhone с невероятной контрастностью и более высоким разрешением.",
-		"card1Img": "img/iphone12/features/feature-4.png",
+	"card1Class": "features__card--left features__card--trans1",
+	"card1Color": "#fff",
+	"card1Text": "Передовые камеры и процессор A13 Bionic работают вместе, чтобы у вас получались красивые снимки с художественно размытым фоном, в том числе селфи.",
+	"card1Img": "img/iphoneSE/features/features-4.png",
+	"imgw1": "421",
+	"imgh1": "393",
 
-		"card2Class": "features__card--iphone12-5",
-		"card2Color": "#E7E3F3",
-		"card2Text": "Благодаря 16‑ядерной системе Neural Engine он легко выполняет триллионы операций в секунду. А высокая энергоэффективность обеспечивает долгую работу без подзарядки",
-		"card2Img": "img/iphone12/features/feature-5.png",
+	"card2Class": "features__card--right features__card--trans2",
+	"card2Color": "#F6F6F8",
+	"card2Text": "Видео 4K обеспечивает разрешение до четырёх раз выше, чем Full HD",
+	"card2Img": "img/iphoneSE/features/features-5.png",
+	"imgw2": "446",
+	"imgh2": "447",
 
-		"card3Class": "features__card--iphone12-6",
-		"card3Color": "#E2F4DE",
-		"card3Text": "Лучший дисплей iPhone Super Retina XDR",
-		"card3Img": "img/iphone12/features/feature-6.png",
+	"card3Class": "d-none",
+	"card3Color": "#E2F4DE",
+	"card3Text": "Лучший дисплей iPhone Super Retina XDR",
+	"card3Img": "img/iphone12/features/feature-6.png",
 	})
-
-	@@include('html-components/features.html', {
-		"card1Class": "features__card--iphone12-7",
-		"card1Color": "#C4C4C4",
-		"card1Text": "Самый маленький, тонкий и легкий 5G смартфон",
-		"card1Img": "img/iphone12/features/feature-7.png",
-
-		"card2Class": "features__card--iphone12-8",
-		"card2Color": "#101010",
-		"card2Text": "Ночной режим теперь есть на всех камерах. Даже на селфи камерах. Широкоугольная камера улавливает на 27% больше света",
-		"card2Img": "img/iphone12/features/feature-8.png",
-
-		"card3Class": "d-none",
-		"card3Color": "",
-		"card3Text": "",
-		"card3Img": "img/iphone12/features/feature-8.png",
-	})
-	
-	<section class="singularity" style="background-color: #E5EBC0;">
-		<div class="singularity__content">
-			<div class="singularity__wrapper">
-				<div class="singularity__heading _anim-items">
-					<h2 class="singularity__title title-h2 _anim-bottom">Размеры для каждого</h2>
-					<div class="singularity__text _anim-bottom">Лучший дисплей iPhone с невероятной контрастностью и более высоким разрешением</div>
-				</div>
-				<div class="singularity__footer">
-					<div class="singularity__sizes _anim-items">
-						<div class="singularity__size _anim-bottom">
-							<div class="singularity__size-title">iPhone 12</div>
-							<div class="singularity__size-text">6.1” Super Retina XDR display2</div>
-						</div>
-						<div class="singularity__size _anim-bottom">
-							<div class="singularity__size-title">iPhone 12 mini</div>
-							<div class="singularity__size-text">5.4” Super Retina XDR display2</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="singularity__image _anim-items _anim-bottom">
-			<img src="img/iphone12/singularity-img.png" alt="" width="756" height="493">
-		</div>
-	</section>
 
 	<section class="xxl-center xxl-center--white" style="background-color: #111111;">
 		<div class="xxl-center__container container">
@@ -498,7 +468,8 @@
 							<img src="img/iphone12/about/about-1.svg" alt="">
 						</div>
 						<div class="product-features__title">Дополненная реальность</div>
-						<div class="product-features__text">Мощный процессор A14 Bionic позволяет в полной мере использовать возможности дополненной реальности. </div>
+						<div class="product-features__text">Мощный процессор A14 Bionic позволяет в полной мере
+							использовать возможности дополненной реальности. </div>
 					</div>
 				</div>
 				<div class="product-features__item _anim-bottom">
@@ -507,7 +478,8 @@
 							<img src="img/iphone12/about/about-2.svg" alt="">
 						</div>
 						<div class="product-features__title">Максимум фото, минимум задержек</div>
-						<div class="product-features__text">Любите фотографировать быстро? Интеллектуальные функции iPhone помогают ускорить обработку, чтобы вы не упустили ни одного кадра.</div>
+						<div class="product-features__text">Любите фотографировать быстро? Интеллектуальные функции
+							iPhone помогают ускорить обработку, чтобы вы не упустили ни одного кадра.</div>
 					</div>
 				</div>
 				<div class="product-features__item _anim-bottom">
@@ -516,7 +488,8 @@
 							<img src="img/iphone12/about/about-3.svg" alt="">
 						</div>
 						<div class="product-features__title">Используйте два номера</div>
-						<div class="product-features__text">Благодаря поддержке двух SIM‑карт — обычной и eSIM — вы сможете пользоваться и личным, и рабочим номером на одном iPhone.</div>
+						<div class="product-features__text">Благодаря поддержке двух SIM‑карт — обычной и eSIM — вы
+							сможете пользоваться и личным, и рабочим номером на одном iPhone.</div>
 					</div>
 				</div>
 				<div class="product-features__item _anim-bottom">
@@ -530,10 +503,18 @@
 				</div>
 			</div>
 			<div class="about-product__text">
-				<p class="_anim-items _anim-bottom">MagSafe — это новая экосистема аксессуаров, которые мгновенно примагничиваются и обеспечивают более быструю беспроводную зарядку. Их можно комбинировать друг с другом, создавая любые сочетания.</p>
-				<p class="_anim-items _anim-bottom">Зарядное устройство MagSafe обеспечивает удобную беспроводную зарядку. Встроенные магниты фиксируют зарядное устройство на задней панели iPhone 12 или iPhone 12 Pro, гарантируя их идеально точное совмещение, поэтому зарядка выполняется быстрее с мощностью до 15 Вт.</p>
-				<p class="_anim-items _anim-bottom">Зарядное устройство MagSafe поддерживает зарядку по стандарту Qi и позволяет удобно заряжать модели iPhone 8 и новее, а также модели AirPods с беспроводным зарядным футляром — точно так же, как это делает любое зарядное устройство стандарта Qi.</p>
-				<p class="_anim-items _anim-bottom">Магнитное совмещение устройств предусмотрено только на моделях iPhone 12 и iPhone 12 Pro.</p>
+				<p class="_anim-items _anim-bottom">MagSafe — это новая экосистема аксессуаров, которые мгновенно
+					примагничиваются и обеспечивают более быструю беспроводную зарядку. Их можно комбинировать друг с
+					другом, создавая любые сочетания.</p>
+				<p class="_anim-items _anim-bottom">Зарядное устройство MagSafe обеспечивает удобную беспроводную
+					зарядку. Встроенные магниты фиксируют зарядное устройство на задней панели iPhone 12 или iPhone 12
+					Pro, гарантируя их идеально точное совмещение, поэтому зарядка выполняется быстрее с мощностью до 15
+					Вт.</p>
+				<p class="_anim-items _anim-bottom">Зарядное устройство MagSafe поддерживает зарядку по стандарту Qi и
+					позволяет удобно заряжать модели iPhone 8 и новее, а также модели AirPods с беспроводным зарядным
+					футляром — точно так же, как это делает любое зарядное устройство стандарта Qi.</p>
+				<p class="_anim-items _anim-bottom">Магнитное совмещение устройств предусмотрено только на моделях
+					iPhone 12 и iPhone 12 Pro.</p>
 				<p class="_anim-items _anim-bottom">Адаптер питания USB‑C мощностью 20 Вт продаётся отдельно.</p>
 			</div>
 		</div>
@@ -541,10 +522,10 @@
 
 	<a class="up-btn" href="">
 		<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M1 6.5L6 1.5L11 6.5" stroke="white" stroke-width="2"/>
+			<path d="M1 6.5L6 1.5L11 6.5" stroke="white" stroke-width="2" />
 		</svg>
 	</a>
-	
+
 	<a href="#productGallery" class="btn-to-product lock-padding">
 		<div class="btn btn-bg"> Купить </div>
 	</a>

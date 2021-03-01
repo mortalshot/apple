@@ -49,22 +49,44 @@
 			margin: 0 auto;
 		}
 	}
+
+	&-reverse {
+		@media screen and (min-width: 768px) {
+			flex-direction: column-reverse;
+		}
+	}
 }
 
 .features__card--right {
 	.features__image {
 		padding-top: 20px;
+
+		@media screen and (max-width: 767px) {
+			padding-left: 20px;
+		}
+
 		img {
 			margin-left: auto;
 		}
 	}
 }
 
+.features__card--left {
+	.features__image {
+		padding-top: 20px;
+
+		@media screen and (max-width: 767px) {
+			padding-right: 20px;
+		}
+
+		img {
+			margin-right: auto;
+		}
+	}
+}
+
 .features__card--full {
 	position: relative;
-
-	.features__title {
-	}
 
 	.features__image {
 		position: absolute;
@@ -77,7 +99,15 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			object-fit: cover;
+			object-fit: contain;
+		}
+	}
+
+	&-cover {
+		.features__image {
+			img {
+				object-fit: cover;
+			}
 		}
 	}
 }
@@ -174,5 +204,304 @@
 	}
 	.features__image {
 		transition: 0.3s ease opacity, transform 0.5s;
+	}
+}
+
+.banner {
+	&__row {
+		display: flex;
+
+		@media screen and (max-width: 575px) {
+			flex-direction: column;
+		}
+	}
+
+	&__content-wrapper {
+		max-width: 320px;
+		margin: 0 auto;
+		@include adaptiv-value("padding-top", 135, 42, 1);
+		@include adaptiv-value("padding-bottom", 135, 42, 1);
+
+		@media screen and (min-width: $layoutDesktop + "px") {
+			max-width: 47%;
+		}
+	}
+
+	&__title {
+		@include adaptiv-value("margin-bottom", 40, 20, 1);
+	}
+
+	&__text {
+		transition-delay: 0.5s;
+	}
+
+	&__image {
+		transition-delay: 1s;
+	}
+
+	&--se {
+		.banner__row {
+			padding: 0 20px;
+		}
+
+		.banner__content {
+			flex: 0 0 50%;
+		}
+
+		.banner__image {
+			@include adaptiv-value("padding-top", 77, 42, 1);
+			display: flex;
+			align-items: flex-end;
+
+			@media screen and (max-width: 575px) {
+				padding-top: 0;
+			}
+		}
+	}
+
+	&--11 {
+		.banner__row {
+			align-items: center;
+		}
+
+		.banner__content {
+			flex: 1 1 auto;
+		}
+
+		.banner__content-wrapper {
+			max-width: 246px;
+
+			@media screen and (min-width: $layoutDesktop + "px") {
+				max-width: 45%;
+			}
+		}
+
+		.banner__image {
+			flex: 0 0 60%;
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+
+	&--xr {
+		.banner__row {
+			padding: 0 20px;
+		}
+
+		.banner__content {
+			flex: 1 1 auto;
+		}
+
+		.banner__image {
+			flex: 0 0 60%;
+			@include adaptiv-value("padding-top", 146, 42, 1);
+			display: flex;
+			align-items: flex-end;
+
+			@media screen and (max-width: 575px) {
+				padding-top: 0;
+			}
+		}
+	}
+
+	&--xl-left {
+		.banner__row {
+			align-items: center;
+		}
+
+		.banner__content {
+			flex: 0 0 50%;
+			padding: 0 20px;
+		}
+
+		.banner__content-wrapper {
+			max-width: 400px;
+
+			@media screen and (min-width: $layoutDesktop + "px") {
+				max-width: 59%;
+			}
+			@media screen and (max-width: 575px) {
+				max-width: 100%;
+			}
+		}
+
+		.banner__image {
+			@media screen and (max-width: 575px) {
+				margin-bottom: 45px;
+			}
+		}
+	}
+
+	&--xl-left-right {
+		.banner__image {
+			flex: 1 1 auto;
+			display: flex;
+			justify-content: flex-end;
+			padding-left: 20px;
+		}
+	}
+
+	&--xl-right {
+		@media screen and (max-width: 575px) {
+			padding: 44px 0;
+		}
+		.banner__row {
+			align-items: center;
+			padding: 0 20px;
+		}
+
+		.banner__content {
+			flex: 0 0 50%;
+		}
+
+		.banner__content-wrapper {
+			max-width: 400px;
+
+			@media screen and (min-width: $layoutDesktop + "px") {
+				max-width: 59%;
+			}
+			@media screen and (max-width: 575px) {
+				max-width: 100%;
+				padding: 0;
+			}
+		}
+
+		.banner__image {
+			@media screen and (max-width: 575px) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+.uniq2 {
+	color: $White;
+
+	@media screen and (min-width: 451px) {
+		@include adaptiv-value("padding-top", 90, 44, 1);
+		@include adaptiv-value("padding-bottom", 90, 44, 1);
+	}
+
+	&__row {
+		display: flex;
+		justify-content: center;
+
+		@media screen and (max-width: 450px) {
+			display: block;
+		}
+	}
+
+	&__content-top {
+		@include adaptiv-value("padding-top", 110, 44, 1);
+
+		@media screen and (max-width: 450px) {
+			padding-top: 20px;
+		}
+	}
+
+	&__title {
+		font-weight: 500;
+	}
+
+	&__text {
+		font-weight: 300;
+		color: $LGray3;
+
+		br {
+			display: none;
+		}
+	}
+
+	&__image {
+		@include adaptiv-value("padding-left", 130, 15, 1);
+		@include adaptiv-value("padding-right", 130, 15, 1);
+		transition-delay: 0.5s;
+
+		@media screen and (max-width: 767px) {
+			padding: 0 15px;
+			max-width: 50%;
+			margin: 0 auto;
+		}
+		@media screen and (max-width: 450px) {
+			padding: 0;
+			margin: 20px auto;
+		}
+	}
+
+	&__content-bottom {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		@include adaptiv-value("padding-bottom", 110, 44, 1);
+		transition-delay: 1s;
+
+		@media screen and (max-width: 450px) {
+			padding-bottom: 20px;
+		}
+	}
+}
+
+.xl-center {
+	@include adaptiv-value("min-height", 700, 350, 1);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	&__image {
+		display: flex;
+		justify-content: center;
+		@include adaptiv-value("margin-bottom", 110, 20, 1);
+		transition-delay: 0.5s;
+	}
+
+	&__title {
+		text-align: center;
+		max-width: 522px;
+		margin: 0 auto;
+		font-weight: 300;
+		font-size: 28px;
+		line-height: 39px;
+		transition-delay: 1s;
+
+		@media screen and (min-width: $layoutDesktop + "px") {
+			max-width: 50%;
+		}
+		@media screen and (max-width: $layoutDesktop - 0.02 + "px") {
+			font-size: calc(16px + 12 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+			line-height: calc(39 / 28);
+		}
+	}
+
+	p {
+		transition-delay: 1.5s;
+		font-weight: 300;
+		max-width: 766px;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+
+		@media screen and (min-width: $layoutDesktop + "px") {
+			max-width: 70%;
+		}
+	}
+
+	&--white {
+		color: $White;
+	}
+
+	&--big {
+		.xl-center__title {
+			font-weight: 500;
+			font-size: calc(24px + 24 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+			line-height: calc(58 / 48);
+		}
+	}
+
+	&--pb {
+		@include adaptiv-value("padding-bottom", 100, 44, 1);
+	}
+
+	&--pt {
+		@include adaptiv-value("padding-top", 100, 44, 1);
 	}
 }

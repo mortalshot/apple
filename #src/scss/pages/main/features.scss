@@ -27,8 +27,8 @@
 		max-width: 100%;
 		padding: 60px 80px 15px;
 		@include adaptiv-value("padding-top", 60, 20, 1);
-		@include adaptiv-value("padding-left", 80, 15, 1);
-		@include adaptiv-value("padding-right", 80, 15, 1);
+		@include adaptiv-value("padding-left", 80, 20, 1);
+		@include adaptiv-value("padding-right", 80, 20, 1);
 		position: relative;
 		z-index: 1;
 

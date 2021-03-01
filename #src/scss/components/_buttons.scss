@@ -127,3 +127,10 @@
         visibility: visible;
     }
 }
+
+.text-link {
+    font-weight: 600;
+    font-size: calc(14px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+    line-height: calc(19 / 16);
+    color: $Blue;
+}

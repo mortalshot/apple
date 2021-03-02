@@ -51,19 +51,43 @@
 	}
 
 	&-reverse {
+		.features__title {
+			flex: initial;
+		}
+
 		@media screen and (min-width: 768px) {
 			flex-direction: column-reverse;
 		}
 	}
 }
 
+.features__card--justify-center {
+	justify-content: center;
+}
+
+.features__card--img-center {
+	.features__image {
+		img {
+			margin: 0 auto;
+		}
+	}
+}
+
+.features__card--img-px {
+	.features__image {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+.features__card--text-center {
+	text-align: center;
+} 
+
 .features__card--right {
 	.features__image {
 		padding-top: 20px;
-
-		@media screen and (max-width: 767px) {
-			padding-left: 20px;
-		}
+		padding-left: 20px;
 
 		img {
 			margin-left: auto;
@@ -74,15 +98,16 @@
 .features__card--left {
 	.features__image {
 		padding-top: 20px;
-
-		@media screen and (max-width: 767px) {
-			padding-right: 20px;
-		}
+		padding-right: 20px;
 
 		img {
 			margin-right: auto;
 		}
 	}
+}
+
+.features__card--left-right {
+	padding: 20px 0px 0px 0px;	
 }
 
 .features__card--full {
@@ -180,6 +205,19 @@
 	}
 }
 
+.features__card--img-py {
+	.features__image {
+		@include adaptiv-value("padding-top", 70, 20, 1);
+		@include adaptiv-value("padding-bottom", 70, 20, 1);
+	}
+}
+
+.features__card--img-pb {
+	.features__image {
+		@include adaptiv-value("padding-bottom", 70, 20, 1);
+	}
+}
+
 .features__card--trans1 {
 	.features__title {
 		transition: 0.3s ease opacity, transform 0s;
@@ -227,12 +265,18 @@
 		}
 	}
 
+	&__content-img {
+		@include adaptiv-value("margin-bottom", 64, 20, 1);
+	}
+
 	&__title {
 		@include adaptiv-value("margin-bottom", 40, 20, 1);
 	}
 
 	&__text {
 		transition-delay: 0.5s;
+		font-size: calc(14px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		line-height: calc(22 / 16);
 	}
 
 	&__image {
@@ -318,7 +362,7 @@
 			max-width: 400px;
 
 			@media screen and (min-width: $layoutDesktop + "px") {
-				max-width: 59%;
+				max-width: 62%;
 			}
 			@media screen and (max-width: 575px) {
 				max-width: 100%;
@@ -326,8 +370,11 @@
 		}
 
 		.banner__image {
+			padding-right: 20px;
+
 			@media screen and (max-width: 575px) {
 				margin-bottom: 45px;
+				padding: 0 20px;
 			}
 		}
 	}
@@ -338,6 +385,33 @@
 			display: flex;
 			justify-content: flex-end;
 			padding-left: 20px;
+			padding-right: 0;
+			transition-delay: 0s;
+
+			@media screen and (max-width: 575px) {
+				padding-right: 0;
+			}
+		}
+	}
+
+	&--xl-left-left {
+		.banner__image {
+			flex: 0 0 50%;
+			transition-delay: 0s;
+			padding-left: 0 !important;
+		}
+		.banner__row {
+			flex-direction: row-reverse;
+
+			@media screen and (max-width: 650px) {
+				display: block;
+			}
+		}
+
+		.banner__content-wrapper {
+			@media screen and (max-width: 650px) {
+				max-width: 100%;
+			}
 		}
 	}
 
@@ -347,6 +421,7 @@
 		}
 		.banner__row {
 			align-items: center;
+			justify-content: center;
 			padding: 0 20px;
 		}
 
@@ -371,6 +446,37 @@
 				margin-bottom: 20px;
 			}
 		}
+	}
+
+	&--l-right {
+		.banner__row {
+			@media screen and (max-width: 767px) {
+				flex-direction: column-reverse;
+			}
+		}
+
+		.banner__image {
+			flex: 0 0 50%;
+			display: flex;
+			justify-content: center;
+			align-items: flex-end;
+			@include adaptiv-value("padding-left", 90, 15, 1);
+			@include adaptiv-value("padding-right", 90, 15, 1);
+		}
+
+		.banner__content-wrapper {
+			max-width: 100%;
+			padding-right: 20px;
+			padding-left: 20px;
+			
+			@media screen and (min-width: $layoutDesktop + 'px') {
+				max-width: 100%;
+			}
+		}
+	}
+
+	&--white {
+		color: $White;
 	}
 }
 
@@ -504,4 +610,32 @@
 	&--pt {
 		@include adaptiv-value("padding-top", 100, 44, 1);
 	}
+
+	&--w100 {
+		.xl-center__title {
+			max-width: 100%;
+
+			@media screen and (min-width: $layoutDesktop + 'px') {
+				max-width: 100%;
+			}
+		}
+	}
+
+	&--reverse {
+		.xl-center__image {
+			margin-bottom: 0 !important;
+			transition-delay: 0s;
+		}
+
+		.xl-center__title {
+			@include adaptiv-value("margin-bottom", 110, 20, 1);
+			transition-delay: 0s;
+		}
+	}
+}
+
+.text-gradient-grey {
+	background: -webkit-linear-gradient(180deg, #EAEAEA 0%, rgba(234, 234, 234, 0.54) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }

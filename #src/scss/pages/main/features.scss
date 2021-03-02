@@ -37,6 +37,21 @@
 			line-height: calc(36 / 26);
 			max-width: 100% !important;
 		}
+
+		&-big {
+			display: block;
+			font-weight: 900;
+			font-size: 144px;
+			line-height: 201px;
+			background: -webkit-linear-gradient(180deg, #1F1F1F 0%, #7A7A7A 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+
+			@media screen and (max-width: $layoutDesktop - 0.02 + 'px') {
+				font-size: calc(64px + 80 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+				line-height: calc(201 / 144);
+			}
+		}
 	}
 
 	&__image {

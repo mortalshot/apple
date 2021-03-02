@@ -97,6 +97,14 @@
 		}
 	}
 
+	&--column {
+		.main {
+			&__row {
+				display: block;
+			}
+		}
+	}
+
 	&--row {
 		@include adaptiv-value("padding-top", 60, 30, 1);
 		@include adaptiv-value("padding-bottom", 60, 30, 1);
@@ -224,9 +232,42 @@
 		.row {
 			align-items: center;
 		}
-		
+
 		.main__title {
 			margin-top: 23px;
+		}
+	}
+
+	&--macbook {
+		.main__title {
+			font-weight: 400;
+			font-size: 32px;
+			line-height: 38px;
+			color: rgba($color: $White, $alpha: 0.75);
+			max-width: 1130px;
+			margin: 0 auto 20px;
+
+			@media screen and (max-width: $layoutDesktop - 0.02 + 'px') {
+				font-size: calc(16px + 16 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+				line-height: calc(38 / 32);
+			}
+
+			span {
+				font-weight: 700;
+				font-size: 64px;
+				line-height: 1;
+				background: -webkit-linear-gradient(78.47deg, #ee0532 3.68%, #326fe2 40.74%, #bf03bd 82.08%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+
+				@media screen and (max-width: $layoutDesktop - 0.02 + 'px') {
+					font-size: calc(32px + 32 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+				}
+			}
+		}
+
+		.main-menu__item--active  {
+			background: rgba(255, 255, 255, 0.2);
 		}
 	}
 }

@@ -2731,6 +2731,58 @@ textarea.form__input {
   background: rgba(255, 255, 255, 0.2);
 }
 
+.main--watch .main__apple {
+  display: inline-block;
+  text-align: center;
+}
+
+.main--watch .main__apple img {
+  margin-bottom: 8px;
+}
+
+.main--watch .main__apple span {
+  font-size: calc(12px + 6 * ((100vw - 320px) / (1366 - 320)));
+}
+
+.main--watch .main__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 73px;
+}
+
+.main--watch .main__row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main--watch .main-menu__item--active {
+  background: rgba(136, 136, 136, 0.2);
+}
+
+.main--tv {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.main--full {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.main--imac .main__title {
+  margin-top: 8px;
+}
+
+.main--imac .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .main-menu {
   padding-top: 30px;
   padding-bottom: 10px;
@@ -4747,6 +4799,21 @@ textarea.form__input {
      object-fit: cover;
 }
 
+.features__card--full-left .features__image img {
+  -o-object-position: left;
+     object-position: left;
+}
+
+.features__card--full-right .features__image img {
+  -o-object-position: right;
+     object-position: right;
+}
+
+.features__card--full-bottom .features__image img {
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
 .features__card--text-end .features__title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4755,6 +4822,15 @@ textarea.form__input {
       -ms-flex-align: end;
           align-items: flex-end;
   padding-bottom: 80px;
+}
+
+.features__card--text-right .features__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .features__card--gray .features__title {
@@ -4873,6 +4949,11 @@ textarea.form__input {
   margin-bottom: 64px;
 }
 
+.banner__subtitle {
+  font-size: calc(18px + 6 * ((100vw - 320px) / (1366 - 320)));
+  margin-bottom: calc(20px + 4 * ((100vw - 320px) / (1046)));
+}
+
 .banner__title {
   margin-bottom: 40px;
 }
@@ -4980,6 +5061,15 @@ textarea.form__input {
 }
 
 .banner--xl-left .banner__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-right: 20px;
 }
 
@@ -5062,6 +5152,43 @@ textarea.form__input {
 
 .banner--white {
   color: #ffffff;
+}
+
+.banner--text-center {
+  text-align: center;
+}
+
+.banner--text-left {
+  text-align: left !important;
+}
+
+.banner--pb {
+  padding-bottom: 70px;
+}
+
+.banner--full {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 650px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-align: center;
+}
+
+.banner--full-contain {
+  background-size: contain;
+}
+
+.banner--full-big {
+  min-height: 927px;
 }
 
 .uniq2 {
@@ -5203,6 +5330,27 @@ textarea.form__input {
   -webkit-transition-delay: 0s;
        -o-transition-delay: 0s;
           transition-delay: 0s;
+}
+
+.xl-center--img-bottom .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.xl-center--img-bottom .container .xl-center__title {
+  margin-top: 130px;
+}
+
+.xl-center--img-bottom .container .xl-center__image {
+  margin-top: auto;
 }
 
 .text-gradient-grey {
@@ -5948,6 +6096,11 @@ textarea.form__input {
     font-size: calc(32px + 32 * ((100vw - 320px) / (1366 - 320)));
   }
 
+  .main--watch .main__title {
+    font-size: calc(32px + 32 * ((100vw - 320px) / (1366 - 320)));
+    line-height: calc(73 / 64);
+  }
+
   .features__title-big {
     font-size: calc(64px + 80 * ((100vw - 320px) / (1366 - 320)));
     line-height: calc(201 / 144);
@@ -6210,6 +6363,18 @@ textarea.form__input {
     padding-right: calc(15px + 75 * ((100vw - 320px) / (1046)));
   }
 
+  .banner--pb {
+    padding-bottom: calc(20px + 50 * ((100vw - 320px) / (1046)));
+  }
+
+  .banner--full {
+    min-height: calc(450px + 200 * ((100vw - 320px) / (1046)));
+  }
+
+  .banner--full-big {
+    min-height: calc(650px + 277 * ((100vw - 320px) / (1046)));
+  }
+
   .uniq2__content-top {
     padding-top: calc(44px + 66 * ((100vw - 320px) / (1046)));
   }
@@ -6244,6 +6409,10 @@ textarea.form__input {
 
   .xl-center--reverse .xl-center__title {
     margin-bottom: calc(20px + 90 * ((100vw - 320px) / (1046)));
+  }
+
+  .xl-center--img-bottom .container .xl-center__title {
+    margin-top: calc(20px + 110 * ((100vw - 320px) / (1046)));
   }
 }
 
@@ -6925,6 +7094,10 @@ textarea.form__input {
     margin: 0;
   }
 
+  .main--tv {
+    background-size: cover;
+  }
+
   .main-menu {
     overflow-x: auto;
     scrollbar-width: thin;
@@ -6955,6 +7128,13 @@ textarea.form__input {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
   }
 
   .features__title {

@@ -135,6 +135,24 @@
 			}
 		}
 	}
+
+	&-left {
+		.features__image img {
+			object-position: left;
+		}
+	}
+
+	&-right {
+		.features__image img {
+			object-position: right;
+		}
+	}
+
+	&-bottom {
+		.features__image img {
+			object-position: bottom;
+		}
+	}
 }
 
 .features__card--text-end {
@@ -142,6 +160,13 @@
 		display: flex;
 		align-items: flex-end;
 		@include adaptiv-value("padding-bottom", 80, 20, 1);
+	}
+}
+
+.features__card--text-right {
+	.features__title {
+		display: flex;
+		justify-content: flex-end;
 	}
 }
 
@@ -269,6 +294,11 @@
 		@include adaptiv-value("margin-bottom", 64, 20, 1);
 	}
 
+	&__subtitle {
+		font-size: calc(18px + 6 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		@include adaptiv-value("margin-bottom", 24, 20, 0);
+	}
+
 	&__title {
 		@include adaptiv-value("margin-bottom", 40, 20, 1);
 	}
@@ -370,6 +400,9 @@
 		}
 
 		.banner__image {
+			flex: 0 0 50%;
+			display: flex;
+			justify-content: center;
 			padding-right: 20px;
 
 			@media screen and (max-width: 575px) {
@@ -477,6 +510,37 @@
 
 	&--white {
 		color: $White;
+	}
+	
+	&--text-center {
+		text-align: center;
+	}
+			
+	&--text-left {
+		text-align: left !important;
+	}
+
+	&--pb {
+		@include adaptiv-value("padding-bottom", 70, 20, 1);
+	}
+
+	&--full {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		@include adaptiv-value("min-height", 650, 450, 1);
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		text-align: center;
+
+		&-contain {
+			background-size: contain;
+		}
+
+		&-big {
+			@include adaptiv-value("min-height", 927, 650, 1);
+		}
 	}
 }
 
@@ -630,6 +694,22 @@
 		.xl-center__title {
 			@include adaptiv-value("margin-bottom", 110, 20, 1);
 			transition-delay: 0s;
+		}
+	}
+
+	&--img-bottom {
+		.container {
+			display: flex;
+			flex-direction: column;
+			flex: 1 1 auto;
+
+			.xl-center__title {
+				@include adaptiv-value("margin-top", 130, 20, 1);
+			}
+
+			.xl-center__image {
+				margin-top: auto;
+			}
 		}
 	}
 }

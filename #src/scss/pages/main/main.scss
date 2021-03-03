@@ -270,6 +270,66 @@
 			background: rgba(255, 255, 255, 0.2);
 		}
 	}
+
+	&--watch {
+		.main__apple {
+			display: inline-block;
+			text-align: center;
+
+			img {
+				margin-bottom: 8px;
+			}
+
+			span {
+				font-size: calc(12px + 6 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+			}
+		}
+
+		.main__title {
+			margin: 0;
+			font-weight: 700;
+			font-size: 64px;
+			line-height: 73px;
+
+			@media screen and (max-width: $layoutDesktop - 0.02 + 'px') {
+				font-size: calc(32px + 32 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+				line-height: calc(73 / 64);
+			}
+		}
+
+		.main__row {
+			align-items: center;
+		}
+
+		.main-menu__item--active  {
+			background: rgba(136, 136, 136, 0.2);
+		}
+	}
+
+	&--tv {
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+
+		@media screen and (max-width: 575px) {
+			background-size: cover;
+		}
+	}
+
+	&--full {
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+	}
+
+	&--imac{
+		.main__title {
+			margin-top: 8px;
+		}
+		.row {
+			align-items: center;
+		}
+	}
 }
 
 .main-menu {
@@ -325,6 +385,9 @@
 		}
 		@media screen and (max-width: 575px) {
 			flex: 1 1 auto;
+			display: flex;
+			justify-content: center;
+			text-align: center;
 		}
 
 		&._active {

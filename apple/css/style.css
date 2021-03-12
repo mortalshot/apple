@@ -2969,7 +2969,7 @@ textarea.form__input {
 
 .gallery__thumbnails .gallery__image {
   position: relative;
-  padding-bottom: 118.8%;
+  padding-bottom: calc(100px + 100 * ((100vw - 320px) / (1046)));
   cursor: pointer;
 }
 
@@ -3030,7 +3030,7 @@ textarea.form__input {
   width: 100% !important;
   margin: 0 auto;
   position: relative;
-  padding-bottom: 29.4%;
+  padding-bottom: calc(300px + 176 * ((100vw - 320px) / (1046)));
 }
 
 .gallery__main .gallery__image img {
@@ -5709,6 +5709,14 @@ textarea.form__input {
     border-right: 1px solid #eaeaea;
   }
 
+  .gallery__thumbnails .slick-list {
+    width: 100% !important;
+  }
+
+  .gallery__thumbnails .slick-track {
+    height: 100% !important;
+  }
+
   .gallery__main {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5721,10 +5729,6 @@ textarea.form__input {
         -ms-flex: 0 0 75%;
             flex: 0 0 75%;
     border-right: 1px solid #eaeaea;
-  }
-
-  .gallery__main .gallery__image {
-    padding-bottom: 32%;
   }
 
   .product-about__triggers .tabs-triggers__item:hover {
@@ -5984,14 +5988,6 @@ textarea.form__input {
 }
 
 @media screen and (min-width: 1400px) {
-  .gallery__thumbnails .gallery__image {
-    padding-bottom: 100%;
-  }
-
-  .gallery__main .gallery__image {
-    padding-bottom: 27%;
-  }
-
   .iphone__container {
     max-width: 62.6%;
   }
@@ -6009,16 +6005,6 @@ textarea.form__input {
   }
 }
 
-@media screen and (min-width: 1500px) {
-  .gallery__thumbnails .gallery__image {
-    padding-bottom: 90%;
-  }
-
-  .gallery__main .gallery__image {
-    padding-bottom: 25%;
-  }
-}
-
 @media screen and (min-width: 1600px) {
   .iphone__image {
     padding-bottom: 120%;
@@ -6026,18 +6012,6 @@ textarea.form__input {
 
   .accessories__image {
     margin-bottom: -4em;
-  }
-}
-
-@media screen and (min-width: 1700px) {
-  .gallery__thumbnails .gallery__image {
-    padding-bottom: 80%;
-  }
-}
-
-@media screen and (min-width: 1800px) {
-  .gallery__thumbnails .gallery__image {
-    padding-bottom: 70%;
   }
 }
 
@@ -6479,10 +6453,6 @@ textarea.form__input {
     margin-right: 1.5em;
   }
 
-  .gallery__thumbnails .gallery__image {
-    padding-bottom: 9%;
-  }
-
   .gallery__main .gallery__image {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -6490,7 +6460,6 @@ textarea.form__input {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding-bottom: 25%;
   }
 
   .gallery__main .gallery__image img {
@@ -6685,10 +6654,6 @@ textarea.form__input {
 
   .gallery__thumbnails .gallery__image img {
     padding: 20px;
-  }
-
-  .gallery__main .gallery__image {
-    padding-bottom: 24%;
   }
 
   .product-about__container {
@@ -7150,16 +7115,8 @@ textarea.form__input {
     padding: 0 20px;
   }
 
-  .gallery__thumbnails .gallery__image {
-    padding-bottom: 4%;
-  }
-
   .gallery__thumbnails .gallery__image img {
     padding: 0;
-  }
-
-  .gallery__main .gallery__image {
-    padding-bottom: 22%;
   }
 
   .product-about__container {
@@ -7544,7 +7501,6 @@ textarea.form__input {
   }
 
   .gallery__main .gallery__image {
-    padding-bottom: 24%;
     margin: 10px auto 20px;
   }
 

@@ -17,6 +17,7 @@
 		flex: 0 0 50%;
 	}
 }
+
 .gallery {
 	@media screen and (max-width: 575px) {
 		padding: 0 20px;
@@ -36,27 +37,8 @@
 
 		.gallery__image {
 			position: relative;
-			padding-bottom: 118.8%;
+			@include adaptiv-value("padding-bottom", 200, 100, 0);
 			cursor: pointer;
-
-			@media screen and (min-width: 1800px) {
-				padding-bottom: 70%;
-			}
-			@media screen and (min-width: 1700px) {
-				padding-bottom: 80%;
-			}
-			@media screen and (min-width: 1500px) {
-				padding-bottom: 90%;
-			}
-			@media screen and (min-width: 1400px) {
-				padding-bottom: 100%;
-			}
-			@media screen and (max-width: 991px) {
-				padding-bottom: 9%;
-			}
-			@media screen and (max-width: 575px) {
-				padding-bottom: 4%;
-			}
 
 			img {
 				position: absolute;
@@ -92,6 +74,18 @@
 				}
 			}
 		}
+
+		.slick-list {
+			@media screen and (min-width: 992px) {
+				width: 100% !important;
+			}
+		}
+
+		.slick-track {
+			@media screen and (min-width: 992px) {
+				height: 100% !important;
+			}
+		}
 	}
 
 	&__item {
@@ -124,30 +118,13 @@
 			width: 100% !important;
 			margin: 0 auto;
 			position: relative;
-			padding-bottom: 29.4%;
+			@include adaptiv-value("padding-bottom", 476, 300, 0);
 
-			@media screen and (min-width: 1500px) {
-				padding-bottom: 25%;
-			}
-			@media screen and (min-width: 1400px) {
-				padding-bottom: 27%;
-			}
-			@media screen and (min-width: 992px) {
-				padding-bottom: 32%;
-			}
 			@media screen and (max-width: 991px) {
 				display: flex;
 				justify-content: center;
-				padding-bottom: 25%;
-			}
-			@media screen and (max-width: 767px) {
-				padding-bottom: 24%;
-			}
-			@media screen and (max-width: 575px) {
-				padding-bottom: 22%;
 			}
 			@media screen and (max-width: 450px) {
-				padding-bottom: 24%;
 				margin: 10px auto 20px;
 			}
 
@@ -167,7 +144,6 @@
 					padding: 10px;
 				}
 			}
-
 		}
 	}
 
@@ -189,6 +165,7 @@
 		}
 	}
 }
+
 .product-about {
 	padding: 55px 0 50px;
 
@@ -327,8 +304,6 @@
 
 			&__item {
 				margin: 0px 4px 0px 0px;
-
-
 			}
 
 			&__input {
